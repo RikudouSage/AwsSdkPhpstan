@@ -235,6 +235,7 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('QueryExecutionId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Query'),
                     new \PHPStan\Type\Constant\ConstantStringType('StatementType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ManagedQueryResultsConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('ResultConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('ResultReuseConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('QueryExecutionContext'),
@@ -252,6 +253,17 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('DDL'),
                         new \PHPStan\Type\Constant\ConstantStringType('DML'),
                         new \PHPStan\Type\Constant\ConstantStringType('UTILITY'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfiguration'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('KmsKey'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('OutputLocation'),
@@ -951,6 +963,7 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('QueryExecutionId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Query'),
                     new \PHPStan\Type\Constant\ConstantStringType('StatementType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ManagedQueryResultsConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('ResultConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('ResultReuseConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('QueryExecutionContext'),
@@ -968,6 +981,17 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('DDL'),
                         new \PHPStan\Type\Constant\ConstantStringType('DML'),
                         new \PHPStan\Type\Constant\ConstantStringType('UTILITY'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfiguration'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('KmsKey'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('OutputLocation'),
@@ -1402,6 +1426,7 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ResultConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManagedQueryResultsConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('EnforceWorkGroupConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('PublishCloudWatchMetricsEnabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('BytesScannedCutoffPerQuery'),
@@ -1437,6 +1462,17 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                                 new \PHPStan\Type\Constant\ConstantStringType('S3AclOption'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantStringType('BUCKET_OWNER_FULL_CONTROL'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfiguration'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKey'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
                             ]),
                         ]),
                         new \PHPStan\Type\BooleanType(),

@@ -1095,6 +1095,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('MultiplexSettings'),
                         new \PHPStan\Type\Constant\ConstantStringType('Settings'),
                         new \PHPStan\Type\Constant\ConstantStringType('SrtSettings'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogicalInterfaceNames'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1133,6 +1134,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SourceIp'),
@@ -4223,6 +4225,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SceneChangeDetect'),
                                     new \PHPStan\Type\Constant\ConstantStringType('TimecodeBurninSettings'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                 ], [
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
@@ -4321,6 +4325,11 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                             new \PHPStan\Type\Constant\ConstantStringType('TOP_RIGHT'),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('CBR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
                                     ]),
                                 ]),
                             ]),
@@ -5441,6 +5450,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('MultiplexSettings'),
                     new \PHPStan\Type\Constant\ConstantStringType('Settings'),
                     new \PHPStan\Type\Constant\ConstantStringType('SrtSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LogicalInterfaceNames'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -5479,6 +5489,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('SourceIp'),
@@ -8569,6 +8580,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                 new \PHPStan\Type\Constant\ConstantStringType('SceneChangeDetect'),
                                 new \PHPStan\Type\Constant\ConstantStringType('TimecodeBurninSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                             ], [
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
@@ -8667,6 +8680,11 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                         new \PHPStan\Type\Constant\ConstantStringType('TOP_RIGHT'),
                                     ]),
                                     new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CBR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
                                 ]),
                             ]),
                         ]),
@@ -9500,6 +9518,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('MultiplexSettings'),
                     new \PHPStan\Type\Constant\ConstantStringType('Settings'),
                     new \PHPStan\Type\Constant\ConstantStringType('SrtSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LogicalInterfaceNames'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -9538,6 +9557,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('SourceIp'),
@@ -12628,6 +12648,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                 new \PHPStan\Type\Constant\ConstantStringType('SceneChangeDetect'),
                                 new \PHPStan\Type\Constant\ConstantStringType('TimecodeBurninSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                             ], [
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
@@ -12726,6 +12748,11 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                         new \PHPStan\Type\Constant\ConstantStringType('TOP_RIGHT'),
                                     ]),
                                     new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CBR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
                                 ]),
                             ]),
                         ]),
@@ -14394,6 +14421,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('MultiplexSettings'),
                         new \PHPStan\Type\Constant\ConstantStringType('Settings'),
                         new \PHPStan\Type\Constant\ConstantStringType('SrtSettings'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogicalInterfaceNames'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -14432,6 +14460,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SourceIp'),
@@ -15761,6 +15790,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('MultiplexSettings'),
                     new \PHPStan\Type\Constant\ConstantStringType('Settings'),
                     new \PHPStan\Type\Constant\ConstantStringType('SrtSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LogicalInterfaceNames'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -15799,6 +15829,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('SourceIp'),
@@ -18889,6 +18920,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                 new \PHPStan\Type\Constant\ConstantStringType('SceneChangeDetect'),
                                 new \PHPStan\Type\Constant\ConstantStringType('TimecodeBurninSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                             ], [
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
@@ -18987,6 +19020,11 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                         new \PHPStan\Type\Constant\ConstantStringType('TOP_RIGHT'),
                                     ]),
                                     new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CBR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
                                 ]),
                             ]),
                         ]),
@@ -19585,6 +19623,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('MultiplexSettings'),
                     new \PHPStan\Type\Constant\ConstantStringType('Settings'),
                     new \PHPStan\Type\Constant\ConstantStringType('SrtSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LogicalInterfaceNames'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -19623,6 +19662,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('SourceIp'),
@@ -22713,6 +22753,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                 new \PHPStan\Type\Constant\ConstantStringType('SceneChangeDetect'),
                                 new \PHPStan\Type\Constant\ConstantStringType('TimecodeBurninSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                             ], [
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
@@ -22811,6 +22853,11 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                         new \PHPStan\Type\Constant\ConstantStringType('TOP_RIGHT'),
                                     ]),
                                     new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CBR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
                                 ]),
                             ]),
                         ]),
@@ -23426,6 +23473,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('MultiplexSettings'),
                         new \PHPStan\Type\Constant\ConstantStringType('Settings'),
                         new \PHPStan\Type\Constant\ConstantStringType('SrtSettings'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogicalInterfaceNames'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -23464,6 +23512,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SourceIp'),
@@ -26554,6 +26603,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SceneChangeDetect'),
                                     new \PHPStan\Type\Constant\ConstantStringType('TimecodeBurninSettings'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                 ], [
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
@@ -26652,6 +26703,11 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                             new \PHPStan\Type\Constant\ConstantStringType('TOP_RIGHT'),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('CBR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
                                     ]),
                                 ]),
                             ]),
@@ -27186,6 +27242,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('MultiplexSettings'),
                         new \PHPStan\Type\Constant\ConstantStringType('Settings'),
                         new \PHPStan\Type\Constant\ConstantStringType('SrtSettings'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogicalInterfaceNames'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -27224,6 +27281,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SourceIp'),
@@ -30314,6 +30372,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SceneChangeDetect'),
                                     new \PHPStan\Type\Constant\ConstantStringType('TimecodeBurninSettings'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                 ], [
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
@@ -30412,6 +30472,11 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                             new \PHPStan\Type\Constant\ConstantStringType('TOP_RIGHT'),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('CBR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
                                     ]),
                                 ]),
                             ]),
@@ -31624,6 +31689,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('MultiplexSettings'),
                     new \PHPStan\Type\Constant\ConstantStringType('Settings'),
                     new \PHPStan\Type\Constant\ConstantStringType('SrtSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LogicalInterfaceNames'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -31662,6 +31728,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('SourceIp'),
@@ -34752,6 +34819,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                 new \PHPStan\Type\Constant\ConstantStringType('SceneChangeDetect'),
                                 new \PHPStan\Type\Constant\ConstantStringType('TimecodeBurninSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                             ], [
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
@@ -34850,6 +34919,11 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                         new \PHPStan\Type\Constant\ConstantStringType('TOP_RIGHT'),
                                     ]),
                                     new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CBR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
                                 ]),
                             ]),
                         ]),

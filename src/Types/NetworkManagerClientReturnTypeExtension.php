@@ -1542,7 +1542,11 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Ipv6Support'),
                         new \PHPStan\Type\Constant\ConstantStringType('ApplianceModeSupport'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DnsSupport'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupReferencingSupport'),
                     ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                     ]),
@@ -2840,6 +2844,9 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('InsideCidrBlocks'),
                         new \PHPStan\Type\Constant\ConstantStringType('SharedSegments'),
                         new \PHPStan\Type\Constant\ConstantStringType('ServiceInsertionActions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VpnEcmpSupport'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DnsSupport'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupReferencingSupport'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
@@ -2886,6 +2893,9 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 ])),
                             ]),
                         ])),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
@@ -2897,6 +2907,9 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('InsideCidrBlocks'),
                         new \PHPStan\Type\Constant\ConstantStringType('SharedSegments'),
                         new \PHPStan\Type\Constant\ConstantStringType('ServiceInsertionActions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VpnEcmpSupport'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DnsSupport'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupReferencingSupport'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
@@ -2943,6 +2956,9 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 ])),
                             ]),
                         ])),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
                     new \PHPStan\Type\StringType(),
                 ])),
@@ -4218,7 +4234,11 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Ipv6Support'),
                         new \PHPStan\Type\Constant\ConstantStringType('ApplianceModeSupport'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DnsSupport'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupReferencingSupport'),
                     ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                     ]),
@@ -5600,7 +5620,11 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Ipv6Support'),
                         new \PHPStan\Type\Constant\ConstantStringType('ApplianceModeSupport'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DnsSupport'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupReferencingSupport'),
                     ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                     ]),

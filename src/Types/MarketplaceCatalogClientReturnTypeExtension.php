@@ -251,6 +251,7 @@ final class MarketplaceCatalogClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('SaaSProductSummary'),
                     new \PHPStan\Type\Constant\ConstantStringType('OfferSummary'),
                     new \PHPStan\Type\Constant\ConstantStringType('ResaleAuthorizationSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MachineLearningProductSummary'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -362,6 +363,18 @@ final class MarketplaceCatalogClientReturnTypeExtension implements \PHPStan\Type
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProductTitle'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Visibility'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Limited'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Public'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Restricted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Draft'),
+                        ]),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),

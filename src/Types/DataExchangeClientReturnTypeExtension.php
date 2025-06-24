@@ -240,6 +240,7 @@ final class DataExchangeClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
                 new \PHPStan\Type\Constant\ConstantStringType('Event'),
                 new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                 new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
             ], [
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -280,6 +281,7 @@ final class DataExchangeClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     ]),
                 ]),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
         ]);
@@ -894,6 +896,7 @@ final class DataExchangeClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
                 new \PHPStan\Type\Constant\ConstantStringType('Event'),
                 new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                 new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
             ], [
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -934,6 +937,7 @@ final class DataExchangeClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     ]),
                 ]),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
         ]);

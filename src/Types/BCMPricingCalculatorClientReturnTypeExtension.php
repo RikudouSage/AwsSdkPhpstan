@@ -899,6 +899,7 @@ final class BCMPricingCalculatorClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('BEFORE_DISCOUNTS'),
                     new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS_AND_COMMITMENTS'),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\UnionType([
@@ -1051,14 +1052,17 @@ final class BCMPricingCalculatorClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('BEFORE_DISCOUNTS'),
                     new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS_AND_COMMITMENTS'),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('BEFORE_DISCOUNTS'),
                     new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS_AND_COMMITMENTS'),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('BEFORE_DISCOUNTS'),
                     new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS_AND_COMMITMENTS'),
                 ])),
             ]),
         ]);
@@ -1085,6 +1089,7 @@ final class BCMPricingCalculatorClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('BEFORE_DISCOUNTS'),
                     new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS_AND_COMMITMENTS'),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\UnionType([
@@ -1741,6 +1746,7 @@ final class BCMPricingCalculatorClientReturnTypeExtension implements \PHPStan\Ty
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('BEFORE_DISCOUNTS'),
                         new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS_AND_COMMITMENTS'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\UnionType([
@@ -1889,14 +1895,17 @@ final class BCMPricingCalculatorClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('BEFORE_DISCOUNTS'),
                     new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS_AND_COMMITMENTS'),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('BEFORE_DISCOUNTS'),
                     new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS_AND_COMMITMENTS'),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('BEFORE_DISCOUNTS'),
                     new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS_AND_COMMITMENTS'),
                 ])),
             ]),
         ]);
@@ -1923,6 +1932,7 @@ final class BCMPricingCalculatorClientReturnTypeExtension implements \PHPStan\Ty
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('BEFORE_DISCOUNTS'),
                     new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AFTER_DISCOUNTS_AND_COMMITMENTS'),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\UnionType([

@@ -111,6 +111,7 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
             'putObjectRetention',
             'putObjectTagging',
             'putPublicAccessBlock',
+            'renameObject',
             'restoreObject',
             'selectObjectContent',
             'uploadPart',
@@ -219,6 +220,7 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
             'putObjectRetention' => $this->putObjectRetention(),
             'putObjectTagging' => $this->putObjectTagging(),
             'putPublicAccessBlock' => $this->putPublicAccessBlock(),
+            'renameObject' => $this->renameObject(),
             'restoreObject' => $this->restoreObject(),
             'selectObjectContent' => $this->selectObjectContent(),
             'uploadPart' => $this->uploadPart(),
@@ -2435,6 +2437,7 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\Constant\ConstantStringType('RequestCharged'),
                 new \PHPStan\Type\Constant\ConstantStringType('ReplicationStatus'),
                 new \PHPStan\Type\Constant\ConstantStringType('PartsCount'),
+                new \PHPStan\Type\Constant\ConstantStringType('TagCount'),
                 new \PHPStan\Type\Constant\ConstantStringType('ObjectLockMode'),
                 new \PHPStan\Type\Constant\ConstantStringType('ObjectLockRetainUntilDate'),
                 new \PHPStan\Type\Constant\ConstantStringType('ObjectLockLegalHoldStatus'),
@@ -2500,6 +2503,7 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                     new \PHPStan\Type\Constant\ConstantStringType('REPLICA'),
                     new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
                 ]),
+                new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('GOVERNANCE'),
@@ -3538,6 +3542,12 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
+    private function renameObject(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([], []),
         ]);
     }
     private function restoreObject(): ?\PHPStan\Type\Type

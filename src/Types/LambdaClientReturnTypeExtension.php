@@ -346,13 +346,77 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('ReportBatchItemFailures')),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryURI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventRecordFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessConfigs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaValidationConfigs'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VALUE'),
+                            ]),
+                        ])),
+                    ]),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryURI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventRecordFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessConfigs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaValidationConfigs'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VALUE'),
+                            ]),
+                        ])),
+                    ]),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('MaximumConcurrency'),
@@ -859,13 +923,77 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('ReportBatchItemFailures')),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryURI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventRecordFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessConfigs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaValidationConfigs'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VALUE'),
+                            ]),
+                        ])),
+                    ]),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryURI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventRecordFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessConfigs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaValidationConfigs'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VALUE'),
+                            ]),
+                        ])),
+                    ]),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('MaximumConcurrency'),
@@ -1146,13 +1274,77 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('ReportBatchItemFailures')),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryURI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventRecordFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessConfigs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaValidationConfigs'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VALUE'),
+                            ]),
+                        ])),
+                    ]),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryURI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventRecordFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessConfigs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaValidationConfigs'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VALUE'),
+                            ]),
+                        ])),
+                    ]),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('MaximumConcurrency'),
@@ -2429,13 +2621,77 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('ReportBatchItemFailures')),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryConfig'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryURI'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EventRecordFormat'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessConfigs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SchemaValidationConfigs'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VALUE'),
+                                ]),
+                            ])),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryConfig'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryURI'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EventRecordFormat'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessConfigs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SchemaValidationConfigs'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('KEY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VALUE'),
+                                ]),
+                            ])),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('MaximumConcurrency'),
@@ -4082,13 +4338,77 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('ReportBatchItemFailures')),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryURI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventRecordFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessConfigs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaValidationConfigs'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VALUE'),
+                            ]),
+                        ])),
+                    ]),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaRegistryURI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EventRecordFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessConfigs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaValidationConfigs'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VALUE'),
+                            ]),
+                        ])),
+                    ]),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('MaximumConcurrency'),

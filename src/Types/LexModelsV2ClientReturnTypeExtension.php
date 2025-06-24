@@ -593,6 +593,7 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('slotResolutionImprovement'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nluImprovement'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('enabled'),
@@ -619,6 +620,11 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 ]),
                                 new \PHPStan\Type\StringType(),
                             ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11316,6 +11322,7 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('slotResolutionImprovement'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nluImprovement'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('enabled'),
@@ -11342,6 +11349,11 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 ]),
                                 new \PHPStan\Type\StringType(),
                             ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -24608,6 +24620,7 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('slotResolutionImprovement'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nluImprovement'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('enabled'),
@@ -24634,6 +24647,11 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 ]),
                                 new \PHPStan\Type\StringType(),
                             ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([

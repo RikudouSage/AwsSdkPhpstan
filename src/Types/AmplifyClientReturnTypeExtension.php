@@ -131,6 +131,7 @@ final class AmplifyClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('cacheConfig'),
                     new \PHPStan\Type\Constant\ConstantStringType('webhookCreateTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('wafConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -236,6 +237,15 @@ final class AmplifyClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantStringType('DISASSOCIATION_FAILED'),
                         ]),
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('buildComputeType'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_8GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LARGE_16GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('XLARGE_72GB'),
+                        ]),
                     ]),
                 ]),
             ]),
@@ -502,6 +512,7 @@ final class AmplifyClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('cacheConfig'),
                     new \PHPStan\Type\Constant\ConstantStringType('webhookCreateTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('wafConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -607,6 +618,15 @@ final class AmplifyClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantStringType('DISASSOCIATION_FAILED'),
                         ]),
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('buildComputeType'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_8GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LARGE_16GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('XLARGE_72GB'),
+                        ]),
                     ]),
                 ]),
             ]),
@@ -920,6 +940,7 @@ final class AmplifyClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('cacheConfig'),
                     new \PHPStan\Type\Constant\ConstantStringType('webhookCreateTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('wafConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1025,6 +1046,15 @@ final class AmplifyClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantStringType('DISASSOCIATION_FAILED'),
                         ]),
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('buildComputeType'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_8GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LARGE_16GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('XLARGE_72GB'),
+                        ]),
                     ]),
                 ]),
             ]),
@@ -1380,6 +1410,7 @@ final class AmplifyClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('cacheConfig'),
                     new \PHPStan\Type\Constant\ConstantStringType('webhookCreateTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('wafConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1485,6 +1516,15 @@ final class AmplifyClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantStringType('DISASSOCIATION_FAILED'),
                         ]),
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('buildComputeType'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_8GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LARGE_16GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('XLARGE_72GB'),
+                        ]),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1992,6 +2032,7 @@ final class AmplifyClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('cacheConfig'),
                     new \PHPStan\Type\Constant\ConstantStringType('webhookCreateTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('wafConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2097,6 +2138,15 @@ final class AmplifyClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantStringType('DISASSOCIATION_FAILED'),
                         ]),
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('buildComputeType'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_8GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LARGE_16GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('XLARGE_72GB'),
+                        ]),
                     ]),
                 ]),
             ]),

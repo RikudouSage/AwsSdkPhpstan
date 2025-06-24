@@ -2445,6 +2445,7 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('Confidence'),
                 new \PHPStan\Type\Constant\ConstantStringType('ReferenceImage'),
                 new \PHPStan\Type\Constant\ConstantStringType('AuditImages'),
+                new \PHPStan\Type\Constant\ConstantStringType('Challenge'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
@@ -2517,6 +2518,16 @@ final class RekognitionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\FloatType(),
                     ]),
                 ])),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FaceMovementAndLightChallenge'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FaceMovementChallenge'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ]),
             ]),
         ]);
     }

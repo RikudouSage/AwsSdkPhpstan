@@ -19,6 +19,7 @@ final class EmrClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'addJobFlowSteps',
             'addTags',
             'cancelSteps',
+            'createPersistentAppUI',
             'createSecurityConfiguration',
             'createStudio',
             'createStudioSessionMapping',
@@ -28,6 +29,7 @@ final class EmrClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'describeCluster',
             'describeJobFlows',
             'describeNotebookExecution',
+            'describePersistentAppUI',
             'describeReleaseLabel',
             'describeSecurityConfiguration',
             'describeStep',
@@ -36,6 +38,8 @@ final class EmrClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'getBlockPublicAccessConfiguration',
             'getClusterSessionCredentials',
             'getManagedScalingPolicy',
+            'getOnClusterAppUIPresignedURL',
+            'getPersistentAppUIPresignedURL',
             'getStudioSessionMapping',
             'listBootstrapActions',
             'listClusters',
@@ -81,6 +85,7 @@ final class EmrClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'addJobFlowSteps' => $this->addJobFlowSteps(),
             'addTags' => $this->addTags(),
             'cancelSteps' => $this->cancelSteps(),
+            'createPersistentAppUI' => $this->createPersistentAppUI(),
             'createSecurityConfiguration' => $this->createSecurityConfiguration(),
             'createStudio' => $this->createStudio(),
             'createStudioSessionMapping' => $this->createStudioSessionMapping(),
@@ -90,6 +95,7 @@ final class EmrClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'describeCluster' => $this->describeCluster(),
             'describeJobFlows' => $this->describeJobFlows(),
             'describeNotebookExecution' => $this->describeNotebookExecution(),
+            'describePersistentAppUI' => $this->describePersistentAppUI(),
             'describeReleaseLabel' => $this->describeReleaseLabel(),
             'describeSecurityConfiguration' => $this->describeSecurityConfiguration(),
             'describeStep' => $this->describeStep(),
@@ -98,6 +104,8 @@ final class EmrClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'getBlockPublicAccessConfiguration' => $this->getBlockPublicAccessConfiguration(),
             'getClusterSessionCredentials' => $this->getClusterSessionCredentials(),
             'getManagedScalingPolicy' => $this->getManagedScalingPolicy(),
+            'getOnClusterAppUIPresignedURL' => $this->getOnClusterAppUIPresignedURL(),
+            'getPersistentAppUIPresignedURL' => $this->getPersistentAppUIPresignedURL(),
             'getStudioSessionMapping' => $this->getStudioSessionMapping(),
             'listBootstrapActions' => $this->listBootstrapActions(),
             'listClusters' => $this->listClusters(),
@@ -196,6 +204,18 @@ final class EmrClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ]),
                     new \PHPStan\Type\StringType(),
                 ])),
+            ]),
+        ]);
+    }
+    private function createPersistentAppUI(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('PersistentAppUIId'),
+                new \PHPStan\Type\Constant\ConstantStringType('RuntimeRoleEnabledCluster'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\BooleanType(),
             ]),
         ]);
     }
@@ -771,6 +791,44 @@ final class EmrClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             ]),
         ]);
     }
+    private function describePersistentAppUI(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('PersistentAppUI'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PersistentAppUIId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PersistentAppUITypeList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PersistentAppUIStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AuthorId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastStateChangeReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SHS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TEZ'),
+                        new \PHPStan\Type\Constant\ConstantStringType('YTS'),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ]),
+            ]),
+        ]);
+    }
     private function describeReleaseLabel(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1056,6 +1114,30 @@ final class EmrClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('ADVANCED'),
                     ]),
                 ]),
+            ]),
+        ]);
+    }
+    private function getOnClusterAppUIPresignedURL(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('PresignedURLReady'),
+                new \PHPStan\Type\Constant\ConstantStringType('PresignedURL'),
+            ], [
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getPersistentAppUIPresignedURL(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('PresignedURLReady'),
+                new \PHPStan\Type\Constant\ConstantStringType('PresignedURL'),
+            ], [
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }

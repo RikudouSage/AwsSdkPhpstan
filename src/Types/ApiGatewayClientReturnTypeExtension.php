@@ -444,6 +444,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('ownershipVerificationCertificateArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('managementPolicy'),
                 new \PHPStan\Type\Constant\ConstantStringType('policy'),
+                new \PHPStan\Type\Constant\ConstantStringType('routingMode'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -498,6 +499,11 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('BASE_PATH_MAPPING_ONLY'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROUTING_RULE_ONLY'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROUTING_RULE_THEN_BASE_PATH_MAPPING'),
+                ]),
             ]),
         ]);
     }
@@ -1511,6 +1517,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('ownershipVerificationCertificateArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('managementPolicy'),
                 new \PHPStan\Type\Constant\ConstantStringType('policy'),
+                new \PHPStan\Type\Constant\ConstantStringType('routingMode'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1565,6 +1572,11 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('BASE_PATH_MAPPING_ONLY'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROUTING_RULE_ONLY'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROUTING_RULE_THEN_BASE_PATH_MAPPING'),
+                ]),
             ]),
         ]);
     }
@@ -1622,6 +1634,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('ownershipVerificationCertificateArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('managementPolicy'),
                     new \PHPStan\Type\Constant\ConstantStringType('policy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('routingMode'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1676,6 +1689,11 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BASE_PATH_MAPPING_ONLY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROUTING_RULE_ONLY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROUTING_RULE_THEN_BASE_PATH_MAPPING'),
+                    ]),
                 ])),
             ]),
         ]);
@@ -3604,6 +3622,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('ownershipVerificationCertificateArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('managementPolicy'),
                 new \PHPStan\Type\Constant\ConstantStringType('policy'),
+                new \PHPStan\Type\Constant\ConstantStringType('routingMode'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -3658,6 +3677,11 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('BASE_PATH_MAPPING_ONLY'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROUTING_RULE_ONLY'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROUTING_RULE_THEN_BASE_PATH_MAPPING'),
+                ]),
             ]),
         ]);
     }

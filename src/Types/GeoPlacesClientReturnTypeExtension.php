@@ -70,6 +70,7 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('PointOfInterest'),
                         new \PHPStan\Type\Constant\ConstantStringType('PointAddress'),
                         new \PHPStan\Type\Constant\ConstantStringType('InterpolatedAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddress'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -88,6 +89,7 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('StreetComponents'),
                         new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
                         new \PHPStan\Type\Constant\ConstantStringType('Building'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddressComponents'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -145,6 +147,11 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
@@ -376,6 +383,10 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('TimeZone'),
                     new \PHPStan\Type\Constant\ConstantStringType('PoliticalView'),
                     new \PHPStan\Type\Constant\ConstantStringType('MatchScores'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ParsedQuery'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Intersections'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MainAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddresses'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -393,6 +404,7 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('PointOfInterest'),
                         new \PHPStan\Type\Constant\ConstantStringType('PointAddress'),
                         new \PHPStan\Type\Constant\ConstantStringType('InterpolatedAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddress'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -411,6 +423,7 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('StreetComponents'),
                         new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
                         new \PHPStan\Type\Constant\ConstantStringType('Building'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddressComponents'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -468,6 +481,11 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -566,6 +584,7 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('Intersection'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Building'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddressComponents'),
                             ], [
                                 new \PHPStan\Type\FloatType(),
                                 new \PHPStan\Type\FloatType(),
@@ -579,9 +598,521 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
                                 new \PHPStan\Type\FloatType(),
                                 new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                ])),
                             ]),
                         ]),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('StartIndex'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndIndex'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('QueryComponent'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubRegion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Locality'),
+                            new \PHPStan\Type\Constant\ConstantStringType('District'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubDistrict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Block'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubBlock'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Street'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Building'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddressComponents'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StartIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('QueryComponent'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StartIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('QueryComponent'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StartIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('QueryComponent'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StartIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('QueryComponent'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StartIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('QueryComponent'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StartIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('QueryComponent'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StartIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('QueryComponent'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StartIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('QueryComponent'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StartIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('QueryComponent'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StartIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('QueryComponent'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StartIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('QueryComponent'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StartIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('QueryComponent'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StartIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EndIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Designator'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PlaceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Position'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Distance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RouteDistance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MapView'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessPoints'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Label'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubRegion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Locality'),
+                            new \PHPStan\Type\Constant\ConstantStringType('District'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubDistrict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Block'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubBlock'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Intersection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Street'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StreetComponents'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Building'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddressComponents'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Code2'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Code3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BaseName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TypePlacement'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TypeSeparator'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Suffix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Direction'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Language'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('BeforeBaseName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AfterBaseName'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Position'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
+                        ])),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PlaceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PlaceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Position'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessPoints'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubRegion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Locality'),
+                            new \PHPStan\Type\Constant\ConstantStringType('District'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubDistrict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Block'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubBlock'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Intersection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Street'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PointOfInterest'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PointAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InterpolatedAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddress'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Label'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubRegion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Locality'),
+                            new \PHPStan\Type\Constant\ConstantStringType('District'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubDistrict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Block'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubBlock'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Intersection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Street'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StreetComponents'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Building'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddressComponents'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Code2'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Code3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BaseName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TypePlacement'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TypeSeparator'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Suffix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Direction'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Language'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('BeforeBaseName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AfterBaseName'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Position'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PlaceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PlaceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Position'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessPoints'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubRegion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Locality'),
+                            new \PHPStan\Type\Constant\ConstantStringType('District'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubDistrict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Block'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubBlock'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Intersection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Street'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PointOfInterest'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PointAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InterpolatedAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddress'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Label'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubRegion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Locality'),
+                            new \PHPStan\Type\Constant\ConstantStringType('District'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubDistrict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Block'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubBlock'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Intersection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Street'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StreetComponents'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Building'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddressComponents'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Code2'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Code3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BaseName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TypePlacement'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TypeSeparator'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Suffix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Direction'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Language'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('BeforeBaseName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AfterBaseName'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Position'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
+                        ])),
+                    ])),
                 ])),
             ]),
         ]);
@@ -609,6 +1140,8 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('TimeZone'),
                 new \PHPStan\Type\Constant\ConstantStringType('PoliticalView'),
                 new \PHPStan\Type\Constant\ConstantStringType('Phonemes'),
+                new \PHPStan\Type\Constant\ConstantStringType('MainAddress'),
+                new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddresses'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
@@ -626,6 +1159,7 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('PointOfInterest'),
                     new \PHPStan\Type\Constant\ConstantStringType('PointAddress'),
                     new \PHPStan\Type\Constant\ConstantStringType('InterpolatedAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddress'),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -645,6 +1179,7 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('StreetComponents'),
                     new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
                     new \PHPStan\Type\Constant\ConstantStringType('Building'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddressComponents'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -702,6 +1237,11 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1019,32 +1559,13 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         ])),
                     ]),
                 ]),
-            ]),
-        ]);
-    }
-    private function reverseGeocode(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('PricingBucket'),
-                new \PHPStan\Type\Constant\ConstantStringType('ResultItems'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('PlaceId'),
                     new \PHPStan\Type\Constant\ConstantStringType('PlaceType'),
                     new \PHPStan\Type\Constant\ConstantStringType('Title'),
                     new \PHPStan\Type\Constant\ConstantStringType('Address'),
-                    new \PHPStan\Type\Constant\ConstantStringType('AddressNumberCorrected'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PostalCodeDetails'),
                     new \PHPStan\Type\Constant\ConstantStringType('Position'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Distance'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MapView'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Categories'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FoodTypes'),
                     new \PHPStan\Type\Constant\ConstantStringType('AccessPoints'),
-                    new \PHPStan\Type\Constant\ConstantStringType('TimeZone'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PoliticalView'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -1062,6 +1583,7 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('PointOfInterest'),
                         new \PHPStan\Type\Constant\ConstantStringType('PointAddress'),
                         new \PHPStan\Type\Constant\ConstantStringType('InterpolatedAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddress'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1080,6 +1602,7 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('StreetComponents'),
                         new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
                         new \PHPStan\Type\Constant\ConstantStringType('Building'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddressComponents'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1137,6 +1660,259 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Position'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
+                    ])),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PlaceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PlaceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Position'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AccessPoints'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubRegion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Locality'),
+                        new \PHPStan\Type\Constant\ConstantStringType('District'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubDistrict'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Block'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubBlock'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Intersection'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Street'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PointOfInterest'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PointAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InterpolatedAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddress'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Label'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubRegion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Locality'),
+                        new \PHPStan\Type\Constant\ConstantStringType('District'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubDistrict'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Block'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubBlock'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Intersection'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Street'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StreetComponents'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Building'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddressComponents'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Code3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BaseName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TypePlacement'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TypeSeparator'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Suffix'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Direction'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Language'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BeforeBaseName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AfterBaseName'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Position'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
+                    ])),
+                ])),
+            ]),
+        ]);
+    }
+    private function reverseGeocode(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('PricingBucket'),
+                new \PHPStan\Type\Constant\ConstantStringType('ResultItems'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PlaceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PlaceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AddressNumberCorrected'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PostalCodeDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Position'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Distance'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MapView'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Categories'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FoodTypes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AccessPoints'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TimeZone'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PoliticalView'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Intersections'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubRegion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Locality'),
+                        new \PHPStan\Type\Constant\ConstantStringType('District'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubDistrict'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Block'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubBlock'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Intersection'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Street'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PointOfInterest'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PointAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InterpolatedAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddress'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Label'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubRegion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Locality'),
+                        new \PHPStan\Type\Constant\ConstantStringType('District'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubDistrict'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Block'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubBlock'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Intersection'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Street'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StreetComponents'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Building'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddressComponents'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Code3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BaseName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TypePlacement'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TypeSeparator'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Suffix'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Direction'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Language'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BeforeBaseName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AfterBaseName'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1212,6 +1988,108 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\IntegerType(),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PlaceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Position'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Distance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RouteDistance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MapView'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessPoints'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Label'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Country'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubRegion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Locality'),
+                            new \PHPStan\Type\Constant\ConstantStringType('District'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubDistrict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Block'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubBlock'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Intersection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Street'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StreetComponents'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Building'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddressComponents'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Code2'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Code3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BaseName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TypePlacement'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TypeSeparator'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Suffix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Direction'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Language'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('BeforeBaseName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AfterBaseName'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Position'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
+                        ])),
+                    ])),
                 ])),
             ]),
         ]);
@@ -1261,6 +2139,7 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('PointOfInterest'),
                         new \PHPStan\Type\Constant\ConstantStringType('PointAddress'),
                         new \PHPStan\Type\Constant\ConstantStringType('InterpolatedAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddress'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1279,6 +2158,7 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('StreetComponents'),
                         new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
                         new \PHPStan\Type\Constant\ConstantStringType('Building'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddressComponents'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1336,6 +2216,11 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
@@ -1669,6 +2554,7 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('PointOfInterest'),
                         new \PHPStan\Type\Constant\ConstantStringType('PointAddress'),
                         new \PHPStan\Type\Constant\ConstantStringType('InterpolatedAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddress'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1687,6 +2573,7 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('StreetComponents'),
                         new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
                         new \PHPStan\Type\Constant\ConstantStringType('Building'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddressComponents'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1744,6 +2631,11 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
@@ -2085,6 +2977,7 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('PointOfInterest'),
                             new \PHPStan\Type\Constant\ConstantStringType('PointAddress'),
                             new \PHPStan\Type\Constant\ConstantStringType('InterpolatedAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddress'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Label'),
@@ -2102,6 +2995,7 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('StreetComponents'),
                             new \PHPStan\Type\Constant\ConstantStringType('AddressNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('Building'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecondaryAddressComponents'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2159,6 +3053,11 @@ final class GeoPlacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Number'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
                         new \PHPStan\Type\IntegerType(),

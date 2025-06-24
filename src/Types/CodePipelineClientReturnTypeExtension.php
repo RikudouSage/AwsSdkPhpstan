@@ -32,6 +32,7 @@ final class CodePipelineClientReturnTypeExtension implements \PHPStan\Type\Dynam
             'getThirdPartyJobDetails',
             'listActionExecutions',
             'listActionTypes',
+            'listDeployActionExecutionTargets',
             'listPipelineExecutions',
             'listPipelines',
             'listRuleExecutions',
@@ -81,6 +82,7 @@ final class CodePipelineClientReturnTypeExtension implements \PHPStan\Type\Dynam
             'getThirdPartyJobDetails' => $this->getThirdPartyJobDetails(),
             'listActionExecutions' => $this->listActionExecutions(),
             'listActionTypes' => $this->listActionTypes(),
+            'listDeployActionExecutionTargets' => $this->listDeployActionExecutionTargets(),
             'listPipelineExecutions' => $this->listPipelineExecutions(),
             'listPipelines' => $this->listPipelines(),
             'listRuleExecutions' => $this->listRuleExecutions(),
@@ -367,9 +369,14 @@ final class CodePipelineClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('name'),
                                 new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PLAINTEXT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SECRETS_MANAGER'),
+                                ]),
                             ])),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1046,9 +1053,14 @@ final class CodePipelineClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('name'),
                                 new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PLAINTEXT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SECRETS_MANAGER'),
+                                ]),
                             ])),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2207,6 +2219,50 @@ final class CodePipelineClientReturnTypeExtension implements \PHPStan\Type\Dynam
             ]),
         ]);
     }
+    private function listDeployActionExecutionTargets(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('targets'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('targetId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('targetType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('events'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('context'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ssmCommandId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function listPipelineExecutions(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -3032,9 +3088,14 @@ final class CodePipelineClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('name'),
                                 new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PLAINTEXT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SECRETS_MANAGER'),
+                                ]),
                             ])),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([

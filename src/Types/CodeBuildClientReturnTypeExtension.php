@@ -435,6 +435,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('certificate'),
                         new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
                         new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dockerServer'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
@@ -511,6 +512,34 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
                             new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -991,6 +1020,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('certificate'),
                         new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
                         new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dockerServer'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
@@ -1067,6 +1097,34 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
                             new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -1696,6 +1754,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('certificate'),
                         new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
                         new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dockerServer'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
@@ -1772,6 +1831,34 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
                             new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -2278,6 +2365,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('certificate'),
                         new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
                         new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dockerServer'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
@@ -2354,6 +2442,34 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
                             new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2946,6 +3062,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('certificate'),
                         new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
                         new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dockerServer'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
@@ -3022,6 +3139,34 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
                             new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -4141,6 +4286,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('certificate'),
                         new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
                         new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dockerServer'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
@@ -4217,6 +4363,34 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
                             new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -4608,6 +4782,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('certificate'),
                         new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
                         new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dockerServer'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
@@ -4684,6 +4859,34 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
                             new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -5162,6 +5365,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('certificate'),
                         new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
                         new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dockerServer'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
@@ -5238,6 +5442,34 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
                             new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -5629,6 +5861,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('certificate'),
                         new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
                         new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dockerServer'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
@@ -5705,6 +5938,34 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
                             new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -6144,6 +6405,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('certificate'),
                         new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
                         new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dockerServer'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
@@ -6220,6 +6482,34 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
                             new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -6688,6 +6978,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('certificate'),
                         new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
                         new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dockerServer'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
@@ -6764,6 +7055,34 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
                             new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -7155,6 +7474,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('certificate'),
                         new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
                         new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dockerServer'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
@@ -7231,6 +7551,34 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
                             new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -7586,6 +7934,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('certificate'),
                         new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
                         new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dockerServer'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
@@ -7662,6 +8011,34 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
                             new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -8253,6 +8630,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('certificate'),
                         new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
                         new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dockerServer'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
@@ -8329,6 +8707,34 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
                             new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\StringType(),

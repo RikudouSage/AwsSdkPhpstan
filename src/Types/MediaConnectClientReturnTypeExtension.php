@@ -349,6 +349,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('BridgePorts'),
                     new \PHPStan\Type\Constant\ConstantStringType('OutputStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeerIpAddress'),
                 ], [
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
@@ -484,6 +485,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -512,6 +514,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
                     new \PHPStan\Type\Constant\ConstantStringType('WhitelistCidr'),
                     new \PHPStan\Type\Constant\ConstantStringType('GatewayBridgeSource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeerIpAddress'),
                 ], [
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -636,6 +639,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\StringType(),
                         ]),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1014,6 +1018,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('BridgePorts'),
                         new \PHPStan\Type\Constant\ConstantStringType('OutputStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PeerIpAddress'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
@@ -1149,6 +1154,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
@@ -1166,6 +1172,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
                         new \PHPStan\Type\Constant\ConstantStringType('WhitelistCidr'),
                         new \PHPStan\Type\Constant\ConstantStringType('GatewayBridgeSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PeerIpAddress'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1290,6 +1297,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\StringType(),
                             ]),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('FailoverMode'),
@@ -1328,6 +1336,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
                         new \PHPStan\Type\Constant\ConstantStringType('WhitelistCidr'),
                         new \PHPStan\Type\Constant\ConstantStringType('GatewayBridgeSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PeerIpAddress'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1452,6 +1461,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\StringType(),
                             ]),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('STANDBY'),
@@ -2031,6 +2041,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('BridgePorts'),
                         new \PHPStan\Type\Constant\ConstantStringType('OutputStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PeerIpAddress'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
@@ -2166,6 +2177,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
@@ -2183,6 +2195,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
                         new \PHPStan\Type\Constant\ConstantStringType('WhitelistCidr'),
                         new \PHPStan\Type\Constant\ConstantStringType('GatewayBridgeSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PeerIpAddress'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2307,6 +2320,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\StringType(),
                             ]),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('FailoverMode'),
@@ -2345,6 +2359,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
                         new \PHPStan\Type\Constant\ConstantStringType('WhitelistCidr'),
                         new \PHPStan\Type\Constant\ConstantStringType('GatewayBridgeSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PeerIpAddress'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2469,6 +2484,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\StringType(),
                             ]),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('STANDBY'),
@@ -3864,6 +3880,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('BridgePorts'),
                         new \PHPStan\Type\Constant\ConstantStringType('OutputStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PeerIpAddress'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
@@ -3999,6 +4016,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
@@ -4016,6 +4034,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
                         new \PHPStan\Type\Constant\ConstantStringType('WhitelistCidr'),
                         new \PHPStan\Type\Constant\ConstantStringType('GatewayBridgeSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PeerIpAddress'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4140,6 +4159,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\StringType(),
                             ]),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('FailoverMode'),
@@ -4178,6 +4198,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
                         new \PHPStan\Type\Constant\ConstantStringType('WhitelistCidr'),
                         new \PHPStan\Type\Constant\ConstantStringType('GatewayBridgeSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PeerIpAddress'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4302,6 +4323,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\StringType(),
                             ]),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('STANDBY'),
@@ -4597,6 +4619,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('BridgePorts'),
                     new \PHPStan\Type\Constant\ConstantStringType('OutputStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeerIpAddress'),
                 ], [
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
@@ -4732,6 +4755,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ]),
             ]),
         ]);
@@ -4760,6 +4784,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
                     new \PHPStan\Type\Constant\ConstantStringType('WhitelistCidr'),
                     new \PHPStan\Type\Constant\ConstantStringType('GatewayBridgeSource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeerIpAddress'),
                 ], [
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4884,6 +4909,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\StringType(),
                         ]),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ]),
             ]),
         ]);

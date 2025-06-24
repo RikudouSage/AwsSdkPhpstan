@@ -936,6 +936,7 @@ final class DeadlineClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('minWorkerCount'),
                 new \PHPStan\Type\Constant\ConstantStringType('maxWorkerCount'),
                 new \PHPStan\Type\Constant\ConstantStringType('configuration'),
+                new \PHPStan\Type\Constant\ConstantStringType('hostConfiguration'),
                 new \PHPStan\Type\Constant\ConstantStringType('capabilities'),
                 new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
@@ -1052,6 +1053,7 @@ final class DeadlineClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('instanceCapabilities'),
                         new \PHPStan\Type\Constant\ConstantStringType('instanceMarketOptions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('storageProfileId'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('vCpuCount'),
@@ -1147,7 +1149,15 @@ final class DeadlineClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 new \PHPStan\Type\Constant\ConstantStringType('spot'),
                             ]),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('scriptBody'),
+                    new \PHPStan\Type\Constant\ConstantStringType('scriptTimeoutSeconds'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('amounts'),
@@ -2413,6 +2423,7 @@ final class DeadlineClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('instanceCapabilities'),
                             new \PHPStan\Type\Constant\ConstantStringType('instanceMarketOptions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('storageProfileId'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('vCpuCount'),
@@ -2508,6 +2519,7 @@ final class DeadlineClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                     new \PHPStan\Type\Constant\ConstantStringType('spot'),
                                 ]),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -3853,6 +3865,7 @@ final class DeadlineClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('log'),
+                new \PHPStan\Type\Constant\ConstantStringType('hostConfiguration'),
             ], [
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('logDriver'),
@@ -3864,6 +3877,13 @@ final class DeadlineClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('scriptBody'),
+                    new \PHPStan\Type\Constant\ConstantStringType('scriptTimeoutSeconds'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ]),
             ]),
         ]);

@@ -15,6 +15,7 @@ final class ServiceQuotasClientReturnTypeExtension implements \PHPStan\Type\Dyna
     {
         return in_array($methodReflection->getName(), [
             'associateServiceQuotaTemplate',
+            'createSupportCase',
             'deleteServiceQuotaIncreaseRequestFromTemplate',
             'disassociateServiceQuotaTemplate',
             'getAWSDefaultServiceQuota',
@@ -40,6 +41,7 @@ final class ServiceQuotasClientReturnTypeExtension implements \PHPStan\Type\Dyna
         return match ((string) $methodCall->name) {
             default => throw new \RuntimeException('Unsupported method'),
             'associateServiceQuotaTemplate' => $this->associateServiceQuotaTemplate(),
+            'createSupportCase' => $this->createSupportCase(),
             'deleteServiceQuotaIncreaseRequestFromTemplate' => $this->deleteServiceQuotaIncreaseRequestFromTemplate(),
             'disassociateServiceQuotaTemplate' => $this->disassociateServiceQuotaTemplate(),
             'getAWSDefaultServiceQuota' => $this->getAWSDefaultServiceQuota(),
@@ -61,6 +63,12 @@ final class ServiceQuotasClientReturnTypeExtension implements \PHPStan\Type\Dyna
         };
     }
     private function associateServiceQuotaTemplate(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+        ]);
+    }
+    private function createSupportCase(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([], []),

@@ -14,25 +14,34 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
     public function isMethodSupported(\PHPStan\Reflection\MethodReflection $methodReflection): bool
     {
         return in_array($methodReflection->getName(), [
+            'acceptNetworkFirewallTransitGatewayAttachment',
+            'associateAvailabilityZones',
             'associateFirewallPolicy',
             'associateSubnets',
             'createFirewall',
             'createFirewallPolicy',
             'createRuleGroup',
             'createTLSInspectionConfiguration',
+            'createVpcEndpointAssociation',
             'deleteFirewall',
             'deleteFirewallPolicy',
+            'deleteNetworkFirewallTransitGatewayAttachment',
             'deleteResourcePolicy',
             'deleteRuleGroup',
             'deleteTLSInspectionConfiguration',
+            'deleteVpcEndpointAssociation',
             'describeFirewall',
+            'describeFirewallMetadata',
             'describeFirewallPolicy',
             'describeFlowOperation',
             'describeLoggingConfiguration',
             'describeResourcePolicy',
             'describeRuleGroup',
             'describeRuleGroupMetadata',
+            'describeRuleGroupSummary',
             'describeTLSInspectionConfiguration',
+            'describeVpcEndpointAssociation',
+            'disassociateAvailabilityZones',
             'disassociateSubnets',
             'getAnalysisReportResults',
             'listAnalysisReports',
@@ -43,12 +52,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             'listRuleGroups',
             'listTLSInspectionConfigurations',
             'listTagsForResource',
+            'listVpcEndpointAssociations',
             'putResourcePolicy',
+            'rejectNetworkFirewallTransitGatewayAttachment',
             'startAnalysisReport',
             'startFlowCapture',
             'startFlowFlush',
             'tagResource',
             'untagResource',
+            'updateAvailabilityZoneChangeProtection',
             'updateFirewallAnalysisSettings',
             'updateFirewallDeleteProtection',
             'updateFirewallDescription',
@@ -65,25 +77,34 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
     {
         return match ((string) $methodCall->name) {
             default => throw new \RuntimeException('Unsupported method'),
+            'acceptNetworkFirewallTransitGatewayAttachment' => $this->acceptNetworkFirewallTransitGatewayAttachment(),
+            'associateAvailabilityZones' => $this->associateAvailabilityZones(),
             'associateFirewallPolicy' => $this->associateFirewallPolicy(),
             'associateSubnets' => $this->associateSubnets(),
             'createFirewall' => $this->createFirewall(),
             'createFirewallPolicy' => $this->createFirewallPolicy(),
             'createRuleGroup' => $this->createRuleGroup(),
             'createTLSInspectionConfiguration' => $this->createTLSInspectionConfiguration(),
+            'createVpcEndpointAssociation' => $this->createVpcEndpointAssociation(),
             'deleteFirewall' => $this->deleteFirewall(),
             'deleteFirewallPolicy' => $this->deleteFirewallPolicy(),
+            'deleteNetworkFirewallTransitGatewayAttachment' => $this->deleteNetworkFirewallTransitGatewayAttachment(),
             'deleteResourcePolicy' => $this->deleteResourcePolicy(),
             'deleteRuleGroup' => $this->deleteRuleGroup(),
             'deleteTLSInspectionConfiguration' => $this->deleteTLSInspectionConfiguration(),
+            'deleteVpcEndpointAssociation' => $this->deleteVpcEndpointAssociation(),
             'describeFirewall' => $this->describeFirewall(),
+            'describeFirewallMetadata' => $this->describeFirewallMetadata(),
             'describeFirewallPolicy' => $this->describeFirewallPolicy(),
             'describeFlowOperation' => $this->describeFlowOperation(),
             'describeLoggingConfiguration' => $this->describeLoggingConfiguration(),
             'describeResourcePolicy' => $this->describeResourcePolicy(),
             'describeRuleGroup' => $this->describeRuleGroup(),
             'describeRuleGroupMetadata' => $this->describeRuleGroupMetadata(),
+            'describeRuleGroupSummary' => $this->describeRuleGroupSummary(),
             'describeTLSInspectionConfiguration' => $this->describeTLSInspectionConfiguration(),
+            'describeVpcEndpointAssociation' => $this->describeVpcEndpointAssociation(),
+            'disassociateAvailabilityZones' => $this->disassociateAvailabilityZones(),
             'disassociateSubnets' => $this->disassociateSubnets(),
             'getAnalysisReportResults' => $this->getAnalysisReportResults(),
             'listAnalysisReports' => $this->listAnalysisReports(),
@@ -94,12 +115,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             'listRuleGroups' => $this->listRuleGroups(),
             'listTLSInspectionConfigurations' => $this->listTLSInspectionConfigurations(),
             'listTagsForResource' => $this->listTagsForResource(),
+            'listVpcEndpointAssociations' => $this->listVpcEndpointAssociations(),
             'putResourcePolicy' => $this->putResourcePolicy(),
+            'rejectNetworkFirewallTransitGatewayAttachment' => $this->rejectNetworkFirewallTransitGatewayAttachment(),
             'startAnalysisReport' => $this->startAnalysisReport(),
             'startFlowCapture' => $this->startFlowCapture(),
             'startFlowFlush' => $this->startFlowFlush(),
             'tagResource' => $this->tagResource(),
             'untagResource' => $this->untagResource(),
+            'updateAvailabilityZoneChangeProtection' => $this->updateAvailabilityZoneChangeProtection(),
             'updateFirewallAnalysisSettings' => $this->updateFirewallAnalysisSettings(),
             'updateFirewallDeleteProtection' => $this->updateFirewallDeleteProtection(),
             'updateFirewallDescription' => $this->updateFirewallDescription(),
@@ -111,6 +135,48 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             'updateSubnetChangeProtection' => $this->updateSubnetChangeProtection(),
             'updateTLSInspectionConfiguration' => $this->updateTLSInspectionConfiguration(),
         };
+    }
+    private function acceptNetworkFirewallTransitGatewayAttachment(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayAttachmentId'),
+                new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayAttachmentStatus'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                    new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PENDING_ACCEPTANCE'),
+                    new \PHPStan\Type\Constant\ConstantStringType('REJECTING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                ]),
+            ]),
+        ]);
+    }
+    private function associateAvailabilityZones(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('FirewallName'),
+                new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZoneMappings'),
+                new \PHPStan\Type\Constant\ConstantStringType('UpdateToken'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
     }
     private function associateFirewallPolicy(): ?\PHPStan\Type\Type
     {
@@ -174,7 +240,12 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('FirewallId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                     new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NumberOfAssociations'),
                     new \PHPStan\Type\Constant\ConstantStringType('EnabledAnalysisTypes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayOwnerAccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZoneMappings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZoneChangeProtection'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -213,16 +284,26 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('AWS_OWNED_KMS_KEY'),
                         ]),
                     ]),
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('TLS_SNI'),
                         new \PHPStan\Type\Constant\ConstantStringType('HTTP_HOST'),
                     ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\BooleanType(),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Status'),
                     new \PHPStan\Type\Constant\ConstantStringType('ConfigurationSyncStateSummary'),
                     new \PHPStan\Type\Constant\ConstantStringType('SyncStates'),
                     new \PHPStan\Type\Constant\ConstantStringType('CapacityUsageSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayAttachmentSyncState'),
                 ], [
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING'),
@@ -284,6 +365,25 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                                 new \PHPStan\Type\IntegerType(),
                             ])),
                         ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AttachmentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayAttachmentStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_ACCEPTANCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REJECTING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ]),
             ]),
@@ -368,6 +468,7 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('SnsTopic'),
                     new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('AnalysisResults'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SummaryConfiguration'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -423,6 +524,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         ]),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RuleOptions'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MSG'),
+                            new \PHPStan\Type\Constant\ConstantStringType('METADATA'),
+                        ])),
+                    ]),
                 ]),
             ]),
         ]);
@@ -502,6 +612,81 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             ]),
         ]);
     }
+    private function createVpcEndpointAssociation(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointAssociation'),
+                new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointAssociationStatus'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointAssociationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointAssociationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubnetMapping'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IPAddressType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationSyncState'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Attachment'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SCALING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                ]),
+            ]),
+        ]);
+    }
     private function deleteFirewall(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -522,7 +707,12 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('FirewallId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                     new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NumberOfAssociations'),
                     new \PHPStan\Type\Constant\ConstantStringType('EnabledAnalysisTypes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayOwnerAccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZoneMappings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZoneChangeProtection'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -561,16 +751,26 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('AWS_OWNED_KMS_KEY'),
                         ]),
                     ]),
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('TLS_SNI'),
                         new \PHPStan\Type\Constant\ConstantStringType('HTTP_HOST'),
                     ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\BooleanType(),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Status'),
                     new \PHPStan\Type\Constant\ConstantStringType('ConfigurationSyncStateSummary'),
                     new \PHPStan\Type\Constant\ConstantStringType('SyncStates'),
                     new \PHPStan\Type\Constant\ConstantStringType('CapacityUsageSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayAttachmentSyncState'),
                 ], [
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING'),
@@ -633,6 +833,25 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                             ])),
                         ]),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AttachmentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayAttachmentStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_ACCEPTANCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REJECTING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
                 ]),
             ]),
         ]);
@@ -690,6 +909,28 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             ]),
         ]);
     }
+    private function deleteNetworkFirewallTransitGatewayAttachment(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayAttachmentId'),
+                new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayAttachmentStatus'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                    new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PENDING_ACCEPTANCE'),
+                    new \PHPStan\Type\Constant\ConstantStringType('REJECTING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                ]),
+            ]),
+        ]);
+    }
     private function deleteResourcePolicy(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -718,6 +959,7 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('SnsTopic'),
                     new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('AnalysisResults'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SummaryConfiguration'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -773,6 +1015,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         ]),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RuleOptions'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MSG'),
+                            new \PHPStan\Type\Constant\ConstantStringType('METADATA'),
+                        ])),
+                    ]),
                 ]),
             ]),
         ]);
@@ -850,6 +1101,81 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             ]),
         ]);
     }
+    private function deleteVpcEndpointAssociation(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointAssociation'),
+                new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointAssociationStatus'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointAssociationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointAssociationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubnetMapping'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IPAddressType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationSyncState'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Attachment'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SCALING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                ]),
+            ]),
+        ]);
+    }
     private function describeFirewall(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -872,7 +1198,12 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('FirewallId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                     new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NumberOfAssociations'),
                     new \PHPStan\Type\Constant\ConstantStringType('EnabledAnalysisTypes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayOwnerAccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZoneMappings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZoneChangeProtection'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -911,16 +1242,26 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('AWS_OWNED_KMS_KEY'),
                         ]),
                     ]),
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('TLS_SNI'),
                         new \PHPStan\Type\Constant\ConstantStringType('HTTP_HOST'),
                     ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\BooleanType(),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Status'),
                     new \PHPStan\Type\Constant\ConstantStringType('ConfigurationSyncStateSummary'),
                     new \PHPStan\Type\Constant\ConstantStringType('SyncStates'),
                     new \PHPStan\Type\Constant\ConstantStringType('CapacityUsageSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayAttachmentSyncState'),
                 ], [
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING'),
@@ -983,7 +1324,58 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                             ])),
                         ]),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AttachmentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayAttachmentStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_ACCEPTANCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REJECTING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
                 ]),
+            ]),
+        ]);
+    }
+    private function describeFirewallMetadata(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('FirewallPolicyArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                new \PHPStan\Type\Constant\ConstantStringType('SupportedAvailabilityZones'),
+                new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayAttachmentId'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('IPAddressType'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -1083,6 +1475,7 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('Priority'),
                         new \PHPStan\Type\Constant\ConstantStringType('Override'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeepThreatInspection'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
@@ -1091,6 +1484,7 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         ], [
                             new \PHPStan\Type\Constant\ConstantStringType('DROP_TO_ALERT'),
                         ]),
+                        new \PHPStan\Type\BooleanType(),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1133,6 +1527,8 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointAssociationArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointId'),
                 new \PHPStan\Type\Constant\ConstantStringType('FlowOperationId'),
                 new \PHPStan\Type\Constant\ConstantStringType('FlowOperationType'),
                 new \PHPStan\Type\Constant\ConstantStringType('FlowOperationStatus'),
@@ -1140,6 +1536,8 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('FlowRequestTimestamp'),
                 new \PHPStan\Type\Constant\ConstantStringType('FlowOperation'),
             ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1191,6 +1589,7 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('LoggingConfiguration'),
+                new \PHPStan\Type\Constant\ConstantStringType('EnableMonitoringDashboard'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1214,6 +1613,7 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
+                new \PHPStan\Type\BooleanType(),
             ]),
         ]);
     }
@@ -1327,6 +1727,8 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                                     new \PHPStan\Type\Constant\ConstantStringType('TFTP'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NTP'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DHCP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('HTTP2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QUIC'),
                                 ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
@@ -1466,6 +1868,7 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('SnsTopic'),
                     new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('AnalysisResults'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SummaryConfiguration'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1521,6 +1924,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         ]),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RuleOptions'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MSG'),
+                            new \PHPStan\Type\Constant\ConstantStringType('METADATA'),
+                        ])),
+                    ]),
                 ]),
             ]),
         ]);
@@ -1554,6 +1966,32 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     ]),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
+            ]),
+        ]);
+    }
+    private function describeRuleGroupSummary(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RuleGroupName'),
+                new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                new \PHPStan\Type\Constant\ConstantStringType('Summary'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RuleSummaries'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SID'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Msg'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Metadata'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ]),
             ]),
         ]);
     }
@@ -1698,6 +2136,101 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             ]),
         ]);
     }
+    private function describeVpcEndpointAssociation(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointAssociation'),
+                new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointAssociationStatus'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointAssociationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointAssociationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubnetMapping'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IPAddressType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationSyncState'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Attachment'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SCALING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                ]),
+            ]),
+        ]);
+    }
+    private function disassociateAvailabilityZones(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('FirewallName'),
+                new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZoneMappings'),
+                new \PHPStan\Type\Constant\ConstantStringType('UpdateToken'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function disassociateSubnets(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1825,7 +2358,9 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('FirewallName'),
                     new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayAttachmentId'),
                 ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ])),
@@ -1838,6 +2373,8 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointAssociationArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointId'),
                 new \PHPStan\Type\Constant\ConstantStringType('FlowOperationId'),
                 new \PHPStan\Type\Constant\ConstantStringType('FlowOperationStatus'),
                 new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
@@ -1845,6 +2382,8 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Flows'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1971,10 +2510,48 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             ]),
         ]);
     }
+    private function listVpcEndpointAssociations(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointAssociations'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointAssociationArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                ])),
+            ]),
+        ]);
+    }
     private function putResourcePolicy(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([], []),
+        ]);
+    }
+    private function rejectNetworkFirewallTransitGatewayAttachment(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayAttachmentId'),
+                new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayAttachmentStatus'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                    new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PENDING_ACCEPTANCE'),
+                    new \PHPStan\Type\Constant\ConstantStringType('REJECTING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                ]),
+            ]),
         ]);
     }
     private function startAnalysisReport(): ?\PHPStan\Type\Type
@@ -2035,6 +2612,22 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([], []),
+        ]);
+    }
+    private function updateAvailabilityZoneChangeProtection(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('UpdateToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('FirewallName'),
+                new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZoneChangeProtection'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\BooleanType(),
+            ]),
         ]);
     }
     private function updateFirewallAnalysisSettings(): ?\PHPStan\Type\Type
@@ -2191,6 +2784,7 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('FirewallName'),
                 new \PHPStan\Type\Constant\ConstantStringType('LoggingConfiguration'),
+                new \PHPStan\Type\Constant\ConstantStringType('EnableMonitoringDashboard'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -2215,6 +2809,7 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
+                new \PHPStan\Type\BooleanType(),
             ]),
         ]);
     }
@@ -2242,6 +2837,7 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('SnsTopic'),
                     new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('AnalysisResults'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SummaryConfiguration'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2297,6 +2893,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                         ]),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RuleOptions'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MSG'),
+                            new \PHPStan\Type\Constant\ConstantStringType('METADATA'),
+                        ])),
+                    ]),
                 ]),
             ]),
         ]);

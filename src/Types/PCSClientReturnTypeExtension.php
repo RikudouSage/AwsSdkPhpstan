@@ -89,6 +89,8 @@ final class PCSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -108,6 +110,7 @@ final class PCSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('scaleDownIdleTimeInSeconds'),
                         new \PHPStan\Type\Constant\ConstantStringType('slurmCustomSettings'),
                         new \PHPStan\Type\Constant\ConstantStringType('authKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('accounting'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -123,6 +126,16 @@ final class PCSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('mode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultPurgeTimeInDays'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -197,6 +210,8 @@ final class PCSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -286,6 +301,8 @@ final class PCSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('computeNodeGroupId'),
@@ -352,6 +369,8 @@ final class PCSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -371,6 +390,7 @@ final class PCSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('scaleDownIdleTimeInSeconds'),
                         new \PHPStan\Type\Constant\ConstantStringType('slurmCustomSettings'),
                         new \PHPStan\Type\Constant\ConstantStringType('authKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('accounting'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -386,6 +406,16 @@ final class PCSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('mode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultPurgeTimeInDays'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -460,6 +490,8 @@ final class PCSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -549,6 +581,8 @@ final class PCSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('computeNodeGroupId'),
@@ -594,6 +628,8 @@ final class PCSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -631,6 +667,8 @@ final class PCSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -667,6 +705,8 @@ final class PCSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -762,6 +802,8 @@ final class PCSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -851,6 +893,8 @@ final class PCSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('computeNodeGroupId'),

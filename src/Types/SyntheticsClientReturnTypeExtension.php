@@ -31,6 +31,7 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'listGroups',
             'listTagsForResource',
             'startCanary',
+            'startCanaryDryRun',
             'stopCanary',
             'tagResource',
             'untagResource',
@@ -58,6 +59,7 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'listGroups' => $this->listGroups(),
             'listTagsForResource' => $this->listTagsForResource(),
             'startCanary' => $this->startCanary(),
+            'startCanaryDryRun' => $this->startCanaryDryRun(),
             'stopCanary' => $this->stopCanary(),
             'tagResource' => $this->tagResource(),
             'untagResource' => $this->untagResource(),
@@ -95,6 +97,7 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('ProvisionedResourceCleanup'),
                     new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                     new \PHPStan\Type\Constant\ConstantStringType('ArtifactConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DryRunConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -109,18 +112,26 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Expression'),
                         new \PHPStan\Type\Constant\ConstantStringType('DurationInSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RetryConfig'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxRetries'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('TimeoutInSeconds'),
                         new \PHPStan\Type\Constant\ConstantStringType('MemoryInMB'),
                         new \PHPStan\Type\Constant\ConstantStringType('ActiveTracing'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EphemeralStorage'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
@@ -212,6 +223,13 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ]),
                             new \PHPStan\Type\StringType(),
                         ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DryRunId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastDryRunExecutionStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ]),
             ]),
@@ -279,6 +297,7 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('ProvisionedResourceCleanup'),
                     new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                     new \PHPStan\Type\Constant\ConstantStringType('ArtifactConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DryRunConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -293,18 +312,26 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Expression'),
                         new \PHPStan\Type\Constant\ConstantStringType('DurationInSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RetryConfig'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxRetries'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('TimeoutInSeconds'),
                         new \PHPStan\Type\Constant\ConstantStringType('MemoryInMB'),
                         new \PHPStan\Type\Constant\ConstantStringType('ActiveTracing'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EphemeralStorage'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
@@ -397,6 +424,13 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\StringType(),
                         ]),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DryRunId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastDryRunExecutionStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -416,17 +450,23 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScheduledRunId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RetryAttempt'),
                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
                         new \PHPStan\Type\Constant\ConstantStringType('Timeline'),
                         new \PHPStan\Type\Constant\ConstantStringType('ArtifactS3Location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DryRunConfig'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('State'),
                             new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
                             new \PHPStan\Type\Constant\ConstantStringType('StateReasonCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TestResult'),
                         ], [
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
@@ -438,15 +478,27 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('CANARY_FAILURE'),
                                 new \PHPStan\Type\Constant\ConstantStringType('EXECUTION_FAILURE'),
                             ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Started'),
                             new \PHPStan\Type\Constant\ConstantStringType('Completed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricTimestampForRunAndRetries'),
                         ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DryRunId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -506,6 +558,7 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('ProvisionedResourceCleanup'),
                     new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                     new \PHPStan\Type\Constant\ConstantStringType('ArtifactConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DryRunConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -520,18 +573,26 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Expression'),
                         new \PHPStan\Type\Constant\ConstantStringType('DurationInSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RetryConfig'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxRetries'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('TimeoutInSeconds'),
                         new \PHPStan\Type\Constant\ConstantStringType('MemoryInMB'),
                         new \PHPStan\Type\Constant\ConstantStringType('ActiveTracing'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EphemeralStorage'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
@@ -624,6 +685,13 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\StringType(),
                         ]),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DryRunId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastDryRunExecutionStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
                 ]),
             ]),
         ]);
@@ -637,17 +705,23 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ], [
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ScheduledRunId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RetryAttempt'),
                     new \PHPStan\Type\Constant\ConstantStringType('Name'),
                     new \PHPStan\Type\Constant\ConstantStringType('Status'),
                     new \PHPStan\Type\Constant\ConstantStringType('Timeline'),
                     new \PHPStan\Type\Constant\ConstantStringType('ArtifactS3Location'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DryRunConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('State'),
                         new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
                         new \PHPStan\Type\Constant\ConstantStringType('StateReasonCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TestResult'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
@@ -659,15 +733,27 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('CANARY_FAILURE'),
                             new \PHPStan\Type\Constant\ConstantStringType('EXECUTION_FAILURE'),
                         ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PASSED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Started'),
                         new \PHPStan\Type\Constant\ConstantStringType('Completed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MetricTimestampForRunAndRetries'),
                     ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DryRunId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -763,6 +849,22 @@ final class SyntheticsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([], []),
+        ]);
+    }
+    private function startCanaryDryRun(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('DryRunConfig'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('DryRunId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastDryRunExecutionStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ]),
+            ]),
         ]);
     }
     private function stopCanary(): ?\PHPStan\Type\Type

@@ -15,6 +15,8 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
     {
         return in_array($methodReflection->getName(), [
             'associateMember',
+            'batchAssociateCodeSecurityScanConfiguration',
+            'batchDisassociateCodeSecurityScanConfiguration',
             'batchGetAccountStatus',
             'batchGetCodeSnippet',
             'batchGetFindingDetails',
@@ -24,10 +26,14 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'cancelFindingsReport',
             'cancelSbomExport',
             'createCisScanConfiguration',
+            'createCodeSecurityIntegration',
+            'createCodeSecurityScanConfiguration',
             'createFilter',
             'createFindingsReport',
             'createSbomExport',
             'deleteCisScanConfiguration',
+            'deleteCodeSecurityIntegration',
+            'deleteCodeSecurityScanConfiguration',
             'deleteFilter',
             'describeOrganizationConfiguration',
             'disable',
@@ -37,6 +43,10 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'enableDelegatedAdminAccount',
             'getCisScanReport',
             'getCisScanResultDetails',
+            'getClustersForImage',
+            'getCodeSecurityIntegration',
+            'getCodeSecurityScan',
+            'getCodeSecurityScanConfiguration',
             'getConfiguration',
             'getDelegatedAdminAccount',
             'getEc2DeepInspectionConfiguration',
@@ -49,6 +59,9 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'listCisScanResultsAggregatedByChecks',
             'listCisScanResultsAggregatedByTargetResource',
             'listCisScans',
+            'listCodeSecurityIntegrations',
+            'listCodeSecurityScanConfigurationAssociations',
+            'listCodeSecurityScanConfigurations',
             'listCoverage',
             'listCoverageStatistics',
             'listDelegatedAdminAccounts',
@@ -63,10 +76,13 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'sendCisSessionHealth',
             'sendCisSessionTelemetry',
             'startCisSession',
+            'startCodeSecurityScan',
             'stopCisSession',
             'tagResource',
             'untagResource',
             'updateCisScanConfiguration',
+            'updateCodeSecurityIntegration',
+            'updateCodeSecurityScanConfiguration',
             'updateConfiguration',
             'updateEc2DeepInspectionConfiguration',
             'updateEncryptionKey',
@@ -80,6 +96,8 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
         return match ((string) $methodCall->name) {
             default => throw new \RuntimeException('Unsupported method'),
             'associateMember' => $this->associateMember(),
+            'batchAssociateCodeSecurityScanConfiguration' => $this->batchAssociateCodeSecurityScanConfiguration(),
+            'batchDisassociateCodeSecurityScanConfiguration' => $this->batchDisassociateCodeSecurityScanConfiguration(),
             'batchGetAccountStatus' => $this->batchGetAccountStatus(),
             'batchGetCodeSnippet' => $this->batchGetCodeSnippet(),
             'batchGetFindingDetails' => $this->batchGetFindingDetails(),
@@ -89,10 +107,14 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'cancelFindingsReport' => $this->cancelFindingsReport(),
             'cancelSbomExport' => $this->cancelSbomExport(),
             'createCisScanConfiguration' => $this->createCisScanConfiguration(),
+            'createCodeSecurityIntegration' => $this->createCodeSecurityIntegration(),
+            'createCodeSecurityScanConfiguration' => $this->createCodeSecurityScanConfiguration(),
             'createFilter' => $this->createFilter(),
             'createFindingsReport' => $this->createFindingsReport(),
             'createSbomExport' => $this->createSbomExport(),
             'deleteCisScanConfiguration' => $this->deleteCisScanConfiguration(),
+            'deleteCodeSecurityIntegration' => $this->deleteCodeSecurityIntegration(),
+            'deleteCodeSecurityScanConfiguration' => $this->deleteCodeSecurityScanConfiguration(),
             'deleteFilter' => $this->deleteFilter(),
             'describeOrganizationConfiguration' => $this->describeOrganizationConfiguration(),
             'disable' => $this->disable(),
@@ -102,6 +124,10 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'enableDelegatedAdminAccount' => $this->enableDelegatedAdminAccount(),
             'getCisScanReport' => $this->getCisScanReport(),
             'getCisScanResultDetails' => $this->getCisScanResultDetails(),
+            'getClustersForImage' => $this->getClustersForImage(),
+            'getCodeSecurityIntegration' => $this->getCodeSecurityIntegration(),
+            'getCodeSecurityScan' => $this->getCodeSecurityScan(),
+            'getCodeSecurityScanConfiguration' => $this->getCodeSecurityScanConfiguration(),
             'getConfiguration' => $this->getConfiguration(),
             'getDelegatedAdminAccount' => $this->getDelegatedAdminAccount(),
             'getEc2DeepInspectionConfiguration' => $this->getEc2DeepInspectionConfiguration(),
@@ -114,6 +140,9 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'listCisScanResultsAggregatedByChecks' => $this->listCisScanResultsAggregatedByChecks(),
             'listCisScanResultsAggregatedByTargetResource' => $this->listCisScanResultsAggregatedByTargetResource(),
             'listCisScans' => $this->listCisScans(),
+            'listCodeSecurityIntegrations' => $this->listCodeSecurityIntegrations(),
+            'listCodeSecurityScanConfigurationAssociations' => $this->listCodeSecurityScanConfigurationAssociations(),
+            'listCodeSecurityScanConfigurations' => $this->listCodeSecurityScanConfigurations(),
             'listCoverage' => $this->listCoverage(),
             'listCoverageStatistics' => $this->listCoverageStatistics(),
             'listDelegatedAdminAccounts' => $this->listDelegatedAdminAccounts(),
@@ -128,10 +157,13 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'sendCisSessionHealth' => $this->sendCisSessionHealth(),
             'sendCisSessionTelemetry' => $this->sendCisSessionTelemetry(),
             'startCisSession' => $this->startCisSession(),
+            'startCodeSecurityScan' => $this->startCodeSecurityScan(),
             'stopCisSession' => $this->stopCisSession(),
             'tagResource' => $this->tagResource(),
             'untagResource' => $this->untagResource(),
             'updateCisScanConfiguration' => $this->updateCisScanConfiguration(),
+            'updateCodeSecurityIntegration' => $this->updateCodeSecurityIntegration(),
+            'updateCodeSecurityScanConfiguration' => $this->updateCodeSecurityScanConfiguration(),
             'updateConfiguration' => $this->updateConfiguration(),
             'updateEc2DeepInspectionConfiguration' => $this->updateEc2DeepInspectionConfiguration(),
             'updateEncryptionKey' => $this->updateEncryptionKey(),
@@ -150,6 +182,92 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ]),
         ]);
     }
+    private function batchAssociateCodeSecurityScanConfiguration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('failedAssociations'),
+                new \PHPStan\Type\Constant\ConstantStringType('successfulAssociations'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('scanConfigurationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusMessage'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('projectId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SCAN_CONFIGURATION_NOT_FOUND'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_INPUT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_NOT_FOUND'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QUOTA_EXCEEDED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('scanConfigurationArn'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('projectId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ])),
+            ]),
+        ]);
+    }
+    private function batchDisassociateCodeSecurityScanConfiguration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('failedAssociations'),
+                new \PHPStan\Type\Constant\ConstantStringType('successfulAssociations'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('scanConfigurationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusMessage'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('projectId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SCAN_CONFIGURATION_NOT_FOUND'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_INPUT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_NOT_FOUND'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QUOTA_EXCEEDED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('scanConfigurationArn'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('projectId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ])),
+            ]),
+        ]);
+    }
     private function batchGetAccountStatus(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -164,11 +282,45 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('codeRepository'),
                         new \PHPStan\Type\Constant\ConstantStringType('ec2'),
                         new \PHPStan\Type\Constant\ConstantStringType('ecr'),
                         new \PHPStan\Type\Constant\ConstantStringType('lambda'),
                         new \PHPStan\Type\Constant\ConstantStringType('lambdaCode'),
                     ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ALREADY_ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLE_IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLE_IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUSPEND_IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SSM_UNAVAILABLE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SSM_THROTTLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EVENTBRIDGE_UNAVAILABLE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EVENTBRIDGE_THROTTLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_SCAN_NOT_DISABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISASSOCIATE_ALL_MEMBERS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_IS_ISOLATED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EC2_SSM_RESOURCE_DATA_SYNC_LIMIT_EXCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EC2_SSM_ASSOCIATION_VERSION_LIMIT_EXCEEDED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
+                            ]),
+                        ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
                             new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
@@ -364,11 +516,20 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('codeRepository'),
                         new \PHPStan\Type\Constant\ConstantStringType('ec2'),
                         new \PHPStan\Type\Constant\ConstantStringType('ecr'),
                         new \PHPStan\Type\Constant\ConstantStringType('lambda'),
                         new \PHPStan\Type\Constant\ConstantStringType('lambdaCode'),
                     ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
+                        ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -561,6 +722,7 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('ECR'),
                             new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
                             new \PHPStan\Type\Constant\ConstantStringType('LAMBDA_CODE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CODE_REPOSITORY'),
                         ]),
                     ])),
                 ])),
@@ -689,6 +851,36 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ]),
         ]);
     }
+    private function createCodeSecurityIntegration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('authorizationUrl'),
+                new \PHPStan\Type\Constant\ConstantStringType('integrationArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('status'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                    new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
+                ]),
+            ]),
+        ]);
+    }
+    private function createCodeSecurityScanConfiguration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('scanConfigurationArn'),
+            ], [
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function createFilter(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -729,6 +921,26 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ]),
         ]);
     }
+    private function deleteCodeSecurityIntegration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('integrationArn'),
+            ], [
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function deleteCodeSecurityScanConfiguration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('scanConfigurationArn'),
+            ], [
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function deleteFilter(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -747,11 +959,13 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('maxAccountLimitReached'),
             ], [
                 new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('codeRepository'),
                     new \PHPStan\Type\Constant\ConstantStringType('ec2'),
                     new \PHPStan\Type\Constant\ConstantStringType('ecr'),
                     new \PHPStan\Type\Constant\ConstantStringType('lambda'),
                     new \PHPStan\Type\Constant\ConstantStringType('lambdaCode'),
                 ], [
+                    new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
@@ -775,11 +989,20 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('codeRepository'),
                         new \PHPStan\Type\Constant\ConstantStringType('ec2'),
                         new \PHPStan\Type\Constant\ConstantStringType('ecr'),
                         new \PHPStan\Type\Constant\ConstantStringType('lambda'),
                         new \PHPStan\Type\Constant\ConstantStringType('lambdaCode'),
                     ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
+                        ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -850,11 +1073,20 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('codeRepository'),
                         new \PHPStan\Type\Constant\ConstantStringType('ec2'),
                         new \PHPStan\Type\Constant\ConstantStringType('ecr'),
                         new \PHPStan\Type\Constant\ConstantStringType('lambda'),
                         new \PHPStan\Type\Constant\ConstantStringType('lambdaCode'),
                     ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
+                        ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -934,11 +1166,20 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('codeRepository'),
                         new \PHPStan\Type\Constant\ConstantStringType('ec2'),
                         new \PHPStan\Type\Constant\ConstantStringType('ecr'),
                         new \PHPStan\Type\Constant\ConstantStringType('lambda'),
                         new \PHPStan\Type\Constant\ConstantStringType('lambdaCode'),
                     ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
+                        ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -1009,11 +1250,20 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('codeRepository'),
                         new \PHPStan\Type\Constant\ConstantStringType('ec2'),
                         new \PHPStan\Type\Constant\ConstantStringType('ecr'),
                         new \PHPStan\Type\Constant\ConstantStringType('lambda'),
                         new \PHPStan\Type\Constant\ConstantStringType('lambdaCode'),
                     ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUSPENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
+                        ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -1130,6 +1380,186 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ]),
         ]);
     }
+    private function getClustersForImage(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('cluster'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('clusterArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('clusterDetails'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('clusterMetadata'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastInUse'),
+                        new \PHPStan\Type\Constant\ConstantStringType('runningUnitCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stoppedUnitCount'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('awsEcsMetadataDetails'),
+                            new \PHPStan\Type\Constant\ConstantStringType('awsEksMetadataDetails'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('detailsGroup'),
+                                new \PHPStan\Type\Constant\ConstantStringType('taskDefinitionArn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('namespace'),
+                                new \PHPStan\Type\Constant\ConstantStringType('workloadInfoList'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ])),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getCodeSecurityIntegration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('authorizationUrl'),
+                new \PHPStan\Type\Constant\ConstantStringType('createdOn'),
+                new \PHPStan\Type\Constant\ConstantStringType('integrationArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('lastUpdateOn'),
+                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                new \PHPStan\Type\Constant\ConstantStringType('type'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                    new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('GITLAB_SELF_MANAGED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GITHUB'),
+                ]),
+            ]),
+        ]);
+    }
+    private function getCodeSecurityScan(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('lastCommitId'),
+                new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                new \PHPStan\Type\Constant\ConstantStringType('scanId'),
+                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('projectId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SUCCESSFUL'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SKIPPED'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+            ]),
+        ]);
+    }
+    private function getCodeSecurityScanConfiguration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('configuration'),
+                new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('level'),
+                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                new \PHPStan\Type\Constant\ConstantStringType('scanConfigurationArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('scopeSettings'),
+                new \PHPStan\Type\Constant\ConstantStringType('tags'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('continuousIntegrationScanConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('periodicScanConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruleSetCategories'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('supportedEvents'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PULL_REQUEST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PUSH'),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('frequency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('frequencyExpression'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('WEEKLY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MONTHLY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NEVER'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SAST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IAC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SCA'),
+                    ])),
+                ]),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('projectSelectionScope'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
     private function getConfiguration(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1159,6 +1589,7 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('pullDateRescanDuration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('pullDateRescanMode'),
                         new \PHPStan\Type\Constant\ConstantStringType('rescanDuration'),
                         new \PHPStan\Type\Constant\ConstantStringType('status'),
                         new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
@@ -1169,6 +1600,10 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('DAYS_60'),
                             new \PHPStan\Type\Constant\ConstantStringType('DAYS_90'),
                             new \PHPStan\Type\Constant\ConstantStringType('DAYS_180'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LAST_PULL_DATE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LAST_IN_USE_AT'),
                         ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('LIFETIME'),
@@ -1280,6 +1715,8 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('awsAccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('codeRepositoryProjectName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('codeRepositoryProviderType'),
                     new \PHPStan\Type\Constant\ConstantStringType('codeVulnerabilityDetectorName'),
                     new \PHPStan\Type\Constant\ConstantStringType('codeVulnerabilityDetectorTags'),
                     new \PHPStan\Type\Constant\ConstantStringType('codeVulnerabilityFilePath'),
@@ -1290,6 +1727,8 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('ec2InstanceVpcId'),
                     new \PHPStan\Type\Constant\ConstantStringType('ecrImageArchitecture'),
                     new \PHPStan\Type\Constant\ConstantStringType('ecrImageHash'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ecrImageInUseCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ecrImageLastInUseAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('ecrImagePushedAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('ecrImageRegistry'),
                     new \PHPStan\Type\Constant\ConstantStringType('ecrImageRepositoryName'),
@@ -1442,6 +1881,42 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
                         ]),
                         new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('comparison'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PREFIX'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('comparison'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PREFIX'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('lowerInclusive'),
+                        new \PHPStan\Type\Constant\ConstantStringType('upperInclusive'),
+                    ], [
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('endInclusive'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startInclusive'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('endInclusive'),
@@ -2270,6 +2745,112 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ]),
         ]);
     }
+    private function listCodeSecurityIntegrations(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('integrations'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('createdOn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('integrationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdateOn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('GITLAB_SELF_MANAGED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GITHUB'),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listCodeSecurityScanConfigurationAssociations(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('associations'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('projectId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listCodeSecurityScanConfigurations(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('configurations'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('continuousIntegrationScanSupportedEvents'),
+                    new \PHPStan\Type\Constant\ConstantStringType('frequencyExpression'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ownerAccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('periodicScanFrequency'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruleSetCategories'),
+                    new \PHPStan\Type\Constant\ConstantStringType('scanConfigurationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('scopeSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PULL_REQUEST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PUSH'),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('WEEKLY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MONTHLY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NEVER'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SAST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IAC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SCA'),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('projectSelectionScope'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function listCoverage(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -2291,11 +2872,108 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('codeRepository'),
                         new \PHPStan\Type\Constant\ConstantStringType('ec2'),
                         new \PHPStan\Type\Constant\ConstantStringType('ecrImage'),
                         new \PHPStan\Type\Constant\ConstantStringType('ecrRepository'),
                         new \PHPStan\Type\Constant\ConstantStringType('lambdaFunction'),
                     ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('integrationArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('lastScannedCommitId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('onDemandScan'),
+                            new \PHPStan\Type\Constant\ConstantStringType('projectName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('providerType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('providerTypeVisibility'),
+                            new \PHPStan\Type\Constant\ConstantStringType('scanConfiguration'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('lastScanAt'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lastScannedCommitId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scanStatus'),
+                            ], [
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('reason'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_INITIAL_SCAN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UNMANAGED_EC2_INSTANCE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UNSUPPORTED_OS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SCAN_ELIGIBILITY_EXPIRED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_TERMINATED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SUCCESSFUL'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NO_RESOURCES_FOUND'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('IMAGE_SIZE_EXCEEDED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SCAN_FREQUENCY_MANUAL'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SCAN_FREQUENCY_SCAN_ON_PUSH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EC2_INSTANCE_STOPPED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_DISABLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NO_INVENTORY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('STALE_INVENTORY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EXCLUDED_BY_TAG'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UNSUPPORTED_RUNTIME'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UNSUPPORTED_MEDIA_TYPE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UNSUPPORTED_CONFIG_FILE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DEEP_INSPECTION_PACKAGE_COLLECTION_LIMIT_EXCEEDED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DEEP_INSPECTION_DAILY_SSM_INVENTORY_LIMIT_EXCEEDED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DEEP_INSPECTION_COLLECTION_TIME_LIMIT_EXCEEDED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DEEP_INSPECTION_NO_INVENTORY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AGENTLESS_INSTANCE_STORAGE_LIMIT_EXCEEDED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AGENTLESS_INSTANCE_COLLECTION_TIME_LIMIT_EXCEEDED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_REVIVAL_SCAN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('INTEGRATION_CONNECTION_LOST'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED_TO_ENCRYPTION_KEY'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UNSUPPORTED_LANGUAGE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NO_SCAN_CONFIGURATION_ASSOCIATED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SCAN_IN_PROGRESS'),
+                                    ]),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                                    ]),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('continuousIntegrationScanConfigurations'),
+                                new \PHPStan\Type\Constant\ConstantStringType('periodicScanConfigurations'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ruleSetCategories'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('supportedEvent'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('SAST'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('IAC'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SCA'),
+                                    ])),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PULL_REQUEST'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PUSH'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('frequencyExpression'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ruleSetCategories'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('SAST'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('IAC'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SCA'),
+                                    ])),
+                                ])),
+                            ]),
+                        ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('amiId'),
                             new \PHPStan\Type\Constant\ConstantStringType('platform'),
@@ -2312,8 +2990,12 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('imagePulledAt'),
+                            new \PHPStan\Type\Constant\ConstantStringType('inUseCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('lastInUseAt'),
                             new \PHPStan\Type\Constant\ConstantStringType('tags'),
                         ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
@@ -2367,6 +3049,7 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('AWS_ECR_CONTAINER_IMAGE'),
                         new \PHPStan\Type\Constant\ConstantStringType('AWS_ECR_REPOSITORY'),
                         new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA_FUNCTION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CODE_REPOSITORY'),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('EC2_SSM_AGENT_BASED'),
@@ -2403,6 +3086,12 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('DEEP_INSPECTION_NO_INVENTORY'),
                             new \PHPStan\Type\Constant\ConstantStringType('AGENTLESS_INSTANCE_STORAGE_LIMIT_EXCEEDED'),
                             new \PHPStan\Type\Constant\ConstantStringType('AGENTLESS_INSTANCE_COLLECTION_TIME_LIMIT_EXCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_REVIVAL_SCAN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTEGRATION_CONNECTION_LOST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED_TO_ENCRYPTION_KEY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNSUPPORTED_LANGUAGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_SCAN_CONFIGURATION_ASSOCIATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SCAN_IN_PROGRESS'),
                         ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
@@ -2493,6 +3182,8 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('awsAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('codeRepositoryProjectName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('codeRepositoryProviderType'),
                         new \PHPStan\Type\Constant\ConstantStringType('codeVulnerabilityDetectorName'),
                         new \PHPStan\Type\Constant\ConstantStringType('codeVulnerabilityDetectorTags'),
                         new \PHPStan\Type\Constant\ConstantStringType('codeVulnerabilityFilePath'),
@@ -2503,6 +3194,8 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('ec2InstanceVpcId'),
                         new \PHPStan\Type\Constant\ConstantStringType('ecrImageArchitecture'),
                         new \PHPStan\Type\Constant\ConstantStringType('ecrImageHash'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ecrImageInUseCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ecrImageLastInUseAt'),
                         new \PHPStan\Type\Constant\ConstantStringType('ecrImagePushedAt'),
                         new \PHPStan\Type\Constant\ConstantStringType('ecrImageRegistry'),
                         new \PHPStan\Type\Constant\ConstantStringType('ecrImageRepositoryName'),
@@ -2655,6 +3348,42 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
                             ]),
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('comparison'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PREFIX'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('comparison'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PREFIX'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('lowerInclusive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('upperInclusive'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('endInclusive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startInclusive'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('endInclusive'),
@@ -3079,12 +3808,14 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
                     new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA_FUNCTION'),
                     new \PHPStan\Type\Constant\ConstantStringType('LAMBDA_LAYER'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CODE_REPOSITORY'),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('accountAggregation'),
                     new \PHPStan\Type\Constant\ConstantStringType('amiAggregation'),
                     new \PHPStan\Type\Constant\ConstantStringType('awsEcrContainerAggregation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('codeRepositoryAggregation'),
                     new \PHPStan\Type\Constant\ConstantStringType('ec2InstanceAggregation'),
                     new \PHPStan\Type\Constant\ConstantStringType('findingTypeAggregation'),
                     new \PHPStan\Type\Constant\ConstantStringType('imageLayerAggregation'),
@@ -3141,6 +3872,8 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('architecture'),
                         new \PHPStan\Type\Constant\ConstantStringType('imageSha'),
                         new \PHPStan\Type\Constant\ConstantStringType('imageTags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inUseCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastInUseAt'),
                         new \PHPStan\Type\Constant\ConstantStringType('repository'),
                         new \PHPStan\Type\Constant\ConstantStringType('resourceId'),
                         new \PHPStan\Type\Constant\ConstantStringType('severityCounts'),
@@ -3149,6 +3882,35 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('all'),
+                            new \PHPStan\Type\Constant\ConstantStringType('critical'),
+                            new \PHPStan\Type\Constant\ConstantStringType('high'),
+                            new \PHPStan\Type\Constant\ConstantStringType('medium'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('exploitAvailableActiveFindingsCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fixAvailableActiveFindingsCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('projectNames'),
+                        new \PHPStan\Type\Constant\ConstantStringType('providerType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('severityCounts'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3587,6 +4349,7 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('awsEc2Instance'),
                             new \PHPStan\Type\Constant\ConstantStringType('awsEcrContainerImage'),
                             new \PHPStan\Type\Constant\ConstantStringType('awsLambdaFunction'),
+                            new \PHPStan\Type\Constant\ConstantStringType('codeRepository'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('iamInstanceProfileArn'),
@@ -3616,6 +4379,8 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('author'),
                                 new \PHPStan\Type\Constant\ConstantStringType('imageHash'),
                                 new \PHPStan\Type\Constant\ConstantStringType('imageTags'),
+                                new \PHPStan\Type\Constant\ConstantStringType('inUseCount'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lastInUseAt'),
                                 new \PHPStan\Type\Constant\ConstantStringType('platform'),
                                 new \PHPStan\Type\Constant\ConstantStringType('pushedAt'),
                                 new \PHPStan\Type\Constant\ConstantStringType('registry'),
@@ -3625,6 +4390,8 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                                 new \PHPStan\Type\StringType(),
@@ -3689,6 +4456,18 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                     new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('integrationArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('projectName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('providerType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('GITHUB'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('GITLAB_SELF_MANAGED'),
+                                ]),
+                            ]),
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
@@ -3699,6 +4478,7 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('AWS_ECR_CONTAINER_IMAGE'),
                             new \PHPStan\Type\Constant\ConstantStringType('AWS_ECR_REPOSITORY'),
                             new \PHPStan\Type\Constant\ConstantStringType('AWS_LAMBDA_FUNCTION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CODE_REPOSITORY'),
                         ]),
                     ])),
                     new \PHPStan\Type\UnionType([
@@ -3799,6 +4579,9 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('ECR_RESCAN'),
                             new \PHPStan\Type\Constant\ConstantStringType('LAMBDA_FUNCTION_HOURS'),
                             new \PHPStan\Type\Constant\ConstantStringType('LAMBDA_FUNCTION_CODE_HOURS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CODE_REPOSITORY_SAST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CODE_REPOSITORY_IAC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CODE_REPOSITORY_SCA'),
                         ]),
                     ])),
                 ])),
@@ -3917,6 +4700,23 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             new \PHPStan\Type\Constant\ConstantArrayType([], []),
         ]);
     }
+    private function startCodeSecurityScan(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('scanId'),
+                new \PHPStan\Type\Constant\ConstantStringType('status'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SUCCESSFUL'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SKIPPED'),
+                ]),
+            ]),
+        ]);
+    }
     private function stopCisSession(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -3936,6 +4736,34 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
         ]);
     }
     private function updateCisScanConfiguration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('scanConfigurationArn'),
+            ], [
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function updateCodeSecurityIntegration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('integrationArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('status'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                    new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
+                ]),
+            ]),
+        ]);
+    }
+    private function updateCodeSecurityScanConfiguration(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4001,11 +4829,13 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('autoEnable'),
             ], [
                 new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('codeRepository'),
                     new \PHPStan\Type\Constant\ConstantStringType('ec2'),
                     new \PHPStan\Type\Constant\ConstantStringType('ecr'),
                     new \PHPStan\Type\Constant\ConstantStringType('lambda'),
                     new \PHPStan\Type\Constant\ConstantStringType('lambdaCode'),
                 ], [
+                    new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),

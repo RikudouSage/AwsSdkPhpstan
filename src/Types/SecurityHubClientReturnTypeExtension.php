@@ -26,16 +26,25 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             'batchImportFindings',
             'batchUpdateAutomationRules',
             'batchUpdateFindings',
+            'batchUpdateFindingsV2',
             'batchUpdateStandardsControlAssociations',
+            'connectorRegistrationsV2',
             'createActionTarget',
+            'createAggregatorV2',
             'createAutomationRule',
+            'createAutomationRuleV2',
             'createConfigurationPolicy',
+            'createConnectorV2',
             'createFindingAggregator',
             'createInsight',
             'createMembers',
+            'createTicketV2',
             'declineInvitations',
             'deleteActionTarget',
+            'deleteAggregatorV2',
+            'deleteAutomationRuleV2',
             'deleteConfigurationPolicy',
+            'deleteConnectorV2',
             'deleteFindingAggregator',
             'deleteInsight',
             'deleteInvitations',
@@ -44,34 +53,48 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             'describeHub',
             'describeOrganizationConfiguration',
             'describeProducts',
+            'describeProductsV2',
+            'describeSecurityHubV2',
             'describeStandards',
             'describeStandardsControls',
             'disableImportFindingsForProduct',
             'disableOrganizationAdminAccount',
             'disableSecurityHub',
+            'disableSecurityHubV2',
             'disassociateFromAdministratorAccount',
             'disassociateFromMasterAccount',
             'disassociateMembers',
             'enableImportFindingsForProduct',
             'enableOrganizationAdminAccount',
             'enableSecurityHub',
+            'enableSecurityHubV2',
             'getAdministratorAccount',
+            'getAggregatorV2',
+            'getAutomationRuleV2',
             'getConfigurationPolicy',
             'getConfigurationPolicyAssociation',
+            'getConnectorV2',
             'getEnabledStandards',
             'getFindingAggregator',
             'getFindingHistory',
+            'getFindingStatisticsV2',
             'getFindings',
+            'getFindingsV2',
             'getInsightResults',
             'getInsights',
             'getInvitationsCount',
             'getMasterAccount',
             'getMembers',
+            'getResourcesStatisticsV2',
+            'getResourcesV2',
             'getSecurityControlDefinition',
             'inviteMembers',
+            'listAggregatorsV2',
             'listAutomationRules',
+            'listAutomationRulesV2',
             'listConfigurationPolicies',
             'listConfigurationPolicyAssociations',
+            'listConnectorsV2',
             'listEnabledProductsForImport',
             'listFindingAggregators',
             'listInvitations',
@@ -85,7 +108,10 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             'tagResource',
             'untagResource',
             'updateActionTarget',
+            'updateAggregatorV2',
+            'updateAutomationRuleV2',
             'updateConfigurationPolicy',
+            'updateConnectorV2',
             'updateFindingAggregator',
             'updateFindings',
             'updateInsight',
@@ -111,16 +137,25 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             'batchImportFindings' => $this->batchImportFindings(),
             'batchUpdateAutomationRules' => $this->batchUpdateAutomationRules(),
             'batchUpdateFindings' => $this->batchUpdateFindings(),
+            'batchUpdateFindingsV2' => $this->batchUpdateFindingsV2(),
             'batchUpdateStandardsControlAssociations' => $this->batchUpdateStandardsControlAssociations(),
+            'connectorRegistrationsV2' => $this->connectorRegistrationsV2(),
             'createActionTarget' => $this->createActionTarget(),
+            'createAggregatorV2' => $this->createAggregatorV2(),
             'createAutomationRule' => $this->createAutomationRule(),
+            'createAutomationRuleV2' => $this->createAutomationRuleV2(),
             'createConfigurationPolicy' => $this->createConfigurationPolicy(),
+            'createConnectorV2' => $this->createConnectorV2(),
             'createFindingAggregator' => $this->createFindingAggregator(),
             'createInsight' => $this->createInsight(),
             'createMembers' => $this->createMembers(),
+            'createTicketV2' => $this->createTicketV2(),
             'declineInvitations' => $this->declineInvitations(),
             'deleteActionTarget' => $this->deleteActionTarget(),
+            'deleteAggregatorV2' => $this->deleteAggregatorV2(),
+            'deleteAutomationRuleV2' => $this->deleteAutomationRuleV2(),
             'deleteConfigurationPolicy' => $this->deleteConfigurationPolicy(),
+            'deleteConnectorV2' => $this->deleteConnectorV2(),
             'deleteFindingAggregator' => $this->deleteFindingAggregator(),
             'deleteInsight' => $this->deleteInsight(),
             'deleteInvitations' => $this->deleteInvitations(),
@@ -129,34 +164,48 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             'describeHub' => $this->describeHub(),
             'describeOrganizationConfiguration' => $this->describeOrganizationConfiguration(),
             'describeProducts' => $this->describeProducts(),
+            'describeProductsV2' => $this->describeProductsV2(),
+            'describeSecurityHubV2' => $this->describeSecurityHubV2(),
             'describeStandards' => $this->describeStandards(),
             'describeStandardsControls' => $this->describeStandardsControls(),
             'disableImportFindingsForProduct' => $this->disableImportFindingsForProduct(),
             'disableOrganizationAdminAccount' => $this->disableOrganizationAdminAccount(),
             'disableSecurityHub' => $this->disableSecurityHub(),
+            'disableSecurityHubV2' => $this->disableSecurityHubV2(),
             'disassociateFromAdministratorAccount' => $this->disassociateFromAdministratorAccount(),
             'disassociateFromMasterAccount' => $this->disassociateFromMasterAccount(),
             'disassociateMembers' => $this->disassociateMembers(),
             'enableImportFindingsForProduct' => $this->enableImportFindingsForProduct(),
             'enableOrganizationAdminAccount' => $this->enableOrganizationAdminAccount(),
             'enableSecurityHub' => $this->enableSecurityHub(),
+            'enableSecurityHubV2' => $this->enableSecurityHubV2(),
             'getAdministratorAccount' => $this->getAdministratorAccount(),
+            'getAggregatorV2' => $this->getAggregatorV2(),
+            'getAutomationRuleV2' => $this->getAutomationRuleV2(),
             'getConfigurationPolicy' => $this->getConfigurationPolicy(),
             'getConfigurationPolicyAssociation' => $this->getConfigurationPolicyAssociation(),
+            'getConnectorV2' => $this->getConnectorV2(),
             'getEnabledStandards' => $this->getEnabledStandards(),
             'getFindingAggregator' => $this->getFindingAggregator(),
             'getFindingHistory' => $this->getFindingHistory(),
+            'getFindingStatisticsV2' => $this->getFindingStatisticsV2(),
             'getFindings' => $this->getFindings(),
+            'getFindingsV2' => $this->getFindingsV2(),
             'getInsightResults' => $this->getInsightResults(),
             'getInsights' => $this->getInsights(),
             'getInvitationsCount' => $this->getInvitationsCount(),
             'getMasterAccount' => $this->getMasterAccount(),
             'getMembers' => $this->getMembers(),
+            'getResourcesStatisticsV2' => $this->getResourcesStatisticsV2(),
+            'getResourcesV2' => $this->getResourcesV2(),
             'getSecurityControlDefinition' => $this->getSecurityControlDefinition(),
             'inviteMembers' => $this->inviteMembers(),
+            'listAggregatorsV2' => $this->listAggregatorsV2(),
             'listAutomationRules' => $this->listAutomationRules(),
+            'listAutomationRulesV2' => $this->listAutomationRulesV2(),
             'listConfigurationPolicies' => $this->listConfigurationPolicies(),
             'listConfigurationPolicyAssociations' => $this->listConfigurationPolicyAssociations(),
+            'listConnectorsV2' => $this->listConnectorsV2(),
             'listEnabledProductsForImport' => $this->listEnabledProductsForImport(),
             'listFindingAggregators' => $this->listFindingAggregators(),
             'listInvitations' => $this->listInvitations(),
@@ -170,7 +219,10 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             'tagResource' => $this->tagResource(),
             'untagResource' => $this->untagResource(),
             'updateActionTarget' => $this->updateActionTarget(),
+            'updateAggregatorV2' => $this->updateAggregatorV2(),
+            'updateAutomationRuleV2' => $this->updateAutomationRuleV2(),
             'updateConfigurationPolicy' => $this->updateConfigurationPolicy(),
+            'updateConnectorV2' => $this->updateConnectorV2(),
             'updateFindingAggregator' => $this->updateFindingAggregator(),
             'updateFindings' => $this->updateFindings(),
             'updateInsight' => $this->updateInsight(),
@@ -375,6 +427,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -389,6 +442,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -403,6 +457,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -417,6 +472,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -431,6 +487,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -531,6 +588,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -545,6 +603,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -559,6 +618,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -573,6 +633,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -587,6 +648,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -601,6 +663,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -615,6 +678,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -629,6 +693,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -643,6 +708,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -657,6 +723,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -699,6 +766,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -713,6 +781,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -727,6 +796,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -741,6 +811,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -755,6 +826,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -769,6 +841,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -783,6 +856,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -797,6 +871,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -811,6 +886,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -840,6 +916,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -868,6 +945,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -882,6 +960,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -896,6 +975,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                     ]),
@@ -1256,6 +1336,55 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             ]),
         ]);
     }
+    private function batchUpdateFindingsV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ProcessedFindings'),
+                new \PHPStan\Type\Constant\ConstantStringType('UnprocessedFindings'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FindingIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MetadataUid'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudAccountUid'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FindingInfoUid'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MetadataProductUid'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FindingIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MetadataUid'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudAccountUid'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FindingInfoUid'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MetadataProductUid'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ValidationException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InternalServerException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConflictException'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ])),
+            ]),
+        ]);
+    }
     private function batchUpdateStandardsControlAssociations(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1292,6 +1421,18 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             ]),
         ]);
     }
+    private function connectorRegistrationsV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ConnectorArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('ConnectorId'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function createActionTarget(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1302,12 +1443,40 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             ]),
         ]);
     }
+    private function createAggregatorV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('AggregatorV2Arn'),
+                new \PHPStan\Type\Constant\ConstantStringType('AggregationRegion'),
+                new \PHPStan\Type\Constant\ConstantStringType('RegionLinkingMode'),
+                new \PHPStan\Type\Constant\ConstantStringType('LinkedRegions'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
     private function createAutomationRule(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('RuleArn'),
             ], [
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function createAutomationRuleV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RuleArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('RuleId'),
+            ], [
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1387,6 +1556,20 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             ]),
         ]);
     }
+    private function createConnectorV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ConnectorArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('ConnectorId'),
+                new \PHPStan\Type\Constant\ConstantStringType('AuthUrl'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function createFindingAggregator(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1429,6 +1612,18 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             ]),
         ]);
     }
+    private function createTicketV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('TicketId'),
+                new \PHPStan\Type\Constant\ConstantStringType('TicketSrcUrl'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function declineInvitations(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1455,7 +1650,25 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             ]),
         ]);
     }
+    private function deleteAggregatorV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+        ]);
+    }
+    private function deleteAutomationRuleV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+        ]);
+    }
     private function deleteConfigurationPolicy(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+        ]);
+    }
+    private function deleteConnectorV2(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([], []),
@@ -1618,6 +1831,50 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             ]),
         ]);
     }
+    private function describeProductsV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ProductsV2'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ProductV2Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CompanyName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Categories'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IntegrationV2Types'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MarketplaceUrl'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ActivationUrl'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SEND_FINDINGS_TO_SECURITY_HUB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RECEIVE_FINDINGS_FROM_SECURITY_HUB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FINDINGS_IN_SECURITY_HUB'),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function describeSecurityHubV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('HubV2Arn'),
+                new \PHPStan\Type\Constant\ConstantStringType('SubscribedAt'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function describeStandards(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1708,6 +1965,12 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             new \PHPStan\Type\Constant\ConstantArrayType([], []),
         ]);
     }
+    private function disableSecurityHubV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+        ]);
+    }
     private function disassociateFromAdministratorAccount(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1739,13 +2002,32 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
     private function enableOrganizationAdminAccount(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('AdminAccountId'),
+                new \PHPStan\Type\Constant\ConstantStringType('Feature'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SecurityHub'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SecurityHubV2'),
+                ]),
+            ]),
         ]);
     }
     private function enableSecurityHub(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([], []),
+        ]);
+    }
+    private function enableSecurityHubV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('HubV2Arn'),
+            ], [
+                new \PHPStan\Type\StringType(),
+            ]),
         ]);
     }
     private function getAdministratorAccount(): ?\PHPStan\Type\Type
@@ -1765,6 +2047,242 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                 ]),
+            ]),
+        ]);
+    }
+    private function getAggregatorV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('AggregatorV2Arn'),
+                new \PHPStan\Type\Constant\ConstantStringType('AggregationRegion'),
+                new \PHPStan\Type\Constant\ConstantStringType('RegionLinkingMode'),
+                new \PHPStan\Type\Constant\ConstantStringType('LinkedRegions'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
+    private function getAutomationRuleV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RuleArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('RuleId'),
+                new \PHPStan\Type\Constant\ConstantStringType('RuleOrder'),
+                new \PHPStan\Type\Constant\ConstantStringType('RuleName'),
+                new \PHPStan\Type\Constant\ConstantStringType('RuleStatus'),
+                new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                new \PHPStan\Type\Constant\ConstantStringType('Criteria'),
+                new \PHPStan\Type\Constant\ConstantStringType('Actions'),
+                new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('OcsfFindingCriteria'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CompositeFilters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompositeOperator'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('StringFilters'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DateFilters'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BooleanFilters'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NumberFilters'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MapFilters'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Operator'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('metadata.uid'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('activity_name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('cloud.account.uid'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('cloud.provider'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('cloud.region'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('compliance.assessments.category'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('compliance.assessments.name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('compliance.control'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('compliance.status'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('compliance.standards'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('finding_info.desc'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('finding_info.src_url'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('finding_info.title'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('finding_info.types'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('finding_info.uid'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('finding_info.related_events.uid'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('finding_info.related_events.product.uid'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('finding_info.related_events.title'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('metadata.product.name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('metadata.product.uid'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('metadata.product.vendor_name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('remediation.desc'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('remediation.references'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('resources.cloud_partition'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('resources.region'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('resources.type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('resources.uid'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('severity'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('comment'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('vulnerabilities.fix_coverage'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('class_name'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Comparison'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PREFIX'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('finding_info.created_time_dt'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('finding_info.first_seen_time_dt'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('finding_info.last_seen_time_dt'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('finding_info.modified_time_dt'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Start'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('End'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DateRange'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('compliance.assessments.meets_criteria'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('vulnerabilities.is_exploit_available'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('vulnerabilities.is_fix_available'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('activity_id'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('compliance.status_id'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('confidence_score'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('severity_id'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('status_id'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('finding_info.related_events_count'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Gte'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Lte'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Eq'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Gt'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Lt'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FieldName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantStringType('resources.tags'),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Comparison'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                        ]),
+                    ]),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FindingFieldsUpdate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExternalIntegrationConfiguration'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FINDING_FIELDS_UPDATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_INTEGRATION'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SeverityId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusId'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectorArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
         ]);
     }
@@ -1876,6 +2394,77 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             ]),
         ]);
     }
+    private function getConnectorV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ConnectorArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('ConnectorId'),
+                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('Health'),
+                new \PHPStan\Type\Constant\ConstantStringType('ProviderDetail'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectorStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastCheckedAt'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CONNECTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED_TO_CONNECT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_CONFIGURATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_AUTHORIZATION'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('JiraCloud'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceNow'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProjectKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthUrl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ClientId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
     private function getEnabledStandards(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1981,6 +2570,28 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getFindingStatisticsV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('GroupByResults'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupByField'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupByValues'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FieldValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ])),
+                ])),
             ]),
         ]);
     }
@@ -9669,6 +10280,18 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             ]),
         ]);
     }
+    private function getFindingsV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Findings'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([], [])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function getInsightResults(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -9826,6 +10449,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -9840,6 +10464,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -9854,6 +10479,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -9868,6 +10494,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -9882,6 +10509,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -9896,6 +10524,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -9996,6 +10625,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10036,6 +10666,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10050,6 +10681,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10064,6 +10696,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10078,6 +10711,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10106,6 +10740,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10120,6 +10755,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10148,6 +10784,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10162,6 +10799,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10176,6 +10814,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10190,6 +10829,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10204,6 +10844,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10218,57 +10859,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Cidr'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Cidr'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Gte'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Lte'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Eq'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Gt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Lt'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Comparison'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PREFIX'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Comparison'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PREFIX'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10306,6 +10897,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10320,6 +10912,45 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Cidr'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Cidr'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Gte'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Lte'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Eq'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Gt'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Lt'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Comparison'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PREFIX'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10334,6 +10965,22 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Comparison'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PREFIX'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_EQUALS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10404,6 +11051,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10418,6 +11066,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10432,6 +11081,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10461,6 +11111,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10475,6 +11126,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10489,6 +11141,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10503,6 +11156,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10517,6 +11171,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10531,6 +11186,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10559,6 +11215,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10573,6 +11230,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10597,6 +11255,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10611,6 +11270,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10625,6 +11285,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10639,6 +11300,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10668,6 +11330,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10682,6 +11345,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10696,6 +11360,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10710,6 +11375,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10724,6 +11390,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10753,6 +11420,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10767,6 +11435,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10781,6 +11450,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10795,6 +11465,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10838,6 +11509,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10852,6 +11524,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10866,6 +11539,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10880,6 +11554,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10894,6 +11569,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10908,6 +11584,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10922,6 +11599,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10936,6 +11614,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10965,6 +11644,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11010,6 +11690,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11024,6 +11705,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11038,6 +11720,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11052,6 +11735,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11066,6 +11750,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11085,6 +11770,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11099,6 +11785,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11113,6 +11800,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11127,6 +11815,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11141,6 +11830,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11155,6 +11845,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11169,6 +11860,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11183,6 +11875,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11197,6 +11890,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('PREFIX_NOT_EQUALS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTAINS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NOT_CONTAINS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTAINS_WORD'),
                             ]),
                         ])),
                     ]),
@@ -11267,6 +11961,109 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ])),
+            ]),
+        ]);
+    }
+    private function getResourcesStatisticsV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('GroupByResults'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupByField'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupByValues'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FieldValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ])),
+                ])),
+            ]),
+        ]);
+    }
+    private function getResourcesV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Resources'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceCategory'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceCreationTimeDt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceDetailCaptureTimeDt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FindingsSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceTags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceConfig'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Compute'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Database'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Storage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AI/ML'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Identity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Network'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Other'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FindingType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProductName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TotalFindings'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Severities'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Other'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Fatal'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Critical'),
+                            new \PHPStan\Type\Constant\ConstantStringType('High'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Medium'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Low'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Informational'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                ])),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -11408,6 +12205,22 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             ]),
         ]);
     }
+    private function listAggregatorsV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('AggregatorsV2'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AggregatorV2Arn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function listAutomationRules(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -11438,6 +12251,48 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listAutomationRulesV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Rules'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RuleArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RuleId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RuleOrder'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RuleName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RuleStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Actions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FINDING_FIELDS_UPDATE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL_INTEGRATION'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -11505,6 +12360,46 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listConnectorsV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('Connectors'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectorArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectorId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProviderSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProviderName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectorStatus'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JIRA_CLOUD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SERVICENOW'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CONNECTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED_TO_CONNECT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_CONFIGURATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_AUTHORIZATION'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                ])),
             ]),
         ]);
     }
@@ -11592,6 +12487,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('AdminAccounts'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('Feature'),
             ], [
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
@@ -11604,6 +12500,10 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SecurityHub'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SecurityHubV2'),
+                ]),
             ]),
         ]);
     }
@@ -11833,6 +12733,28 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
             new \PHPStan\Type\Constant\ConstantArrayType([], []),
         ]);
     }
+    private function updateAggregatorV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('AggregatorV2Arn'),
+                new \PHPStan\Type\Constant\ConstantStringType('AggregationRegion'),
+                new \PHPStan\Type\Constant\ConstantStringType('RegionLinkingMode'),
+                new \PHPStan\Type\Constant\ConstantStringType('LinkedRegions'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
+    private function updateAutomationRuleV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+        ]);
+    }
     private function updateConfigurationPolicy(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -11906,6 +12828,12 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     ]),
                 ]),
             ]),
+        ]);
+    }
+    private function updateConnectorV2(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([], []),
         ]);
     }
     private function updateFindingAggregator(): ?\PHPStan\Type\Type

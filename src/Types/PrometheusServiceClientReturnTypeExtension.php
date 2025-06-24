@@ -16,16 +16,19 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
         return in_array($methodReflection->getName(), [
             'createAlertManagerDefinition',
             'createLoggingConfiguration',
+            'createQueryLoggingConfiguration',
             'createRuleGroupsNamespace',
             'createScraper',
             'createWorkspace',
             'deleteAlertManagerDefinition',
             'deleteLoggingConfiguration',
+            'deleteQueryLoggingConfiguration',
             'deleteRuleGroupsNamespace',
             'deleteScraper',
             'deleteWorkspace',
             'describeAlertManagerDefinition',
             'describeLoggingConfiguration',
+            'describeQueryLoggingConfiguration',
             'describeRuleGroupsNamespace',
             'describeScraper',
             'describeWorkspace',
@@ -40,6 +43,7 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
             'tagResource',
             'untagResource',
             'updateLoggingConfiguration',
+            'updateQueryLoggingConfiguration',
             'updateScraper',
             'updateWorkspaceAlias',
             'updateWorkspaceConfiguration',
@@ -51,16 +55,19 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
             default => throw new \RuntimeException('Unsupported method'),
             'createAlertManagerDefinition' => $this->createAlertManagerDefinition(),
             'createLoggingConfiguration' => $this->createLoggingConfiguration(),
+            'createQueryLoggingConfiguration' => $this->createQueryLoggingConfiguration(),
             'createRuleGroupsNamespace' => $this->createRuleGroupsNamespace(),
             'createScraper' => $this->createScraper(),
             'createWorkspace' => $this->createWorkspace(),
             'deleteAlertManagerDefinition' => $this->deleteAlertManagerDefinition(),
             'deleteLoggingConfiguration' => $this->deleteLoggingConfiguration(),
+            'deleteQueryLoggingConfiguration' => $this->deleteQueryLoggingConfiguration(),
             'deleteRuleGroupsNamespace' => $this->deleteRuleGroupsNamespace(),
             'deleteScraper' => $this->deleteScraper(),
             'deleteWorkspace' => $this->deleteWorkspace(),
             'describeAlertManagerDefinition' => $this->describeAlertManagerDefinition(),
             'describeLoggingConfiguration' => $this->describeLoggingConfiguration(),
+            'describeQueryLoggingConfiguration' => $this->describeQueryLoggingConfiguration(),
             'describeRuleGroupsNamespace' => $this->describeRuleGroupsNamespace(),
             'describeScraper' => $this->describeScraper(),
             'describeWorkspace' => $this->describeWorkspace(),
@@ -75,6 +82,7 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
             'tagResource' => $this->tagResource(),
             'untagResource' => $this->untagResource(),
             'updateLoggingConfiguration' => $this->updateLoggingConfiguration(),
+            'updateQueryLoggingConfiguration' => $this->updateQueryLoggingConfiguration(),
             'updateScraper' => $this->updateScraper(),
             'updateWorkspaceAlias' => $this->updateWorkspaceAlias(),
             'updateWorkspaceConfiguration' => $this->updateWorkspaceConfiguration(),
@@ -104,6 +112,29 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
         ]);
     }
     private function createLoggingConfiguration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('status'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ]),
+            ]),
+        ]);
+    }
+    private function createQueryLoggingConfiguration(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -223,6 +254,12 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
         ]);
     }
+    private function deleteQueryLoggingConfiguration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
     private function deleteRuleGroupsNamespace(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -311,6 +348,55 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
                 ], [
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ]),
+            ]),
+        ]);
+    }
+    private function describeQueryLoggingConfiguration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('queryLoggingConfiguration'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('destinations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('modifiedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('workspace'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('filters'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('logGroupArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('qspThreshold'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
@@ -776,6 +862,29 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
         ]);
     }
     private function updateLoggingConfiguration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('status'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ]),
+            ]),
+        ]);
+    }
+    private function updateQueryLoggingConfiguration(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([

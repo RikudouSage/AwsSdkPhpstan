@@ -21,11 +21,15 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
             'endSession',
             'generateQuery',
             'getAgentMemory',
+            'getExecutionFlowSnapshot',
+            'getFlowExecution',
             'getInvocationStep',
             'getSession',
             'invokeAgent',
             'invokeFlow',
             'invokeInlineAgent',
+            'listFlowExecutionEvents',
+            'listFlowExecutions',
             'listInvocationSteps',
             'listInvocations',
             'listSessions',
@@ -36,6 +40,8 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
             'retrieve',
             'retrieveAndGenerate',
             'retrieveAndGenerateStream',
+            'startFlowExecution',
+            'stopFlowExecution',
             'tagResource',
             'untagResource',
             'updateSession',
@@ -52,11 +58,15 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
             'endSession' => $this->endSession(),
             'generateQuery' => $this->generateQuery(),
             'getAgentMemory' => $this->getAgentMemory(),
+            'getExecutionFlowSnapshot' => $this->getExecutionFlowSnapshot(),
+            'getFlowExecution' => $this->getFlowExecution(),
             'getInvocationStep' => $this->getInvocationStep(),
             'getSession' => $this->getSession(),
             'invokeAgent' => $this->invokeAgent(),
             'invokeFlow' => $this->invokeFlow(),
             'invokeInlineAgent' => $this->invokeInlineAgent(),
+            'listFlowExecutionEvents' => $this->listFlowExecutionEvents(),
+            'listFlowExecutions' => $this->listFlowExecutions(),
             'listInvocationSteps' => $this->listInvocationSteps(),
             'listInvocations' => $this->listInvocations(),
             'listSessions' => $this->listSessions(),
@@ -67,6 +77,8 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
             'retrieve' => $this->retrieve(),
             'retrieveAndGenerate' => $this->retrieveAndGenerate(),
             'retrieveAndGenerateStream' => $this->retrieveAndGenerateStream(),
+            'startFlowExecution' => $this->startFlowExecution(),
+            'stopFlowExecution' => $this->stopFlowExecution(),
             'tagResource' => $this->tagResource(),
             'untagResource' => $this->untagResource(),
             'updateSession' => $this->updateSession(),
@@ -177,6 +189,64 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getExecutionFlowSnapshot(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('customerEncryptionKeyArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('definition'),
+                new \PHPStan\Type\Constant\ConstantStringType('executionRoleArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('flowAliasIdentifier'),
+                new \PHPStan\Type\Constant\ConstantStringType('flowIdentifier'),
+                new \PHPStan\Type\Constant\ConstantStringType('flowVersion'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getFlowExecution(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('endedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('errors'),
+                new \PHPStan\Type\Constant\ConstantStringType('executionArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('flowAliasIdentifier'),
+                new \PHPStan\Type\Constant\ConstantStringType('flowIdentifier'),
+                new \PHPStan\Type\Constant\ConstantStringType('flowVersion'),
+                new \PHPStan\Type\Constant\ConstantStringType('startedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('status'),
+            ], [
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('error'),
+                    new \PHPStan\Type\Constant\ConstantStringType('message'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodeName'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionTimedOut'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Running'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Aborted'),
+                ]),
             ]),
         ]);
     }
@@ -618,15 +688,40 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                 new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('failureReason'),
+                                new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                 new \PHPStan\Type\Constant\ConstantStringType('traceId'),
                             ], [
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('action'),
                                 new \PHPStan\Type\Constant\ConstantStringType('inputAssessments'),
+                                new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                 new \PHPStan\Type\Constant\ConstantStringType('outputAssessments'),
                                 new \PHPStan\Type\Constant\ConstantStringType('traceId'),
                             ], [
@@ -763,6 +858,27 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                         ])),
                                     ]),
                                 ])),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ]),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('contentPolicy'),
                                     new \PHPStan\Type\Constant\ConstantStringType('sensitiveInformationPolicy'),
@@ -1150,8 +1266,18 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                     new \PHPStan\Type\Constant\ConstantStringType('traceId'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
                                         new \PHPStan\Type\Constant\ConstantStringType('usage'),
                                     ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
                                             new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
@@ -1195,17 +1321,61 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                     new \PHPStan\Type\Constant\ConstantStringType('type'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                         new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('agentCollaboratorAliasArn'),
                                         new \PHPStan\Type\Constant\ConstantStringType('agentCollaboratorName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                         new \PHPStan\Type\Constant\ConstantStringType('output'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('returnControlPayload'),
                                             new \PHPStan\Type\Constant\ConstantStringType('text'),
@@ -1308,20 +1478,86 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                         new \PHPStan\Type\Constant\ConstantStringType('executionOutput'),
                                         new \PHPStan\Type\Constant\ConstantStringType('executionTimeout'),
                                         new \PHPStan\Type\Constant\ConstantStringType('files'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\BooleanType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                         new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                         new \PHPStan\Type\Constant\ConstantStringType('retrievedReferences'),
                                     ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('content'),
                                             new \PHPStan\Type\Constant\ConstantStringType('location'),
@@ -1506,8 +1742,18 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                     new \PHPStan\Type\Constant\ConstantStringType('traceId'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
                                         new \PHPStan\Type\Constant\ConstantStringType('usage'),
                                     ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
                                             new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
@@ -1601,8 +1847,18 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                     new \PHPStan\Type\Constant\ConstantStringType('traceId'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
                                         new \PHPStan\Type\Constant\ConstantStringType('usage'),
                                     ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
                                             new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
@@ -1897,8 +2153,18 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                     new \PHPStan\Type\Constant\ConstantStringType('traceId'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
                                         new \PHPStan\Type\Constant\ConstantStringType('usage'),
                                     ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
                                             new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
@@ -1925,17 +2191,61 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                     new \PHPStan\Type\Constant\ConstantStringType('type'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                         new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('agentCollaboratorAliasArn'),
                                         new \PHPStan\Type\Constant\ConstantStringType('agentCollaboratorName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                         new \PHPStan\Type\Constant\ConstantStringType('output'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('returnControlPayload'),
                                             new \PHPStan\Type\Constant\ConstantStringType('text'),
@@ -2038,20 +2348,86 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                         new \PHPStan\Type\Constant\ConstantStringType('executionOutput'),
                                         new \PHPStan\Type\Constant\ConstantStringType('executionTimeout'),
                                         new \PHPStan\Type\Constant\ConstantStringType('files'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\BooleanType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                         new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                         new \PHPStan\Type\Constant\ConstantStringType('retrievedReferences'),
                                     ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('content'),
                                             new \PHPStan\Type\Constant\ConstantStringType('location'),
@@ -2733,15 +3109,40 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                 new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('failureReason'),
+                                new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                 new \PHPStan\Type\Constant\ConstantStringType('traceId'),
                             ], [
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('action'),
                                 new \PHPStan\Type\Constant\ConstantStringType('inputAssessments'),
+                                new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                 new \PHPStan\Type\Constant\ConstantStringType('outputAssessments'),
                                 new \PHPStan\Type\Constant\ConstantStringType('traceId'),
                             ], [
@@ -2878,6 +3279,27 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                         ])),
                                     ]),
                                 ])),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ]),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('contentPolicy'),
                                     new \PHPStan\Type\Constant\ConstantStringType('sensitiveInformationPolicy'),
@@ -3265,8 +3687,18 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                     new \PHPStan\Type\Constant\ConstantStringType('traceId'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
                                         new \PHPStan\Type\Constant\ConstantStringType('usage'),
                                     ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
                                             new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
@@ -3310,17 +3742,61 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                     new \PHPStan\Type\Constant\ConstantStringType('type'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                         new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('agentCollaboratorAliasArn'),
                                         new \PHPStan\Type\Constant\ConstantStringType('agentCollaboratorName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                         new \PHPStan\Type\Constant\ConstantStringType('output'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('returnControlPayload'),
                                             new \PHPStan\Type\Constant\ConstantStringType('text'),
@@ -3423,20 +3899,86 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                         new \PHPStan\Type\Constant\ConstantStringType('executionOutput'),
                                         new \PHPStan\Type\Constant\ConstantStringType('executionTimeout'),
                                         new \PHPStan\Type\Constant\ConstantStringType('files'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\BooleanType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                         new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                         new \PHPStan\Type\Constant\ConstantStringType('retrievedReferences'),
                                     ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('content'),
                                             new \PHPStan\Type\Constant\ConstantStringType('location'),
@@ -3621,8 +4163,18 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                     new \PHPStan\Type\Constant\ConstantStringType('traceId'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
                                         new \PHPStan\Type\Constant\ConstantStringType('usage'),
                                     ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
                                             new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
@@ -3716,8 +4268,18 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                     new \PHPStan\Type\Constant\ConstantStringType('traceId'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
                                         new \PHPStan\Type\Constant\ConstantStringType('usage'),
                                     ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
                                             new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
@@ -4012,8 +4574,18 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                     new \PHPStan\Type\Constant\ConstantStringType('traceId'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
                                         new \PHPStan\Type\Constant\ConstantStringType('usage'),
                                     ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
                                             new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
@@ -4040,17 +4612,61 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                     new \PHPStan\Type\Constant\ConstantStringType('type'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                         new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('agentCollaboratorAliasArn'),
                                         new \PHPStan\Type\Constant\ConstantStringType('agentCollaboratorName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                         new \PHPStan\Type\Constant\ConstantStringType('output'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('returnControlPayload'),
                                             new \PHPStan\Type\Constant\ConstantStringType('text'),
@@ -4153,20 +4769,86 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                         new \PHPStan\Type\Constant\ConstantStringType('executionOutput'),
                                         new \PHPStan\Type\Constant\ConstantStringType('executionTimeout'),
                                         new \PHPStan\Type\Constant\ConstantStringType('files'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\BooleanType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                         new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                                         new \PHPStan\Type\Constant\ConstantStringType('retrievedReferences'),
                                     ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('clientRequestId'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('operationTotalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('totalTimeMs'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
+                                            ], [
+                                                new \PHPStan\Type\IntegerType(),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                        ]),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('content'),
                                             new \PHPStan\Type\Constant\ConstantStringType('location'),
@@ -4298,6 +4980,179 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                     ]),
                 ]),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listFlowExecutionEvents(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('flowExecutionEvents'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('conditionResultEvent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('flowFailureEvent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('flowInputEvent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('flowOutputEvent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodeFailureEvent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodeInputEvent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodeOutputEvent'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('nodeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('satisfiedConditions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('conditionName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VALIDATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_SERVER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NODE_EXECUTION_FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('fields'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('document'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('fields'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('document'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VALIDATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPENDENCY_FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BAD_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_SERVER'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('fields'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('document'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('fields'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('document'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listFlowExecutions(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('flowExecutionSummaries'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('executionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('flowAliasIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('flowIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('flowVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Running'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Aborted'),
+                    ]),
+                ])),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -5090,6 +5945,34 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                     ], [
                         new \PHPStan\Type\StringType(),
                     ]),
+                ]),
+            ]),
+        ]);
+    }
+    private function startFlowExecution(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('executionArn'),
+            ], [
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function stopFlowExecution(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('executionArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('status'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Running'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Aborted'),
                 ]),
             ]),
         ]);

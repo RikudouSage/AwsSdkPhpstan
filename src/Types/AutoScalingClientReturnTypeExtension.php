@@ -462,6 +462,7 @@ final class AutoScalingClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                         new \PHPStan\Type\Constant\ConstantStringType('intel'),
                                         new \PHPStan\Type\Constant\ConstantStringType('amd'),
                                         new \PHPStan\Type\Constant\ConstantStringType('amazon-web-services'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('apple'),
                                     ])),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Min'),
@@ -1012,6 +1013,7 @@ final class AutoScalingClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                             new \PHPStan\Type\Constant\ConstantStringType('intel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('amd'),
                                             new \PHPStan\Type\Constant\ConstantStringType('amazon-web-services'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('apple'),
                                         ])),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('Min'),

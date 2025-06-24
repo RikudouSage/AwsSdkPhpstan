@@ -33,6 +33,7 @@ final class CloudTrailClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'generateQuery',
             'getChannel',
             'getDashboard',
+            'getEventConfiguration',
             'getEventDataStore',
             'getEventSelectors',
             'getImport',
@@ -52,6 +53,7 @@ final class CloudTrailClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'listTags',
             'listTrails',
             'lookupEvents',
+            'putEventConfiguration',
             'putEventSelectors',
             'putInsightSelectors',
             'putResourcePolicy',
@@ -96,6 +98,7 @@ final class CloudTrailClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'generateQuery' => $this->generateQuery(),
             'getChannel' => $this->getChannel(),
             'getDashboard' => $this->getDashboard(),
+            'getEventConfiguration' => $this->getEventConfiguration(),
             'getEventDataStore' => $this->getEventDataStore(),
             'getEventSelectors' => $this->getEventSelectors(),
             'getImport' => $this->getImport(),
@@ -115,6 +118,7 @@ final class CloudTrailClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'listTags' => $this->listTags(),
             'listTrails' => $this->listTrails(),
             'lookupEvents' => $this->lookupEvents(),
+            'putEventConfiguration' => $this->putEventConfiguration(),
             'putEventSelectors' => $this->putEventSelectors(),
             'putInsightSelectors' => $this->putInsightSelectors(),
             'putResourcePolicy' => $this->putResourcePolicy(),
@@ -681,6 +685,32 @@ final class CloudTrailClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\BooleanType(),
+            ]),
+        ]);
+    }
+    private function getEventConfiguration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('EventDataStoreArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('MaxEventSize'),
+                new \PHPStan\Type\Constant\ConstantStringType('ContextKeySelectors'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Standard'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Large'),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Equals'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TagContext'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestContext'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                ])),
             ]),
         ]);
     }
@@ -1350,6 +1380,32 @@ final class CloudTrailClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function putEventConfiguration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('EventDataStoreArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('MaxEventSize'),
+                new \PHPStan\Type\Constant\ConstantStringType('ContextKeySelectors'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Standard'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Large'),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Equals'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TagContext'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestContext'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                ])),
             ]),
         ]);
     }

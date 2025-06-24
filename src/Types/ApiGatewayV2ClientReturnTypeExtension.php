@@ -24,6 +24,7 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
             'createModel',
             'createRoute',
             'createRouteResponse',
+            'createRoutingRule',
             'createStage',
             'createVpcLink',
             'deleteAccessLogSettings',
@@ -40,6 +41,7 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
             'deleteRouteRequestParameter',
             'deleteRouteResponse',
             'deleteRouteSettings',
+            'deleteRoutingRule',
             'deleteStage',
             'deleteVpcLink',
             'exportApi',
@@ -65,12 +67,15 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
             'getRouteResponse',
             'getRouteResponses',
             'getRoutes',
+            'getRoutingRule',
+            'listRoutingRules',
             'getStage',
             'getStages',
             'getTags',
             'getVpcLink',
             'getVpcLinks',
             'importApi',
+            'putRoutingRule',
             'reimportApi',
             'tagResource',
             'untagResource',
@@ -102,6 +107,7 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
             'createModel' => $this->createModel(),
             'createRoute' => $this->createRoute(),
             'createRouteResponse' => $this->createRouteResponse(),
+            'createRoutingRule' => $this->createRoutingRule(),
             'createStage' => $this->createStage(),
             'createVpcLink' => $this->createVpcLink(),
             'deleteAccessLogSettings' => $this->deleteAccessLogSettings(),
@@ -118,6 +124,7 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
             'deleteRouteRequestParameter' => $this->deleteRouteRequestParameter(),
             'deleteRouteResponse' => $this->deleteRouteResponse(),
             'deleteRouteSettings' => $this->deleteRouteSettings(),
+            'deleteRoutingRule' => $this->deleteRoutingRule(),
             'deleteStage' => $this->deleteStage(),
             'deleteVpcLink' => $this->deleteVpcLink(),
             'exportApi' => $this->exportApi(),
@@ -143,12 +150,15 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
             'getRouteResponse' => $this->getRouteResponse(),
             'getRouteResponses' => $this->getRouteResponses(),
             'getRoutes' => $this->getRoutes(),
+            'getRoutingRule' => $this->getRoutingRule(),
+            'listRoutingRules' => $this->listRoutingRules(),
             'getStage' => $this->getStage(),
             'getStages' => $this->getStages(),
             'getTags' => $this->getTags(),
             'getVpcLink' => $this->getVpcLink(),
             'getVpcLinks' => $this->getVpcLinks(),
             'importApi' => $this->importApi(),
+            'putRoutingRule' => $this->putRoutingRule(),
             'reimportApi' => $this->reimportApi(),
             'tagResource' => $this->tagResource(),
             'untagResource' => $this->untagResource(),
@@ -313,10 +323,13 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('ApiMappingSelectionExpression'),
                 new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                new \PHPStan\Type\Constant\ConstantStringType('DomainNameArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('DomainNameConfigurations'),
                 new \PHPStan\Type\Constant\ConstantStringType('MutualTlsAuthentication'),
+                new \PHPStan\Type\Constant\ConstantStringType('RoutingMode'),
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -366,6 +379,11 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                ]),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('API_MAPPING_ONLY'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROUTING_RULE_ONLY'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROUTING_RULE_THEN_API_MAPPING'),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
@@ -540,6 +558,56 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 ], [
                     new \PHPStan\Type\BooleanType(),
                 ])),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function createRoutingRule(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Actions'),
+                new \PHPStan\Type\Constant\ConstantStringType('Conditions'),
+                new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                new \PHPStan\Type\Constant\ConstantStringType('RoutingRuleArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('RoutingRuleId'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('InvokeApi'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ApiId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Stage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StripBasePath'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('MatchBasePaths'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MatchHeaders'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AnyOf'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AnyOf'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Header'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ValueGlob'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
+                new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -730,6 +798,12 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
         ]);
     }
     private function deleteRouteSettings(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
+    private function deleteRoutingRule(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
@@ -1079,10 +1153,13 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('ApiMappingSelectionExpression'),
                 new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                new \PHPStan\Type\Constant\ConstantStringType('DomainNameArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('DomainNameConfigurations'),
                 new \PHPStan\Type\Constant\ConstantStringType('MutualTlsAuthentication'),
+                new \PHPStan\Type\Constant\ConstantStringType('RoutingMode'),
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1133,6 +1210,11 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('API_MAPPING_ONLY'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROUTING_RULE_ONLY'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROUTING_RULE_THEN_API_MAPPING'),
+                ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
@@ -1147,10 +1229,13 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ApiMappingSelectionExpression'),
                     new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DomainNameArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('DomainNameConfigurations'),
                     new \PHPStan\Type\Constant\ConstantStringType('MutualTlsAuthentication'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoutingMode'),
                     new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                 ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1200,6 +1285,11 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('API_MAPPING_ONLY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROUTING_RULE_ONLY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROUTING_RULE_THEN_API_MAPPING'),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
@@ -1595,6 +1685,112 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
             ]),
         ]);
     }
+    private function getRoutingRule(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Actions'),
+                new \PHPStan\Type\Constant\ConstantStringType('Conditions'),
+                new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                new \PHPStan\Type\Constant\ConstantStringType('RoutingRuleArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('RoutingRuleId'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('InvokeApi'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ApiId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Stage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StripBasePath'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('MatchBasePaths'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MatchHeaders'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AnyOf'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AnyOf'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Header'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ValueGlob'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
+                new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listRoutingRules(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('RoutingRules'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Actions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Conditions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoutingRuleArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoutingRuleId'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InvokeApi'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ApiId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Stage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StripBasePath'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MatchBasePaths'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MatchHeaders'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AnyOf'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AnyOf'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Header'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ValueGlob'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+            ]),
+        ]);
+    }
     private function getStage(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1891,6 +2087,56 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
             ]),
         ]);
     }
+    private function putRoutingRule(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Actions'),
+                new \PHPStan\Type\Constant\ConstantStringType('Conditions'),
+                new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                new \PHPStan\Type\Constant\ConstantStringType('RoutingRuleArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('RoutingRuleId'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('InvokeApi'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ApiId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Stage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StripBasePath'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('MatchBasePaths'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MatchHeaders'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AnyOf'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AnyOf'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Header'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ValueGlob'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                ])),
+                new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function reimportApi(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -2112,10 +2358,13 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('ApiMappingSelectionExpression'),
                 new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                new \PHPStan\Type\Constant\ConstantStringType('DomainNameArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('DomainNameConfigurations'),
                 new \PHPStan\Type\Constant\ConstantStringType('MutualTlsAuthentication'),
+                new \PHPStan\Type\Constant\ConstantStringType('RoutingMode'),
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2165,6 +2414,11 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                ]),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('API_MAPPING_ONLY'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROUTING_RULE_ONLY'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ROUTING_RULE_THEN_API_MAPPING'),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),

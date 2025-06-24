@@ -240,6 +240,7 @@ final class ControlTowerClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('arn'),
                     new \PHPStan\Type\Constant\ConstantStringType('baselineIdentifier'),
                     new \PHPStan\Type\Constant\ConstantStringType('baselineVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('driftStatusSummary'),
                     new \PHPStan\Type\Constant\ConstantStringType('parameters'),
                     new \PHPStan\Type\Constant\ConstantStringType('parentIdentifier'),
                     new \PHPStan\Type\Constant\ConstantStringType('statusSummary'),
@@ -248,6 +249,22 @@ final class ControlTowerClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('types'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('inheritance'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('IN_SYNC'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DRIFTED'),
+                                ]),
+                            ]),
+                        ]),
+                    ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('key'),
                         new \PHPStan\Type\Constant\ConstantStringType('value'),
@@ -467,6 +484,7 @@ final class ControlTowerClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('arn'),
                     new \PHPStan\Type\Constant\ConstantStringType('baselineIdentifier'),
                     new \PHPStan\Type\Constant\ConstantStringType('baselineVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('driftStatusSummary'),
                     new \PHPStan\Type\Constant\ConstantStringType('parentIdentifier'),
                     new \PHPStan\Type\Constant\ConstantStringType('statusSummary'),
                     new \PHPStan\Type\Constant\ConstantStringType('targetIdentifier'),
@@ -474,6 +492,22 @@ final class ControlTowerClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('types'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('inheritance'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('IN_SYNC'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DRIFTED'),
+                                ]),
+                            ]),
+                        ]),
+                    ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('lastOperationIdentifier'),

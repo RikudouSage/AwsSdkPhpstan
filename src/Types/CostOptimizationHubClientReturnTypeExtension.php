@@ -42,6 +42,7 @@ final class CostOptimizationHubClientReturnTypeExtension implements \PHPStan\Typ
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('savingsEstimationMode'),
                 new \PHPStan\Type\Constant\ConstantStringType('memberAccountDiscountVisibility'),
+                new \PHPStan\Type\Constant\ConstantStringType('preferredCommitment'),
             ], [
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('BeforeDiscounts'),
@@ -50,6 +51,20 @@ final class CostOptimizationHubClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('All'),
                     new \PHPStan\Type\Constant\ConstantStringType('None'),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('term'),
+                    new \PHPStan\Type\Constant\ConstantStringType('paymentOption'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OneYear'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ThreeYears'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AllUpfront'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PartialUpfront'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NoUpfront'),
+                    ]),
                 ]),
             ]),
         ]);
@@ -107,6 +122,7 @@ final class CostOptimizationHubClientReturnTypeExtension implements \PHPStan\Typ
                     new \PHPStan\Type\Constant\ConstantStringType('ElastiCacheReservedInstances'),
                     new \PHPStan\Type\Constant\ConstantStringType('RdsDbInstanceStorage'),
                     new \PHPStan\Type\Constant\ConstantStringType('RdsDbInstance'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AuroraDbClusterStorage'),
                     new \PHPStan\Type\Constant\ConstantStringType('DynamoDbReservedCapacity'),
                     new \PHPStan\Type\Constant\ConstantStringType('MemoryDbReservedInstances'),
                 ]),
@@ -126,6 +142,7 @@ final class CostOptimizationHubClientReturnTypeExtension implements \PHPStan\Typ
                     new \PHPStan\Type\Constant\ConstantStringType('ElastiCacheReservedInstances'),
                     new \PHPStan\Type\Constant\ConstantStringType('RdsDbInstanceStorage'),
                     new \PHPStan\Type\Constant\ConstantStringType('RdsDbInstance'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AuroraDbClusterStorage'),
                     new \PHPStan\Type\Constant\ConstantStringType('DynamoDbReservedCapacity'),
                     new \PHPStan\Type\Constant\ConstantStringType('MemoryDbReservedInstances'),
                 ]),
@@ -172,6 +189,7 @@ final class CostOptimizationHubClientReturnTypeExtension implements \PHPStan\Typ
                     new \PHPStan\Type\Constant\ConstantStringType('sageMakerSavingsPlans'),
                     new \PHPStan\Type\Constant\ConstantStringType('rdsDbInstance'),
                     new \PHPStan\Type\Constant\ConstantStringType('rdsDbInstanceStorage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('auroraDbClusterStorage'),
                     new \PHPStan\Type\Constant\ConstantStringType('dynamoDbReservedCapacity'),
                     new \PHPStan\Type\Constant\ConstantStringType('memoryDbReservedInstances'),
                 ], [
@@ -889,6 +907,53 @@ final class CostOptimizationHubClientReturnTypeExtension implements \PHPStan\Typ
                             new \PHPStan\Type\FloatType(),
                             new \PHPStan\Type\FloatType(),
                             new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('usages'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pricing'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('usageType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('usageAmount'),
+                                new \PHPStan\Type\Constant\ConstantStringType('operation'),
+                                new \PHPStan\Type\Constant\ConstantStringType('productCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('estimatedCostBeforeDiscounts'),
+                                new \PHPStan\Type\Constant\ConstantStringType('estimatedNetUnusedAmortizedCommitments'),
+                                new \PHPStan\Type\Constant\ConstantStringType('estimatedDiscounts'),
+                                new \PHPStan\Type\Constant\ConstantStringType('estimatedCostAfterDiscounts'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('savingsPlansDiscount'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('reservedInstancesDiscount'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('otherDiscount'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('configuration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('costCalculation'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('storageType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('usages'),
@@ -1035,6 +1100,7 @@ final class CostOptimizationHubClientReturnTypeExtension implements \PHPStan\Typ
                     new \PHPStan\Type\Constant\ConstantStringType('sageMakerSavingsPlans'),
                     new \PHPStan\Type\Constant\ConstantStringType('rdsDbInstance'),
                     new \PHPStan\Type\Constant\ConstantStringType('rdsDbInstanceStorage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('auroraDbClusterStorage'),
                     new \PHPStan\Type\Constant\ConstantStringType('dynamoDbReservedCapacity'),
                     new \PHPStan\Type\Constant\ConstantStringType('memoryDbReservedInstances'),
                 ], [
@@ -1752,6 +1818,53 @@ final class CostOptimizationHubClientReturnTypeExtension implements \PHPStan\Typ
                             new \PHPStan\Type\FloatType(),
                             new \PHPStan\Type\FloatType(),
                             new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('usages'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pricing'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('usageType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('usageAmount'),
+                                new \PHPStan\Type\Constant\ConstantStringType('operation'),
+                                new \PHPStan\Type\Constant\ConstantStringType('productCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('estimatedCostBeforeDiscounts'),
+                                new \PHPStan\Type\Constant\ConstantStringType('estimatedNetUnusedAmortizedCommitments'),
+                                new \PHPStan\Type\Constant\ConstantStringType('estimatedDiscounts'),
+                                new \PHPStan\Type\Constant\ConstantStringType('estimatedCostAfterDiscounts'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('savingsPlansDiscount'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('reservedInstancesDiscount'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('otherDiscount'),
+                                ], [
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\FloatType(),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('configuration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('costCalculation'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('storageType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('usages'),
@@ -2032,6 +2145,7 @@ final class CostOptimizationHubClientReturnTypeExtension implements \PHPStan\Typ
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('savingsEstimationMode'),
                 new \PHPStan\Type\Constant\ConstantStringType('memberAccountDiscountVisibility'),
+                new \PHPStan\Type\Constant\ConstantStringType('preferredCommitment'),
             ], [
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('BeforeDiscounts'),
@@ -2040,6 +2154,20 @@ final class CostOptimizationHubClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('All'),
                     new \PHPStan\Type\Constant\ConstantStringType('None'),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('term'),
+                    new \PHPStan\Type\Constant\ConstantStringType('paymentOption'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OneYear'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ThreeYears'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AllUpfront'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PartialUpfront'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NoUpfront'),
+                    ]),
                 ]),
             ]),
         ]);

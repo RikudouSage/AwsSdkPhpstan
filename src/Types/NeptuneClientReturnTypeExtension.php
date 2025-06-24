@@ -83,6 +83,7 @@ final class NeptuneClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             'restoreDBClusterToPointInTime',
             'startDBCluster',
             'stopDBCluster',
+            'switchoverGlobalCluster',
         ], true);
     }
     public function getTypeFromMethodCall(\PHPStan\Reflection\MethodReflection $methodReflection, \PhpParser\Node\Expr\MethodCall $methodCall, \PHPStan\Analyser\Scope $scope): ?\PHPStan\Type\Type
@@ -158,6 +159,7 @@ final class NeptuneClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             'restoreDBClusterToPointInTime' => $this->restoreDBClusterToPointInTime(),
             'startDBCluster' => $this->startDBCluster(),
             'stopDBCluster' => $this->stopDBCluster(),
+            'switchoverGlobalCluster' => $this->switchoverGlobalCluster(),
         };
     }
     private function addRoleToDBCluster(): ?\PHPStan\Type\Type
@@ -928,6 +930,7 @@ final class NeptuneClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('StorageEncrypted'),
                     new \PHPStan\Type\Constant\ConstantStringType('DeletionProtection'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterMembers'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailoverState'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -946,6 +949,21 @@ final class NeptuneClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\BooleanType(),
                     ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FromDbClusterArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ToDbClusterArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsDataLossAllowed'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('failing-over'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cancelling'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
                 ]),
             ]),
         ]);
@@ -1492,6 +1510,7 @@ final class NeptuneClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('StorageEncrypted'),
                     new \PHPStan\Type\Constant\ConstantStringType('DeletionProtection'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterMembers'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailoverState'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1510,6 +1529,21 @@ final class NeptuneClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\BooleanType(),
                     ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FromDbClusterArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ToDbClusterArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsDataLossAllowed'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('failing-over'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cancelling'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
                 ]),
             ]),
         ]);
@@ -2437,6 +2471,7 @@ final class NeptuneClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('StorageEncrypted'),
                     new \PHPStan\Type\Constant\ConstantStringType('DeletionProtection'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterMembers'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailoverState'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2455,6 +2490,21 @@ final class NeptuneClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\BooleanType(),
                     ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FromDbClusterArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ToDbClusterArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsDataLossAllowed'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('failing-over'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cancelling'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
                 ])),
             ]),
         ]);
@@ -2775,6 +2825,7 @@ final class NeptuneClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('StorageEncrypted'),
                     new \PHPStan\Type\Constant\ConstantStringType('DeletionProtection'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterMembers'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailoverState'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2793,6 +2844,21 @@ final class NeptuneClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\BooleanType(),
                     ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FromDbClusterArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ToDbClusterArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsDataLossAllowed'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('failing-over'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cancelling'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
                 ]),
             ]),
         ]);
@@ -3361,6 +3427,7 @@ final class NeptuneClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('StorageEncrypted'),
                     new \PHPStan\Type\Constant\ConstantStringType('DeletionProtection'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterMembers'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailoverState'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -3379,6 +3446,21 @@ final class NeptuneClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\BooleanType(),
                     ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FromDbClusterArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ToDbClusterArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsDataLossAllowed'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('failing-over'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cancelling'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
                 ]),
             ]),
         ]);
@@ -3793,6 +3875,7 @@ final class NeptuneClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('StorageEncrypted'),
                     new \PHPStan\Type\Constant\ConstantStringType('DeletionProtection'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterMembers'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailoverState'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -3811,6 +3894,21 @@ final class NeptuneClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\BooleanType(),
                     ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FromDbClusterArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ToDbClusterArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsDataLossAllowed'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('failing-over'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cancelling'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
                 ]),
             ]),
         ]);
@@ -4523,6 +4621,60 @@ final class NeptuneClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
+                ]),
+            ]),
+        ]);
+    }
+    private function switchoverGlobalCluster(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('GlobalCluster'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterResourceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Engine'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EngineVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StorageEncrypted'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeletionProtection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterMembers'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailoverState'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DBClusterArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Readers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsWriter'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\BooleanType(),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FromDbClusterArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ToDbClusterArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsDataLossAllowed'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('failing-over'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cancelling'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
                 ]),
             ]),
         ]);

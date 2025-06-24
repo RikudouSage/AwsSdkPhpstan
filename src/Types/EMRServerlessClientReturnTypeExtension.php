@@ -115,6 +115,7 @@ final class EMRServerlessClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('monitoringConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('interactiveConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('schedulerConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('identityCenterConfiguration'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -263,6 +264,13 @@ final class EMRServerlessClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('identityCenterInstanceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('identityCenterApplicationArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
                 ]),
             ]),
         ]);
@@ -292,6 +300,7 @@ final class EMRServerlessClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('executionRole'),
+                    new \PHPStan\Type\Constant\ConstantStringType('executionIamPolicy'),
                     new \PHPStan\Type\Constant\ConstantStringType('state'),
                     new \PHPStan\Type\Constant\ConstantStringType('stateDetails'),
                     new \PHPStan\Type\Constant\ConstantStringType('releaseLabel'),
@@ -320,6 +329,13 @@ final class EMRServerlessClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('policy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('policyArns'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('SUBMITTED'),
                         new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
@@ -696,6 +712,7 @@ final class EMRServerlessClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('monitoringConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('interactiveConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('schedulerConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('identityCenterConfiguration'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -843,6 +860,13 @@ final class EMRServerlessClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('identityCenterInstanceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('identityCenterApplicationArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ]),
             ]),

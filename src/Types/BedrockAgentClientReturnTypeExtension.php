@@ -496,6 +496,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('agentAliasName'),
                     new \PHPStan\Type\Constant\ConstantStringType('agentAliasStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('agentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('aliasInvocationState'),
                     new \PHPStan\Type\Constant\ConstantStringType('clientToken'),
                     new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('description'),
@@ -530,6 +531,10 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('DISSOCIATED'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCEPT_INVOCATIONS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REJECT_INVOCATIONS'),
+                    ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -978,6 +983,9 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('knowledgeBase'),
                             new \PHPStan\Type\Constant\ConstantStringType('lambdaFunction'),
                             new \PHPStan\Type\Constant\ConstantStringType('lex'),
+                            new \PHPStan\Type\Constant\ConstantStringType('loop'),
+                            new \PHPStan\Type\Constant\ConstantStringType('loopController'),
+                            new \PHPStan\Type\Constant\ConstantStringType('loopInput'),
                             new \PHPStan\Type\Constant\ConstantStringType('output'),
                             new \PHPStan\Type\Constant\ConstantStringType('prompt'),
                             new \PHPStan\Type\Constant\ConstantStringType('retrieval'),
@@ -1011,8 +1019,13 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('guardrailConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('inferenceConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
                                 new \PHPStan\Type\Constant\ConstantStringType('modelId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('numberOfResults'),
+                                new \PHPStan\Type\Constant\ConstantStringType('orchestrationConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('promptTemplate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rerankingConfiguration'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('guardrailIdentifier'),
@@ -1021,8 +1034,109 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('stopSequences'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('temperature'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('topP'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('additionalModelRequestFields'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('inferenceConfig'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('performanceConfig'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('promptTemplate'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([], [])),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('stopSequences'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('temperature'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('topP'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('latency'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('standard'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('optimized'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('textPromptTemplate'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('textPromptTemplate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bedrockRerankingConfiguration'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadataConfiguration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('modelConfiguration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('numberOfRerankedResults'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('selectionMode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('selectiveModeConfiguration'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('SELECTIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('fieldsToExclude'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('fieldsToInclude'),
+                                            ], [
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('additionalModelRequestFields'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('modelArn'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([], [])),
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BEDROCK_RERANKING_MODEL'),
+                                ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('lambdaArn'),
@@ -1036,6 +1150,25 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('definition'),
+                            ], [
+                                new \PHPStan\Type\MixedType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('continueCondition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxIterations'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('expression'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('guardrailConfiguration'),
@@ -1222,10 +1355,16 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ]),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('category'),
                             new \PHPStan\Type\Constant\ConstantStringType('expression'),
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
                             new \PHPStan\Type\Constant\ConstantStringType('type'),
                         ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LoopCondition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReturnValueToLoopStart'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ExitLoop'),
+                            ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
@@ -1264,6 +1403,9 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('Iterator'),
                             new \PHPStan\Type\Constant\ConstantStringType('Collector'),
                             new \PHPStan\Type\Constant\ConstantStringType('InlineCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Loop'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LoopInput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LoopController'),
                         ]),
                     ])),
                 ]),
@@ -1287,6 +1429,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                new \PHPStan\Type\Constant\ConstantStringType('concurrencyConfiguration'),
                 new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                 new \PHPStan\Type\Constant\ConstantStringType('description'),
                 new \PHPStan\Type\Constant\ConstantStringType('flowId'),
@@ -1296,6 +1439,16 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
             ], [
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('maxConcurrency'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Automatic'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Manual'),
+                    ]),
+                ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1381,6 +1534,9 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('knowledgeBase'),
                             new \PHPStan\Type\Constant\ConstantStringType('lambdaFunction'),
                             new \PHPStan\Type\Constant\ConstantStringType('lex'),
+                            new \PHPStan\Type\Constant\ConstantStringType('loop'),
+                            new \PHPStan\Type\Constant\ConstantStringType('loopController'),
+                            new \PHPStan\Type\Constant\ConstantStringType('loopInput'),
                             new \PHPStan\Type\Constant\ConstantStringType('output'),
                             new \PHPStan\Type\Constant\ConstantStringType('prompt'),
                             new \PHPStan\Type\Constant\ConstantStringType('retrieval'),
@@ -1414,8 +1570,13 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('guardrailConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('inferenceConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
                                 new \PHPStan\Type\Constant\ConstantStringType('modelId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('numberOfResults'),
+                                new \PHPStan\Type\Constant\ConstantStringType('orchestrationConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('promptTemplate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rerankingConfiguration'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('guardrailIdentifier'),
@@ -1424,8 +1585,109 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('stopSequences'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('temperature'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('topP'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('additionalModelRequestFields'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('inferenceConfig'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('performanceConfig'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('promptTemplate'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([], [])),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('stopSequences'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('temperature'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('topP'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('latency'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('standard'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('optimized'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('textPromptTemplate'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('textPromptTemplate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bedrockRerankingConfiguration'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadataConfiguration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('modelConfiguration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('numberOfRerankedResults'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('selectionMode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('selectiveModeConfiguration'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('SELECTIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('fieldsToExclude'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('fieldsToInclude'),
+                                            ], [
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('additionalModelRequestFields'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('modelArn'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([], [])),
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BEDROCK_RERANKING_MODEL'),
+                                ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('lambdaArn'),
@@ -1439,6 +1701,25 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('definition'),
+                            ], [
+                                new \PHPStan\Type\MixedType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('continueCondition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxIterations'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('expression'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('guardrailConfiguration'),
@@ -1625,10 +1906,16 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ]),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('category'),
                             new \PHPStan\Type\Constant\ConstantStringType('expression'),
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
                             new \PHPStan\Type\Constant\ConstantStringType('type'),
                         ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LoopCondition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReturnValueToLoopStart'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ExitLoop'),
+                            ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
@@ -1667,6 +1954,9 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('Iterator'),
                             new \PHPStan\Type\Constant\ConstantStringType('Collector'),
                             new \PHPStan\Type\Constant\ConstantStringType('InlineCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Loop'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LoopInput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LoopController'),
                         ]),
                     ])),
                 ]),
@@ -2901,6 +3191,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('agentAliasName'),
                     new \PHPStan\Type\Constant\ConstantStringType('agentAliasStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('agentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('aliasInvocationState'),
                     new \PHPStan\Type\Constant\ConstantStringType('clientToken'),
                     new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('description'),
@@ -2935,6 +3226,10 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('DISSOCIATED'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCEPT_INVOCATIONS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REJECT_INVOCATIONS'),
+                    ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -3584,6 +3879,9 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('knowledgeBase'),
                             new \PHPStan\Type\Constant\ConstantStringType('lambdaFunction'),
                             new \PHPStan\Type\Constant\ConstantStringType('lex'),
+                            new \PHPStan\Type\Constant\ConstantStringType('loop'),
+                            new \PHPStan\Type\Constant\ConstantStringType('loopController'),
+                            new \PHPStan\Type\Constant\ConstantStringType('loopInput'),
                             new \PHPStan\Type\Constant\ConstantStringType('output'),
                             new \PHPStan\Type\Constant\ConstantStringType('prompt'),
                             new \PHPStan\Type\Constant\ConstantStringType('retrieval'),
@@ -3617,8 +3915,13 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('guardrailConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('inferenceConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
                                 new \PHPStan\Type\Constant\ConstantStringType('modelId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('numberOfResults'),
+                                new \PHPStan\Type\Constant\ConstantStringType('orchestrationConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('promptTemplate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rerankingConfiguration'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('guardrailIdentifier'),
@@ -3627,8 +3930,109 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('stopSequences'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('temperature'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('topP'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('additionalModelRequestFields'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('inferenceConfig'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('performanceConfig'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('promptTemplate'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([], [])),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('stopSequences'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('temperature'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('topP'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('latency'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('standard'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('optimized'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('textPromptTemplate'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('textPromptTemplate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bedrockRerankingConfiguration'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadataConfiguration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('modelConfiguration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('numberOfRerankedResults'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('selectionMode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('selectiveModeConfiguration'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('SELECTIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('fieldsToExclude'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('fieldsToInclude'),
+                                            ], [
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('additionalModelRequestFields'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('modelArn'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([], [])),
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BEDROCK_RERANKING_MODEL'),
+                                ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('lambdaArn'),
@@ -3642,6 +4046,25 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('definition'),
+                            ], [
+                                new \PHPStan\Type\MixedType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('continueCondition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxIterations'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('expression'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('guardrailConfiguration'),
@@ -3828,10 +4251,16 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ]),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('category'),
                             new \PHPStan\Type\Constant\ConstantStringType('expression'),
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
                             new \PHPStan\Type\Constant\ConstantStringType('type'),
                         ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LoopCondition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReturnValueToLoopStart'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ExitLoop'),
+                            ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
@@ -3870,6 +4299,9 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('Iterator'),
                             new \PHPStan\Type\Constant\ConstantStringType('Collector'),
                             new \PHPStan\Type\Constant\ConstantStringType('InlineCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Loop'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LoopInput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LoopController'),
                         ]),
                     ])),
                 ]),
@@ -3895,6 +4327,8 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('duplicateConditionExpression'),
                         new \PHPStan\Type\Constant\ConstantStringType('duplicateConnections'),
                         new \PHPStan\Type\Constant\ConstantStringType('incompatibleConnectionDataType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('invalidLoopBoundary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('loopIncompatibleNodeType'),
                         new \PHPStan\Type\Constant\ConstantStringType('malformedConditionExpression'),
                         new \PHPStan\Type\Constant\ConstantStringType('malformedNodeInputExpression'),
                         new \PHPStan\Type\Constant\ConstantStringType('mismatchedNodeInputType'),
@@ -3902,10 +4336,14 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('missingConnectionConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('missingDefaultCondition'),
                         new \PHPStan\Type\Constant\ConstantStringType('missingEndingNodes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('missingLoopControllerNode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('missingLoopInputNode'),
                         new \PHPStan\Type\Constant\ConstantStringType('missingNodeConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('missingNodeInput'),
                         new \PHPStan\Type\Constant\ConstantStringType('missingNodeOutput'),
                         new \PHPStan\Type\Constant\ConstantStringType('missingStartingNodes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('multipleLoopControllerNodes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('multipleLoopInputNodes'),
                         new \PHPStan\Type\Constant\ConstantStringType('multipleNodeInputConnections'),
                         new \PHPStan\Type\Constant\ConstantStringType('unfulfilledNodeInput'),
                         new \PHPStan\Type\Constant\ConstantStringType('unknownConnectionCondition'),
@@ -3941,6 +4379,29 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('connection'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('connection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                            new \PHPStan\Type\Constant\ConstantStringType('target'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('incompatibleNodeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('incompatibleNodeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('node'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Input'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Condition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Iterator'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Collector'),
+                            ]),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4003,6 +4464,16 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([], []),
                         new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('loopNode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('loopNode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('node'),
                         ], [
                             new \PHPStan\Type\StringType(),
@@ -4022,6 +4493,16 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('loopNode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('loopNode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('input'),
                             new \PHPStan\Type\Constant\ConstantStringType('node'),
@@ -4120,6 +4601,12 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('Unspecified'),
                         new \PHPStan\Type\Constant\ConstantStringType('UnknownNodeInput'),
                         new \PHPStan\Type\Constant\ConstantStringType('UnknownNodeOutput'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MissingLoopInputNode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MissingLoopControllerNode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MultipleLoopInputNodes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MultipleLoopControllerNodes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LoopIncompatibleNodeType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidLoopBoundary'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -4131,6 +4618,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                new \PHPStan\Type\Constant\ConstantStringType('concurrencyConfiguration'),
                 new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                 new \PHPStan\Type\Constant\ConstantStringType('description'),
                 new \PHPStan\Type\Constant\ConstantStringType('flowId'),
@@ -4140,6 +4628,16 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
             ], [
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('maxConcurrency'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Automatic'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Manual'),
+                    ]),
+                ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -4225,6 +4723,9 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('knowledgeBase'),
                             new \PHPStan\Type\Constant\ConstantStringType('lambdaFunction'),
                             new \PHPStan\Type\Constant\ConstantStringType('lex'),
+                            new \PHPStan\Type\Constant\ConstantStringType('loop'),
+                            new \PHPStan\Type\Constant\ConstantStringType('loopController'),
+                            new \PHPStan\Type\Constant\ConstantStringType('loopInput'),
                             new \PHPStan\Type\Constant\ConstantStringType('output'),
                             new \PHPStan\Type\Constant\ConstantStringType('prompt'),
                             new \PHPStan\Type\Constant\ConstantStringType('retrieval'),
@@ -4258,8 +4759,13 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('guardrailConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('inferenceConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
                                 new \PHPStan\Type\Constant\ConstantStringType('modelId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('numberOfResults'),
+                                new \PHPStan\Type\Constant\ConstantStringType('orchestrationConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('promptTemplate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rerankingConfiguration'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('guardrailIdentifier'),
@@ -4268,8 +4774,109 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('stopSequences'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('temperature'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('topP'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('additionalModelRequestFields'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('inferenceConfig'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('performanceConfig'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('promptTemplate'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([], [])),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('stopSequences'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('temperature'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('topP'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('latency'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('standard'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('optimized'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('textPromptTemplate'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('textPromptTemplate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bedrockRerankingConfiguration'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadataConfiguration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('modelConfiguration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('numberOfRerankedResults'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('selectionMode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('selectiveModeConfiguration'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('SELECTIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('fieldsToExclude'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('fieldsToInclude'),
+                                            ], [
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('additionalModelRequestFields'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('modelArn'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([], [])),
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BEDROCK_RERANKING_MODEL'),
+                                ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('lambdaArn'),
@@ -4283,6 +4890,25 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('definition'),
+                            ], [
+                                new \PHPStan\Type\MixedType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('continueCondition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxIterations'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('expression'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('guardrailConfiguration'),
@@ -4469,10 +5095,16 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ]),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('category'),
                             new \PHPStan\Type\Constant\ConstantStringType('expression'),
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
                             new \PHPStan\Type\Constant\ConstantStringType('type'),
                         ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LoopCondition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReturnValueToLoopStart'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ExitLoop'),
+                            ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
@@ -4511,6 +5143,9 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('Iterator'),
                             new \PHPStan\Type\Constant\ConstantStringType('Collector'),
                             new \PHPStan\Type\Constant\ConstantStringType('InlineCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Loop'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LoopInput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LoopController'),
                         ]),
                     ])),
                 ]),
@@ -5282,6 +5917,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('agentAliasId'),
                     new \PHPStan\Type\Constant\ConstantStringType('agentAliasName'),
                     new \PHPStan\Type\Constant\ConstantStringType('agentAliasStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('aliasInvocationState'),
                     new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('description'),
                     new \PHPStan\Type\Constant\ConstantStringType('routingConfiguration'),
@@ -5296,6 +5932,10 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('DISSOCIATED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCEPT_INVOCATIONS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REJECT_INVOCATIONS'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -5501,6 +6141,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
             ], [
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('concurrencyConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('description'),
                     new \PHPStan\Type\Constant\ConstantStringType('flowId'),
@@ -5510,6 +6151,16 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
                 ], [
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('maxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Automatic'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Manual'),
+                        ]),
+                    ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -6192,6 +6843,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('agentAliasName'),
                     new \PHPStan\Type\Constant\ConstantStringType('agentAliasStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('agentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('aliasInvocationState'),
                     new \PHPStan\Type\Constant\ConstantStringType('clientToken'),
                     new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('description'),
@@ -6226,6 +6878,10 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('DISSOCIATED'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCEPT_INVOCATIONS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REJECT_INVOCATIONS'),
+                    ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -6742,6 +7398,9 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('knowledgeBase'),
                             new \PHPStan\Type\Constant\ConstantStringType('lambdaFunction'),
                             new \PHPStan\Type\Constant\ConstantStringType('lex'),
+                            new \PHPStan\Type\Constant\ConstantStringType('loop'),
+                            new \PHPStan\Type\Constant\ConstantStringType('loopController'),
+                            new \PHPStan\Type\Constant\ConstantStringType('loopInput'),
                             new \PHPStan\Type\Constant\ConstantStringType('output'),
                             new \PHPStan\Type\Constant\ConstantStringType('prompt'),
                             new \PHPStan\Type\Constant\ConstantStringType('retrieval'),
@@ -6775,8 +7434,13 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('guardrailConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('inferenceConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
                                 new \PHPStan\Type\Constant\ConstantStringType('modelId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('numberOfResults'),
+                                new \PHPStan\Type\Constant\ConstantStringType('orchestrationConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('promptTemplate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rerankingConfiguration'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('guardrailIdentifier'),
@@ -6785,8 +7449,109 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('stopSequences'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('temperature'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('topP'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        new \PHPStan\Type\FloatType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('additionalModelRequestFields'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('inferenceConfig'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('performanceConfig'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('promptTemplate'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([], [])),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('stopSequences'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('temperature'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('topP'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\FloatType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('latency'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('standard'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('optimized'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('textPromptTemplate'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('textPromptTemplate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bedrockRerankingConfiguration'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('metadataConfiguration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('modelConfiguration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('numberOfRerankedResults'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('selectionMode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('selectiveModeConfiguration'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('SELECTIVE'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('fieldsToExclude'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('fieldsToInclude'),
+                                            ], [
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('additionalModelRequestFields'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('modelArn'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([], [])),
+                                            new \PHPStan\Type\StringType(),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BEDROCK_RERANKING_MODEL'),
+                                ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('lambdaArn'),
@@ -6800,6 +7565,25 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('definition'),
+                            ], [
+                                new \PHPStan\Type\MixedType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('continueCondition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxIterations'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('expression'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('guardrailConfiguration'),
@@ -6986,10 +7770,16 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ]),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('category'),
                             new \PHPStan\Type\Constant\ConstantStringType('expression'),
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
                             new \PHPStan\Type\Constant\ConstantStringType('type'),
                         ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LoopCondition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReturnValueToLoopStart'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ExitLoop'),
+                            ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
@@ -7028,6 +7818,9 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('Iterator'),
                             new \PHPStan\Type\Constant\ConstantStringType('Collector'),
                             new \PHPStan\Type\Constant\ConstantStringType('InlineCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Loop'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LoopInput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LoopController'),
                         ]),
                     ])),
                 ]),
@@ -7051,6 +7844,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                new \PHPStan\Type\Constant\ConstantStringType('concurrencyConfiguration'),
                 new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                 new \PHPStan\Type\Constant\ConstantStringType('description'),
                 new \PHPStan\Type\Constant\ConstantStringType('flowId'),
@@ -7060,6 +7854,16 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
             ], [
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('maxConcurrency'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Automatic'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Manual'),
+                    ]),
+                ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -7642,6 +8446,8 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('duplicateConditionExpression'),
                         new \PHPStan\Type\Constant\ConstantStringType('duplicateConnections'),
                         new \PHPStan\Type\Constant\ConstantStringType('incompatibleConnectionDataType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('invalidLoopBoundary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('loopIncompatibleNodeType'),
                         new \PHPStan\Type\Constant\ConstantStringType('malformedConditionExpression'),
                         new \PHPStan\Type\Constant\ConstantStringType('malformedNodeInputExpression'),
                         new \PHPStan\Type\Constant\ConstantStringType('mismatchedNodeInputType'),
@@ -7649,10 +8455,14 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('missingConnectionConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('missingDefaultCondition'),
                         new \PHPStan\Type\Constant\ConstantStringType('missingEndingNodes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('missingLoopControllerNode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('missingLoopInputNode'),
                         new \PHPStan\Type\Constant\ConstantStringType('missingNodeConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('missingNodeInput'),
                         new \PHPStan\Type\Constant\ConstantStringType('missingNodeOutput'),
                         new \PHPStan\Type\Constant\ConstantStringType('missingStartingNodes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('multipleLoopControllerNodes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('multipleLoopInputNodes'),
                         new \PHPStan\Type\Constant\ConstantStringType('multipleNodeInputConnections'),
                         new \PHPStan\Type\Constant\ConstantStringType('unfulfilledNodeInput'),
                         new \PHPStan\Type\Constant\ConstantStringType('unknownConnectionCondition'),
@@ -7688,6 +8498,29 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('connection'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('connection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                            new \PHPStan\Type\Constant\ConstantStringType('target'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('incompatibleNodeName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('incompatibleNodeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('node'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Input'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Condition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Iterator'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Collector'),
+                            ]),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -7750,6 +8583,16 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([], []),
                         new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('loopNode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('loopNode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('node'),
                         ], [
                             new \PHPStan\Type\StringType(),
@@ -7769,6 +8612,16 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('loopNode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('loopNode'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('input'),
                             new \PHPStan\Type\Constant\ConstantStringType('node'),
@@ -7867,6 +8720,12 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('Unspecified'),
                         new \PHPStan\Type\Constant\ConstantStringType('UnknownNodeInput'),
                         new \PHPStan\Type\Constant\ConstantStringType('UnknownNodeOutput'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MissingLoopInputNode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MissingLoopControllerNode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MultipleLoopInputNodes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MultipleLoopControllerNodes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LoopIncompatibleNodeType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidLoopBoundary'),
                     ]),
                 ])),
             ]),

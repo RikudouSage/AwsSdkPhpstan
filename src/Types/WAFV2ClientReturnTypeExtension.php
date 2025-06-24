@@ -949,6 +949,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                             new \PHPStan\Type\Constant\ConstantStringType('ManagedRuleGroupStatement'),
                             new \PHPStan\Type\Constant\ConstantStringType('LabelMatchStatement'),
                             new \PHPStan\Type\Constant\ConstantStringType('RegexMatchStatement'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AsnMatchStatement'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('SearchString'),
@@ -2345,6 +2346,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('UriPath'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ASN'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -2541,6 +2543,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
                                     ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2584,6 +2587,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesBotControlRuleSet'),
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesATPRuleSet'),
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesACFPRuleSet'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesAntiDDoSRuleSet'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\UnionType([
@@ -2765,6 +2769,40 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ]),
                                         ]),
                                         new \PHPStan\Type\BooleanType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ClientSideActionConfig'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SensitivityToBlock'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Challenge'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('UsageOfAction'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Sensitivity'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ExemptUriRegularExpressions'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                                ]),
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('RegexString'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                        ]),
                                     ]),
                                 ])),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3058,6 +3096,22 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                         new \PHPStan\Type\Constant\ConstantStringType('UTF8_TO_UNICODE'),
                                     ]),
                                 ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AsnList'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ForwardedIPConfig'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('HeaderName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                    ]),
+                                ]),
                             ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3365,6 +3419,8 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                     new \PHPStan\Type\Constant\ConstantStringType('TokenDomains'),
                     new \PHPStan\Type\Constant\ConstantStringType('AssociationConfig'),
                     new \PHPStan\Type\Constant\ConstantStringType('RetrofittedByFirewallManager'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OnSourceDDoSProtectionConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -3438,6 +3494,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                             new \PHPStan\Type\Constant\ConstantStringType('ManagedRuleGroupStatement'),
                             new \PHPStan\Type\Constant\ConstantStringType('LabelMatchStatement'),
                             new \PHPStan\Type\Constant\ConstantStringType('RegexMatchStatement'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AsnMatchStatement'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('SearchString'),
@@ -4834,6 +4891,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('UriPath'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ASN'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -5030,6 +5088,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
                                     ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -5073,6 +5132,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesBotControlRuleSet'),
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesATPRuleSet'),
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesACFPRuleSet'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesAntiDDoSRuleSet'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\UnionType([
@@ -5254,6 +5314,40 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ]),
                                         ]),
                                         new \PHPStan\Type\BooleanType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ClientSideActionConfig'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SensitivityToBlock'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Challenge'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('UsageOfAction'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Sensitivity'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ExemptUriRegularExpressions'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                                ]),
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('RegexString'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                        ]),
                                     ]),
                                 ])),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -5548,6 +5642,22 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ]),
                                 ])),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AsnList'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ForwardedIPConfig'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('HeaderName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                    ]),
+                                ]),
+                            ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Block'),
@@ -5776,6 +5886,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('ManagedRuleGroupStatement'),
                                     new \PHPStan\Type\Constant\ConstantStringType('LabelMatchStatement'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RegexMatchStatement'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AsnMatchStatement'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SearchString'),
@@ -7172,6 +7283,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('UriPath'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ASN'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -7368,6 +7480,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
                                             ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
                                         ])),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -7584,6 +7697,22 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ]),
                                         ])),
                                     ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AsnList'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ForwardedIPConfig'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HeaderName'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                            ]),
+                                        ]),
+                                    ]),
                                 ]),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('LoginPath'),
@@ -7593,6 +7722,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesBotControlRuleSet'),
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesATPRuleSet'),
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesACFPRuleSet'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesAntiDDoSRuleSet'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\UnionType([
@@ -7774,6 +7904,40 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ]),
                                         ]),
                                         new \PHPStan\Type\BooleanType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ClientSideActionConfig'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SensitivityToBlock'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Challenge'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('UsageOfAction'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Sensitivity'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ExemptUriRegularExpressions'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                                ]),
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('RegexString'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                        ]),
                                     ]),
                                 ])),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -8053,6 +8217,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('ManagedRuleGroupStatement'),
                                     new \PHPStan\Type\Constant\ConstantStringType('LabelMatchStatement'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RegexMatchStatement'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AsnMatchStatement'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SearchString'),
@@ -9449,6 +9614,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('UriPath'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ASN'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -9645,6 +9811,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
                                             ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
                                         ])),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -9861,6 +10028,22 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ]),
                                         ])),
                                     ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AsnList'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ForwardedIPConfig'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HeaderName'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                            ]),
+                                        ]),
+                                    ]),
                                 ]),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('LoginPath'),
@@ -9870,6 +10053,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesBotControlRuleSet'),
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesATPRuleSet'),
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesACFPRuleSet'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesAntiDDoSRuleSet'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\UnionType([
@@ -10051,6 +10235,40 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ]),
                                         ]),
                                         new \PHPStan\Type\BooleanType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ClientSideActionConfig'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SensitivityToBlock'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Challenge'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('UsageOfAction'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Sensitivity'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ExemptUriRegularExpressions'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                                ]),
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('RegexString'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                        ]),
                                     ]),
                                 ])),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10337,6 +10555,25 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         ])),
                     ]),
                     new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ALBLowReputationMode'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE_UNDER_DDOS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALWAYS_ON'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                    ]),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -10369,6 +10606,8 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                     new \PHPStan\Type\Constant\ConstantStringType('TokenDomains'),
                     new \PHPStan\Type\Constant\ConstantStringType('AssociationConfig'),
                     new \PHPStan\Type\Constant\ConstantStringType('RetrofittedByFirewallManager'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OnSourceDDoSProtectionConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -10442,6 +10681,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                             new \PHPStan\Type\Constant\ConstantStringType('ManagedRuleGroupStatement'),
                             new \PHPStan\Type\Constant\ConstantStringType('LabelMatchStatement'),
                             new \PHPStan\Type\Constant\ConstantStringType('RegexMatchStatement'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AsnMatchStatement'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('SearchString'),
@@ -11838,6 +12078,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('UriPath'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ASN'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -12034,6 +12275,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
                                     ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -12077,6 +12319,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesBotControlRuleSet'),
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesATPRuleSet'),
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesACFPRuleSet'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesAntiDDoSRuleSet'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\UnionType([
@@ -12258,6 +12501,40 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ]),
                                         ]),
                                         new \PHPStan\Type\BooleanType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ClientSideActionConfig'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SensitivityToBlock'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Challenge'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('UsageOfAction'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Sensitivity'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ExemptUriRegularExpressions'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                                ]),
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('RegexString'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                        ]),
                                     ]),
                                 ])),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -12552,6 +12829,22 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ]),
                                 ])),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AsnList'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ForwardedIPConfig'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('HeaderName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                    ]),
+                                ]),
+                            ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Block'),
@@ -12780,6 +13073,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('ManagedRuleGroupStatement'),
                                     new \PHPStan\Type\Constant\ConstantStringType('LabelMatchStatement'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RegexMatchStatement'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AsnMatchStatement'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SearchString'),
@@ -14176,6 +14470,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('UriPath'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ASN'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -14372,6 +14667,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
                                             ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
                                         ])),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -14588,6 +14884,22 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ]),
                                         ])),
                                     ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AsnList'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ForwardedIPConfig'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HeaderName'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                            ]),
+                                        ]),
+                                    ]),
                                 ]),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('LoginPath'),
@@ -14597,6 +14909,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesBotControlRuleSet'),
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesATPRuleSet'),
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesACFPRuleSet'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesAntiDDoSRuleSet'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\UnionType([
@@ -14778,6 +15091,40 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ]),
                                         ]),
                                         new \PHPStan\Type\BooleanType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ClientSideActionConfig'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SensitivityToBlock'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Challenge'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('UsageOfAction'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Sensitivity'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ExemptUriRegularExpressions'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                                ]),
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('RegexString'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                        ]),
                                     ]),
                                 ])),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -15057,6 +15404,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('ManagedRuleGroupStatement'),
                                     new \PHPStan\Type\Constant\ConstantStringType('LabelMatchStatement'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RegexMatchStatement'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AsnMatchStatement'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SearchString'),
@@ -16453,6 +16801,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('UriPath'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ASN'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -16649,6 +16998,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
                                             ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([], []),
                                         ])),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -16865,6 +17215,22 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ]),
                                         ])),
                                     ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('AsnList'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ForwardedIPConfig'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HeaderName'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                            ]),
+                                        ]),
+                                    ]),
                                 ]),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('LoginPath'),
@@ -16874,6 +17240,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesBotControlRuleSet'),
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesATPRuleSet'),
                                     new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesACFPRuleSet'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWSManagedRulesAntiDDoSRuleSet'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\UnionType([
@@ -17055,6 +17422,40 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ]),
                                         ]),
                                         new \PHPStan\Type\BooleanType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('ClientSideActionConfig'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SensitivityToBlock'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Challenge'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('UsageOfAction'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Sensitivity'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('ExemptUriRegularExpressions'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                                ]),
+                                                new \PHPStan\Type\UnionType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                                ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('RegexString'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                        ]),
                                     ]),
                                 ])),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -17341,6 +17742,25 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         ])),
                     ]),
                     new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ALBLowReputationMode'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE_UNDER_DDOS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALWAYS_ON'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                    ]),
                 ]),
             ]),
         ]);

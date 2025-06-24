@@ -84,6 +84,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'describeDBInstanceAutomatedBackups',
             'describeDBInstances',
             'describeDBLogFiles',
+            'describeDBMajorEngineVersions',
             'describeDBParameterGroups',
             'describeDBParameters',
             'describeDBProxies',
@@ -252,6 +253,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'describeDBInstanceAutomatedBackups' => $this->describeDBInstanceAutomatedBackups(),
             'describeDBInstances' => $this->describeDBInstances(),
             'describeDBLogFiles' => $this->describeDBLogFiles(),
+            'describeDBMajorEngineVersions' => $this->describeDBMajorEngineVersions(),
             'describeDBParameterGroups' => $this->describeDBParameterGroups(),
             'describeDBParameters' => $this->describeDBParameters(),
             'describeDBProxies' => $this->describeDBProxies(),
@@ -1084,6 +1086,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('CrossAccountClone'),
                     new \PHPStan\Type\Constant\ConstantStringType('DomainMemberships'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterIdentifier'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingRequested'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingModifiedValues'),
@@ -1262,6 +1265,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('disabled'),
@@ -3256,6 +3260,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('CrossAccountClone'),
                     new \PHPStan\Type\Constant\ConstantStringType('DomainMemberships'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterIdentifier'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingRequested'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingModifiedValues'),
@@ -3434,6 +3439,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('disabled'),
@@ -5192,6 +5198,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('CrossAccountClone'),
                     new \PHPStan\Type\Constant\ConstantStringType('DomainMemberships'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterIdentifier'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingRequested'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingModifiedValues'),
@@ -5370,6 +5377,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('disabled'),
@@ -6162,6 +6170,37 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function describeDBMajorEngineVersions(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('DBMajorEngineVersions'),
+                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Engine'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MajorEngineVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SupportedEngineLifecycles'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LifecycleSupportName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LifecycleSupportStartDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LifecycleSupportEndDate'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('open-source-rds-standard-support'),
+                            new \PHPStan\Type\Constant\ConstantStringType('open-source-rds-extended-support'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -7969,6 +8008,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('CrossAccountClone'),
                     new \PHPStan\Type\Constant\ConstantStringType('DomainMemberships'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterIdentifier'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingRequested'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingModifiedValues'),
@@ -8147,6 +8187,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('disabled'),
@@ -8662,6 +8703,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('CrossAccountClone'),
                     new \PHPStan\Type\Constant\ConstantStringType('DomainMemberships'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterIdentifier'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingRequested'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingModifiedValues'),
@@ -8840,6 +8882,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('disabled'),
@@ -10790,6 +10833,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('CrossAccountClone'),
                     new \PHPStan\Type\Constant\ConstantStringType('DomainMemberships'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterIdentifier'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingRequested'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingModifiedValues'),
@@ -10968,6 +11012,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('disabled'),
@@ -11213,6 +11258,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('CrossAccountClone'),
                     new \PHPStan\Type\Constant\ConstantStringType('DomainMemberships'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterIdentifier'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingRequested'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingModifiedValues'),
@@ -11391,6 +11437,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('disabled'),
@@ -12234,6 +12281,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('CrossAccountClone'),
                     new \PHPStan\Type\Constant\ConstantStringType('DomainMemberships'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterIdentifier'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingRequested'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingModifiedValues'),
@@ -12412,6 +12460,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('disabled'),
@@ -12607,6 +12656,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('CrossAccountClone'),
                     new \PHPStan\Type\Constant\ConstantStringType('DomainMemberships'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterIdentifier'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingRequested'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingModifiedValues'),
@@ -12785,6 +12835,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('disabled'),
@@ -12980,6 +13031,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('CrossAccountClone'),
                     new \PHPStan\Type\Constant\ConstantStringType('DomainMemberships'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterIdentifier'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingRequested'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingModifiedValues'),
@@ -13158,6 +13210,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('disabled'),
@@ -14644,6 +14697,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('CrossAccountClone'),
                     new \PHPStan\Type\Constant\ConstantStringType('DomainMemberships'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterIdentifier'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingRequested'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingModifiedValues'),
@@ -14822,6 +14876,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('disabled'),
@@ -15570,6 +15625,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('CrossAccountClone'),
                     new \PHPStan\Type\Constant\ConstantStringType('DomainMemberships'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalClusterIdentifier'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('GlobalWriteForwardingRequested'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingModifiedValues'),
@@ -15748,6 +15804,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('disabled'),

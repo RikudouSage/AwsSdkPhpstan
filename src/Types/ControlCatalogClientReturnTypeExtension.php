@@ -16,6 +16,7 @@ final class ControlCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
         return in_array($methodReflection->getName(), [
             'getControl',
             'listCommonControls',
+            'listControlMappings',
             'listControls',
             'listDomains',
             'listObjectives',
@@ -27,6 +28,7 @@ final class ControlCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
             default => throw new \RuntimeException('Unsupported method'),
             'getControl' => $this->getControl(),
             'listCommonControls' => $this->listCommonControls(),
+            'listControlMappings' => $this->listControlMappings(),
             'listControls' => $this->listControls(),
             'listDomains' => $this->listDomains(),
             'listObjectives' => $this->listObjectives(),
@@ -37,6 +39,7 @@ final class ControlCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                new \PHPStan\Type\Constant\ConstantStringType('Aliases'),
                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
                 new \PHPStan\Type\Constant\ConstantStringType('Description'),
                 new \PHPStan\Type\Constant\ConstantStringType('Behavior'),
@@ -45,8 +48,10 @@ final class ControlCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Implementation'),
                 new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
                 new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
+                new \PHPStan\Type\Constant\ConstantStringType('GovernedResources'),
             ], [
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
@@ -83,6 +88,7 @@ final class ControlCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -126,6 +132,45 @@ final class ControlCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
             ]),
         ]);
     }
+    private function listControlMappings(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ControlMappings'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ControlArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MappingType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FRAMEWORK'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMMON_CONTROL'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Framework'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CommonControl'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Item'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CommonControlArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function listControls(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -135,14 +180,17 @@ final class ControlCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
             ], [
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Aliases'),
                     new \PHPStan\Type\Constant\ConstantStringType('Name'),
                     new \PHPStan\Type\Constant\ConstantStringType('Description'),
                     new \PHPStan\Type\Constant\ConstantStringType('Behavior'),
                     new \PHPStan\Type\Constant\ConstantStringType('Severity'),
                     new \PHPStan\Type\Constant\ConstantStringType('Implementation'),
                     new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GovernedResources'),
                 ], [
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -164,6 +212,7 @@ final class ControlCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

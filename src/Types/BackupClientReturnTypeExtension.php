@@ -14,6 +14,7 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
     public function isMethodSupported(\PHPStan\Reflection\MethodReflection $methodReflection): bool
     {
         return in_array($methodReflection->getName(), [
+            'associateBackupVaultMpaApprovalTeam',
             'cancelLegalHold',
             'createBackupPlan',
             'createBackupSelection',
@@ -22,6 +23,7 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             'createLegalHold',
             'createLogicallyAirGappedBackupVault',
             'createReportPlan',
+            'createRestoreAccessBackupVault',
             'createRestoreTestingPlan',
             'createRestoreTestingSelection',
             'deleteBackupPlan',
@@ -46,6 +48,7 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             'describeReportJob',
             'describeReportPlan',
             'describeRestoreJob',
+            'disassociateBackupVaultMpaApprovalTeam',
             'disassociateRecoveryPoint',
             'disassociateRecoveryPointFromParent',
             'exportBackupPlanTemplate',
@@ -82,6 +85,7 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             'listRecoveryPointsByResource',
             'listReportJobs',
             'listReportPlans',
+            'listRestoreAccessBackupVaults',
             'listRestoreJobSummaries',
             'listRestoreJobs',
             'listRestoreJobsByProtectedResource',
@@ -92,6 +96,7 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             'putBackupVaultLockConfiguration',
             'putBackupVaultNotifications',
             'putRestoreValidationResult',
+            'revokeRestoreAccessBackupVault',
             'startBackupJob',
             'startCopyJob',
             'startReportJob',
@@ -114,6 +119,7 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
     {
         return match ((string) $methodCall->name) {
             default => throw new \RuntimeException('Unsupported method'),
+            'associateBackupVaultMpaApprovalTeam' => $this->associateBackupVaultMpaApprovalTeam(),
             'cancelLegalHold' => $this->cancelLegalHold(),
             'createBackupPlan' => $this->createBackupPlan(),
             'createBackupSelection' => $this->createBackupSelection(),
@@ -122,6 +128,7 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             'createLegalHold' => $this->createLegalHold(),
             'createLogicallyAirGappedBackupVault' => $this->createLogicallyAirGappedBackupVault(),
             'createReportPlan' => $this->createReportPlan(),
+            'createRestoreAccessBackupVault' => $this->createRestoreAccessBackupVault(),
             'createRestoreTestingPlan' => $this->createRestoreTestingPlan(),
             'createRestoreTestingSelection' => $this->createRestoreTestingSelection(),
             'deleteBackupPlan' => $this->deleteBackupPlan(),
@@ -146,6 +153,7 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             'describeReportJob' => $this->describeReportJob(),
             'describeReportPlan' => $this->describeReportPlan(),
             'describeRestoreJob' => $this->describeRestoreJob(),
+            'disassociateBackupVaultMpaApprovalTeam' => $this->disassociateBackupVaultMpaApprovalTeam(),
             'disassociateRecoveryPoint' => $this->disassociateRecoveryPoint(),
             'disassociateRecoveryPointFromParent' => $this->disassociateRecoveryPointFromParent(),
             'exportBackupPlanTemplate' => $this->exportBackupPlanTemplate(),
@@ -182,6 +190,7 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             'listRecoveryPointsByResource' => $this->listRecoveryPointsByResource(),
             'listReportJobs' => $this->listReportJobs(),
             'listReportPlans' => $this->listReportPlans(),
+            'listRestoreAccessBackupVaults' => $this->listRestoreAccessBackupVaults(),
             'listRestoreJobSummaries' => $this->listRestoreJobSummaries(),
             'listRestoreJobs' => $this->listRestoreJobs(),
             'listRestoreJobsByProtectedResource' => $this->listRestoreJobsByProtectedResource(),
@@ -192,6 +201,7 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             'putBackupVaultLockConfiguration' => $this->putBackupVaultLockConfiguration(),
             'putBackupVaultNotifications' => $this->putBackupVaultNotifications(),
             'putRestoreValidationResult' => $this->putRestoreValidationResult(),
+            'revokeRestoreAccessBackupVault' => $this->revokeRestoreAccessBackupVault(),
             'startBackupJob' => $this->startBackupJob(),
             'startCopyJob' => $this->startCopyJob(),
             'startReportJob' => $this->startReportJob(),
@@ -209,6 +219,12 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             'updateRestoreTestingPlan' => $this->updateRestoreTestingPlan(),
             'updateRestoreTestingSelection' => $this->updateRestoreTestingSelection(),
         };
+    }
+    private function associateBackupVaultMpaApprovalTeam(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
     }
     private function cancelLegalHold(): ?\PHPStan\Type\Type
     {
@@ -350,6 +366,26 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
             ], [
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+            ]),
+        ]);
+    }
+    private function createRestoreAccessBackupVault(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RestoreAccessBackupVaultArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('VaultState'),
+                new \PHPStan\Type\Constant\ConstantStringType('RestoreAccessBackupVaultName'),
+                new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
@@ -569,12 +605,17 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('MinRetentionDays'),
                 new \PHPStan\Type\Constant\ConstantStringType('MaxRetentionDays'),
                 new \PHPStan\Type\Constant\ConstantStringType('LockDate'),
+                new \PHPStan\Type\Constant\ConstantStringType('SourceBackupVaultArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('MpaApprovalTeamArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('MpaSessionArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('LatestMpaApprovalTeamUpdate'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('BACKUP_VAULT'),
                     new \PHPStan\Type\Constant\ConstantStringType('LOGICALLY_AIR_GAPPED_BACKUP_VAULT'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RESTORE_ACCESS_BACKUP_VAULT'),
                 ]),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
@@ -589,6 +630,26 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('MpaSessionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InitiationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExpiryDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                ]),
             ]),
         ]);
     }
@@ -769,6 +830,7 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('Status'),
                 new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
                 new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                new \PHPStan\Type\Constant\ConstantStringType('InitiationDate'),
                 new \PHPStan\Type\Constant\ConstantStringType('CompletionDate'),
                 new \PHPStan\Type\Constant\ConstantStringType('BackupSizeInBytes'),
                 new \PHPStan\Type\Constant\ConstantStringType('CalculatedLifecycle'),
@@ -808,8 +870,12 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('PARTIAL'),
                     new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                    new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                 ]),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\IntegerType(),
@@ -844,6 +910,7 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('BACKUP_VAULT'),
                     new \PHPStan\Type\Constant\ConstantStringType('LOGICALLY_AIR_GAPPED_BACKUP_VAULT'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RESTORE_ACCESS_BACKUP_VAULT'),
                 ]),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
@@ -1016,6 +1083,12 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 ]),
                 new \PHPStan\Type\StringType(),
             ]),
+        ]);
+    }
+    private function disassociateBackupVaultMpaApprovalTeam(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
         ]);
     }
     private function disassociateRecoveryPoint(): ?\PHPStan\Type\Type
@@ -1408,6 +1481,10 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('BACKUP_PLAN_MODIFIED'),
                     new \PHPStan\Type\Constant\ConstantStringType('S3_BACKUP_OBJECT_FAILED'),
                     new \PHPStan\Type\Constant\ConstantStringType('S3_RESTORE_OBJECT_FAILED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CONTINUOUS_BACKUP_INTERRUPTED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RECOVERY_POINT_INDEX_COMPLETED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RECOVERY_POINT_INDEX_DELETED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RECOVERY_POINT_INDEXING_FAILED'),
                 ])),
             ]),
         ]);
@@ -1912,6 +1989,7 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('BACKUP_VAULT'),
                         new \PHPStan\Type\Constant\ConstantStringType('LOGICALLY_AIR_GAPPED_BACKUP_VAULT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RESTORE_ACCESS_BACKUP_VAULT'),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
@@ -2223,6 +2301,7 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('Status'),
                     new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
                     new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InitiationDate'),
                     new \PHPStan\Type\Constant\ConstantStringType('CompletionDate'),
                     new \PHPStan\Type\Constant\ConstantStringType('BackupSizeInBytes'),
                     new \PHPStan\Type\Constant\ConstantStringType('CalculatedLifecycle'),
@@ -2261,8 +2340,12 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('PARTIAL'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\IntegerType(),
@@ -2292,6 +2375,7 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('BACKUP_VAULT'),
                         new \PHPStan\Type\Constant\ConstantStringType('LOGICALLY_AIR_GAPPED_BACKUP_VAULT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RESTORE_ACCESS_BACKUP_VAULT'),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
@@ -2356,6 +2440,9 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('PARTIAL'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2367,6 +2454,7 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('BACKUP_VAULT'),
                         new \PHPStan\Type\Constant\ConstantStringType('LOGICALLY_AIR_GAPPED_BACKUP_VAULT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RESTORE_ACCESS_BACKUP_VAULT'),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
@@ -2466,6 +2554,49 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listRestoreAccessBackupVaults(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('RestoreAccessBackupVaults'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RestoreAccessBackupVaultArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ApprovalDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VaultState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LatestRevokeRequest'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MpaSessionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InitiationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExpiryDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ])),
             ]),
         ]);
     }
@@ -2737,6 +2868,12 @@ final class BackupClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
         ]);
     }
     private function putRestoreValidationResult(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
+    private function revokeRestoreAccessBackupVault(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),

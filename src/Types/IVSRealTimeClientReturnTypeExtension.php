@@ -38,6 +38,7 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
             'listEncoderConfigurations',
             'listIngestConfigurations',
             'listParticipantEvents',
+            'listParticipantReplicas',
             'listParticipants',
             'listPublicKeys',
             'listStageSessions',
@@ -45,7 +46,9 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
             'listStorageConfigurations',
             'listTagsForResource',
             'startComposition',
+            'startParticipantReplication',
             'stopComposition',
+            'stopParticipantReplication',
             'tagResource',
             'untagResource',
             'updateIngestConfiguration',
@@ -80,6 +83,7 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
             'listEncoderConfigurations' => $this->listEncoderConfigurations(),
             'listIngestConfigurations' => $this->listIngestConfigurations(),
             'listParticipantEvents' => $this->listParticipantEvents(),
+            'listParticipantReplicas' => $this->listParticipantReplicas(),
             'listParticipants' => $this->listParticipants(),
             'listPublicKeys' => $this->listPublicKeys(),
             'listStageSessions' => $this->listStageSessions(),
@@ -87,7 +91,9 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
             'listStorageConfigurations' => $this->listStorageConfigurations(),
             'listTagsForResource' => $this->listTagsForResource(),
             'startComposition' => $this->startComposition(),
+            'startParticipantReplication' => $this->startParticipantReplication(),
             'stopComposition' => $this->stopComposition(),
+            'stopParticipantReplication' => $this->stopParticipantReplication(),
             'tagResource' => $this->tagResource(),
             'untagResource' => $this->untagResource(),
             'updateIngestConfiguration' => $this->updateIngestConfiguration(),
@@ -216,6 +222,7 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('thumbnailConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('recordingReconnectWindowSeconds'),
                         new \PHPStan\Type\Constant\ConstantStringType('hlsConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recordParticipantReplicas'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
@@ -244,6 +251,7 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         ], [
                             new \PHPStan\Type\IntegerType(),
                         ]),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('events'),
@@ -598,6 +606,10 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\Constant\ConstantStringType('recordingS3Prefix'),
                     new \PHPStan\Type\Constant\ConstantStringType('recordingState'),
                     new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                    new \PHPStan\Type\Constant\ConstantStringType('replicationType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('replicationState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sourceStageArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sourceSessionId'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -630,6 +642,17 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('RTMP'),
                         new \PHPStan\Type\Constant\ConstantStringType('RTMPS'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REPLICA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ]),
             ]),
         ]);
@@ -680,6 +703,7 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('thumbnailConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('recordingReconnectWindowSeconds'),
                         new \PHPStan\Type\Constant\ConstantStringType('hlsConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recordParticipantReplicas'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
@@ -708,6 +732,7 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         ], [
                             new \PHPStan\Type\IntegerType(),
                         ]),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('events'),
@@ -906,6 +931,9 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\Constant\ConstantStringType('eventTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('remoteParticipantId'),
                     new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('destinationStageArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('destinationSessionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('replica'),
                 ], [
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('JOINED'),
@@ -917,6 +945,8 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('PUBLISH_ERROR'),
                         new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIBE_ERROR'),
                         new \PHPStan\Type\Constant\ConstantStringType('JOIN_ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REPLICATION_STARTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REPLICATION_STOPPED'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -937,6 +967,38 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('INVALID_INPUT'),
                         new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_SERVER_EXCEPTION'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listParticipantReplicas(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('replicas'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('sourceStageArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('participantId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sourceSessionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('destinationStageArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('destinationSessionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('replicationState'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                    ]),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -956,6 +1018,10 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\Constant\ConstantStringType('firstJoinTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('published'),
                     new \PHPStan\Type\Constant\ConstantStringType('recordingState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('replicationType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('replicationState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sourceStageArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sourceSessionId'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -973,6 +1039,17 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REPLICA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1243,10 +1320,54 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
             ]),
         ]);
     }
+    private function startParticipantReplication(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('accessControlAllowOrigin'),
+                new \PHPStan\Type\Constant\ConstantStringType('accessControlExposeHeaders'),
+                new \PHPStan\Type\Constant\ConstantStringType('cacheControl'),
+                new \PHPStan\Type\Constant\ConstantStringType('contentSecurityPolicy'),
+                new \PHPStan\Type\Constant\ConstantStringType('strictTransportSecurity'),
+                new \PHPStan\Type\Constant\ConstantStringType('xContentTypeOptions'),
+                new \PHPStan\Type\Constant\ConstantStringType('xFrameOptions'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function stopComposition(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([], []),
+        ]);
+    }
+    private function stopParticipantReplication(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('accessControlAllowOrigin'),
+                new \PHPStan\Type\Constant\ConstantStringType('accessControlExposeHeaders'),
+                new \PHPStan\Type\Constant\ConstantStringType('cacheControl'),
+                new \PHPStan\Type\Constant\ConstantStringType('contentSecurityPolicy'),
+                new \PHPStan\Type\Constant\ConstantStringType('strictTransportSecurity'),
+                new \PHPStan\Type\Constant\ConstantStringType('xContentTypeOptions'),
+                new \PHPStan\Type\Constant\ConstantStringType('xFrameOptions'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
         ]);
     }
     private function tagResource(): ?\PHPStan\Type\Type
@@ -1323,6 +1444,7 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('thumbnailConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('recordingReconnectWindowSeconds'),
                         new \PHPStan\Type\Constant\ConstantStringType('hlsConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recordParticipantReplicas'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
@@ -1351,6 +1473,7 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         ], [
                             new \PHPStan\Type\IntegerType(),
                         ]),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('events'),

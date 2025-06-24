@@ -1063,6 +1063,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('SourceFile'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TimeDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TimeDeltaUnits'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UpconvertSTLToTeletext'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -1088,6 +1089,10 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPCONVERT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                         ]),
                                     ]),
                                     new \PHPStan\Type\UnionType([
@@ -1656,6 +1661,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\IntegerType(),
                             ]),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Crop'),
                                 new \PHPStan\Type\Constant\ConstantStringType('EndTimecode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('InitialPosition'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Input'),
@@ -1663,6 +1669,22 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('StartTimecode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Transitions'),
                             ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PIXELS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Height'),
@@ -4020,6 +4042,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                                 new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('NO_DISPLAY_WINDOW'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED_OPTIMAL'),
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
@@ -4735,16 +4758,24 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('C2paManifest'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CertificateSecret'),
                                         new \PHPStan\Type\Constant\ConstantStringType('CslgAtom'),
                                         new \PHPStan\Type\Constant\ConstantStringType('CttsVersion'),
                                         new \PHPStan\Type\Constant\ConstantStringType('FreeSpaceBox'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MoovPlacement'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Mp4MajorBrand'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SigningKmsKey'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_CODEC_DURATION'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH_VIDEO_DURATION'),
                                         ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
+                                        ]),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                             new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
@@ -4758,6 +4789,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('PROGRESSIVE_DOWNLOAD'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
                                         ]),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -7463,6 +7495,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('SourceFile'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TimeDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TimeDeltaUnits'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UpconvertSTLToTeletext'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -7488,6 +7521,10 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPCONVERT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                         ]),
                                     ]),
                                     new \PHPStan\Type\UnionType([
@@ -8026,6 +8063,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Crop'),
                                 new \PHPStan\Type\Constant\ConstantStringType('EndTimecode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('InitialPosition'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Input'),
@@ -8033,6 +8071,22 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('StartTimecode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Transitions'),
                             ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PIXELS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Height'),
@@ -10390,6 +10444,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                                 new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('NO_DISPLAY_WINDOW'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED_OPTIMAL'),
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
@@ -11105,16 +11160,24 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('C2paManifest'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CertificateSecret'),
                                         new \PHPStan\Type\Constant\ConstantStringType('CslgAtom'),
                                         new \PHPStan\Type\Constant\ConstantStringType('CttsVersion'),
                                         new \PHPStan\Type\Constant\ConstantStringType('FreeSpaceBox'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MoovPlacement'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Mp4MajorBrand'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SigningKmsKey'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_CODEC_DURATION'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH_VIDEO_DURATION'),
                                         ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
+                                        ]),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                             new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
@@ -11128,6 +11191,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('PROGRESSIVE_DOWNLOAD'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
                                         ]),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -13876,6 +13940,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                         new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('NO_DISPLAY_WINDOW'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED_OPTIMAL'),
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
@@ -14591,16 +14656,24 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('C2paManifest'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CertificateSecret'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CslgAtom'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CttsVersion'),
                                 new \PHPStan\Type\Constant\ConstantStringType('FreeSpaceBox'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MoovPlacement'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Mp4MajorBrand'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SigningKmsKey'),
                             ], [
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_CODEC_DURATION'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH_VIDEO_DURATION'),
                                 ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
@@ -14614,6 +14687,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('PROGRESSIVE_DOWNLOAD'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -17411,6 +17485,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('SourceFile'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TimeDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TimeDeltaUnits'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UpconvertSTLToTeletext'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -17436,6 +17511,10 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPCONVERT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                         ]),
                                     ]),
                                     new \PHPStan\Type\UnionType([
@@ -18004,6 +18083,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\IntegerType(),
                             ]),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Crop'),
                                 new \PHPStan\Type\Constant\ConstantStringType('EndTimecode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('InitialPosition'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Input'),
@@ -18011,6 +18091,22 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('StartTimecode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Transitions'),
                             ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PIXELS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Height'),
@@ -20368,6 +20464,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                                 new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('NO_DISPLAY_WINDOW'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED_OPTIMAL'),
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
@@ -21083,16 +21180,24 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('C2paManifest'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CertificateSecret'),
                                         new \PHPStan\Type\Constant\ConstantStringType('CslgAtom'),
                                         new \PHPStan\Type\Constant\ConstantStringType('CttsVersion'),
                                         new \PHPStan\Type\Constant\ConstantStringType('FreeSpaceBox'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MoovPlacement'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Mp4MajorBrand'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SigningKmsKey'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_CODEC_DURATION'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH_VIDEO_DURATION'),
                                         ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
+                                        ]),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                             new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
@@ -21106,6 +21211,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('PROGRESSIVE_DOWNLOAD'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
                                         ]),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -23811,6 +23917,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('SourceFile'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TimeDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TimeDeltaUnits'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UpconvertSTLToTeletext'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -23836,6 +23943,10 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPCONVERT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                         ]),
                                     ]),
                                     new \PHPStan\Type\UnionType([
@@ -24374,6 +24485,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Crop'),
                                 new \PHPStan\Type\Constant\ConstantStringType('EndTimecode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('InitialPosition'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Input'),
@@ -24381,6 +24493,22 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('StartTimecode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Transitions'),
                             ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PIXELS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Height'),
@@ -26738,6 +26866,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                                 new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('NO_DISPLAY_WINDOW'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED_OPTIMAL'),
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
@@ -27453,16 +27582,24 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('C2paManifest'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CertificateSecret'),
                                         new \PHPStan\Type\Constant\ConstantStringType('CslgAtom'),
                                         new \PHPStan\Type\Constant\ConstantStringType('CttsVersion'),
                                         new \PHPStan\Type\Constant\ConstantStringType('FreeSpaceBox'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MoovPlacement'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Mp4MajorBrand'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SigningKmsKey'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_CODEC_DURATION'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH_VIDEO_DURATION'),
                                         ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
+                                        ]),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                             new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
@@ -27476,6 +27613,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('PROGRESSIVE_DOWNLOAD'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
                                         ]),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -30251,6 +30389,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                         new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('NO_DISPLAY_WINDOW'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED_OPTIMAL'),
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
@@ -30966,16 +31105,24 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('C2paManifest'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CertificateSecret'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CslgAtom'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CttsVersion'),
                                 new \PHPStan\Type\Constant\ConstantStringType('FreeSpaceBox'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MoovPlacement'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Mp4MajorBrand'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SigningKmsKey'),
                             ], [
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_CODEC_DURATION'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH_VIDEO_DURATION'),
                                 ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
@@ -30989,6 +31136,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('PROGRESSIVE_DOWNLOAD'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -33665,6 +33813,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('SourceFile'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TimeDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TimeDeltaUnits'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UpconvertSTLToTeletext'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -33690,6 +33839,10 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPCONVERT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                         ]),
                                     ]),
                                     new \PHPStan\Type\UnionType([
@@ -34228,6 +34381,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Crop'),
                                 new \PHPStan\Type\Constant\ConstantStringType('EndTimecode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('InitialPosition'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Input'),
@@ -34235,6 +34389,22 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('StartTimecode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Transitions'),
                             ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PIXELS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Height'),
@@ -36592,6 +36762,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                                 new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('NO_DISPLAY_WINDOW'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED_OPTIMAL'),
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
@@ -37307,16 +37478,24 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('C2paManifest'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CertificateSecret'),
                                         new \PHPStan\Type\Constant\ConstantStringType('CslgAtom'),
                                         new \PHPStan\Type\Constant\ConstantStringType('CttsVersion'),
                                         new \PHPStan\Type\Constant\ConstantStringType('FreeSpaceBox'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MoovPlacement'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Mp4MajorBrand'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SigningKmsKey'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_CODEC_DURATION'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH_VIDEO_DURATION'),
                                         ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
+                                        ]),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                             new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
@@ -37330,6 +37509,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('PROGRESSIVE_DOWNLOAD'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
                                         ]),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -40089,6 +40269,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('SourceFile'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TimeDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TimeDeltaUnits'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UpconvertSTLToTeletext'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -40114,6 +40295,10 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPCONVERT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                         ]),
                                     ]),
                                     new \PHPStan\Type\UnionType([
@@ -40682,6 +40867,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\IntegerType(),
                             ]),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Crop'),
                                 new \PHPStan\Type\Constant\ConstantStringType('EndTimecode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('InitialPosition'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Input'),
@@ -40689,6 +40875,22 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('StartTimecode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Transitions'),
                             ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PIXELS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Height'),
@@ -43046,6 +43248,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                                 new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('NO_DISPLAY_WINDOW'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED_OPTIMAL'),
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
@@ -43761,16 +43964,24 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('C2paManifest'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CertificateSecret'),
                                         new \PHPStan\Type\Constant\ConstantStringType('CslgAtom'),
                                         new \PHPStan\Type\Constant\ConstantStringType('CttsVersion'),
                                         new \PHPStan\Type\Constant\ConstantStringType('FreeSpaceBox'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MoovPlacement'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Mp4MajorBrand'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SigningKmsKey'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_CODEC_DURATION'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH_VIDEO_DURATION'),
                                         ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
+                                        ]),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                             new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
@@ -43784,6 +43995,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('PROGRESSIVE_DOWNLOAD'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
                                         ]),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -46559,6 +46771,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                         new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('NO_DISPLAY_WINDOW'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED_OPTIMAL'),
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
@@ -47274,16 +47487,24 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('C2paManifest'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CertificateSecret'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CslgAtom'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CttsVersion'),
                                 new \PHPStan\Type\Constant\ConstantStringType('FreeSpaceBox'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MoovPlacement'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Mp4MajorBrand'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SigningKmsKey'),
                             ], [
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_CODEC_DURATION'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH_VIDEO_DURATION'),
                                 ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
@@ -47297,6 +47518,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('PROGRESSIVE_DOWNLOAD'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -50312,6 +50534,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('SourceFile'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TimeDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TimeDeltaUnits'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UpconvertSTLToTeletext'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -50337,6 +50560,10 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPCONVERT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                         ]),
                                     ]),
                                     new \PHPStan\Type\UnionType([
@@ -50905,6 +51132,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\IntegerType(),
                             ]),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Crop'),
                                 new \PHPStan\Type\Constant\ConstantStringType('EndTimecode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('InitialPosition'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Input'),
@@ -50912,6 +51140,22 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('StartTimecode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Transitions'),
                             ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PIXELS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Height'),
@@ -53269,6 +53513,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                                 new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('NO_DISPLAY_WINDOW'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED_OPTIMAL'),
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
@@ -53984,16 +54229,24 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('C2paManifest'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CertificateSecret'),
                                         new \PHPStan\Type\Constant\ConstantStringType('CslgAtom'),
                                         new \PHPStan\Type\Constant\ConstantStringType('CttsVersion'),
                                         new \PHPStan\Type\Constant\ConstantStringType('FreeSpaceBox'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MoovPlacement'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Mp4MajorBrand'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SigningKmsKey'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_CODEC_DURATION'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH_VIDEO_DURATION'),
                                         ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
+                                        ]),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                             new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
@@ -54007,6 +54260,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('PROGRESSIVE_DOWNLOAD'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
                                         ]),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -56725,6 +56979,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('SourceFile'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TimeDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TimeDeltaUnits'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('UpconvertSTLToTeletext'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -56750,6 +57005,10 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
+                                        ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('UPCONVERT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                         ]),
                                     ]),
                                     new \PHPStan\Type\UnionType([
@@ -57288,6 +57547,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Crop'),
                                 new \PHPStan\Type\Constant\ConstantStringType('EndTimecode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('InitialPosition'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Input'),
@@ -57295,6 +57555,22 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('StartTimecode'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Transitions'),
                             ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Height'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Width'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('X'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Y'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PIXELS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PERCENTAGE'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Height'),
@@ -59652,6 +59928,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                                 new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('NO_DISPLAY_WINDOW'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED_OPTIMAL'),
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
@@ -60367,16 +60644,24 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('C2paManifest'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CertificateSecret'),
                                         new \PHPStan\Type\Constant\ConstantStringType('CslgAtom'),
                                         new \PHPStan\Type\Constant\ConstantStringType('CttsVersion'),
                                         new \PHPStan\Type\Constant\ConstantStringType('FreeSpaceBox'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MoovPlacement'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Mp4MajorBrand'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SigningKmsKey'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_CODEC_DURATION'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH_VIDEO_DURATION'),
                                         ]),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
+                                        ]),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                             new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
@@ -60390,6 +60675,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('PROGRESSIVE_DOWNLOAD'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
                                         ]),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -63138,6 +63424,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                         new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('NO_DISPLAY_WINDOW'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SPECIFIED_OPTIMAL'),
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
@@ -63853,16 +64140,24 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('C2paManifest'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CertificateSecret'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CslgAtom'),
                                 new \PHPStan\Type\Constant\ConstantStringType('CttsVersion'),
                                 new \PHPStan\Type\Constant\ConstantStringType('FreeSpaceBox'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MoovPlacement'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Mp4MajorBrand'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SigningKmsKey'),
                             ], [
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_CODEC_DURATION'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH_VIDEO_DURATION'),
                                 ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
@@ -63876,6 +64171,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('PROGRESSIVE_DOWNLOAD'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([

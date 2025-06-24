@@ -833,6 +833,8 @@ final class EcrClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                     new \PHPStan\Type\Constant\ConstantStringType('imageTags'),
                                     new \PHPStan\Type\Constant\ConstantStringType('platform'),
                                     new \PHPStan\Type\Constant\ConstantStringType('pushedAt'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('lastInUseAt'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('inUseCount'),
                                     new \PHPStan\Type\Constant\ConstantStringType('registry'),
                                     new \PHPStan\Type\Constant\ConstantStringType('repositoryName'),
                                 ], [
@@ -842,6 +844,8 @@ final class EcrClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                    new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ]),

@@ -25,6 +25,7 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
             'deleteMatchingWorkflow',
             'deletePolicyStatement',
             'deleteSchemaMapping',
+            'generateMatchId',
             'getIdMappingJob',
             'getIdMappingWorkflow',
             'getIdNamespace',
@@ -68,6 +69,7 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
             'deleteMatchingWorkflow' => $this->deleteMatchingWorkflow(),
             'deletePolicyStatement' => $this->deletePolicyStatement(),
             'deleteSchemaMapping' => $this->deleteSchemaMapping(),
+            'generateMatchId' => $this->generateMatchId(),
             'getIdMappingJob' => $this->getIdMappingJob(),
             'getIdMappingWorkflow' => $this->getIdMappingWorkflow(),
             'getIdNamespace' => $this->getIdNamespace(),
@@ -509,6 +511,40 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('message'),
             ], [
                 new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function generateMatchId(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('matchGroups'),
+                new \PHPStan\Type\Constant\ConstantStringType('failedRecords'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('records'),
+                    new \PHPStan\Type\Constant\ConstantStringType('matchId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('matchRule'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('inputSourceARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recordId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('inputSourceARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('uniqueId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }

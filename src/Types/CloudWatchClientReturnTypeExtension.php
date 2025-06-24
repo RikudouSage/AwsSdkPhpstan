@@ -769,11 +769,13 @@ final class CloudWatchClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('Schema'),
                     new \PHPStan\Type\Constant\ConstantStringType('Definition'),
                     new \PHPStan\Type\Constant\ConstantStringType('ManagedRule'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ApplyOnTransformedLogs'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                 ])),
             ]),

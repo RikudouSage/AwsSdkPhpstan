@@ -123,6 +123,7 @@ final class ComputeOptimizerClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('EcsService'),
                         new \PHPStan\Type\Constant\ConstantStringType('License'),
                         new \PHPStan\Type\Constant\ConstantStringType('RdsDBInstance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuroraDBClusterStorage'),
                         new \PHPStan\Type\Constant\ConstantStringType('Idle'),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -997,6 +998,7 @@ final class ComputeOptimizerClientReturnTypeExtension implements \PHPStan\Type\D
                             new \PHPStan\Type\Constant\ConstantStringType('License'),
                             new \PHPStan\Type\Constant\ConstantStringType('RdsDBInstance'),
                             new \PHPStan\Type\Constant\ConstantStringType('RdsDBInstanceStorage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AuroraDBClusterStorage'),
                         ]),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -1980,6 +1982,9 @@ final class ComputeOptimizerClientReturnTypeExtension implements \PHPStan\Type\D
                             new \PHPStan\Type\Constant\ConstantStringType('AuroraMemoryNumKillQueryTotal'),
                             new \PHPStan\Type\Constant\ConstantStringType('ReadIOPSEphemeralStorage'),
                             new \PHPStan\Type\Constant\ConstantStringType('WriteIOPSEphemeralStorage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VolumeReadIOPs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VolumeBytesUsed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VolumeWriteIOPs'),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ObjectType('DateTimeInterface')),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
@@ -2011,6 +2016,7 @@ final class ComputeOptimizerClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\Constant\ConstantStringType('storageFinding'),
                     new \PHPStan\Type\Constant\ConstantStringType('instanceFindingReasonCodes'),
                     new \PHPStan\Type\Constant\ConstantStringType('currentInstancePerformanceRisk'),
+                    new \PHPStan\Type\Constant\ConstantStringType('currentStorageEstimatedMonthlyVolumeIOPsCostVariation'),
                     new \PHPStan\Type\Constant\ConstantStringType('storageFindingReasonCodes'),
                     new \PHPStan\Type\Constant\ConstantStringType('instanceRecommendationOptions'),
                     new \PHPStan\Type\Constant\ConstantStringType('storageRecommendationOptions'),
@@ -2053,6 +2059,7 @@ final class ComputeOptimizerClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('Optimized'),
                         new \PHPStan\Type\Constant\ConstantStringType('Underprovisioned'),
                         new \PHPStan\Type\Constant\ConstantStringType('Overprovisioned'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NotOptimized'),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CPUOverprovisioned'),
@@ -2076,12 +2083,20 @@ final class ComputeOptimizerClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('Medium'),
                         new \PHPStan\Type\Constant\ConstantStringType('High'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('None'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Low'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Medium'),
+                        new \PHPStan\Type\Constant\ConstantStringType('High'),
+                    ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('EBSVolumeAllocatedStorageUnderprovisioned'),
                         new \PHPStan\Type\Constant\ConstantStringType('EBSVolumeThroughputUnderprovisioned'),
                         new \PHPStan\Type\Constant\ConstantStringType('EBSVolumeIOPSOverprovisioned'),
                         new \PHPStan\Type\Constant\ConstantStringType('EBSVolumeThroughputOverprovisioned'),
                         new \PHPStan\Type\Constant\ConstantStringType('NewGenerationStorageTypeAvailable'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DBClusterStorageOptionAvailable'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DBClusterStorageSavingsAvailable'),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('dbInstanceClass'),
@@ -2116,6 +2131,9 @@ final class ComputeOptimizerClientReturnTypeExtension implements \PHPStan\Type\D
                                 new \PHPStan\Type\Constant\ConstantStringType('AuroraMemoryNumKillQueryTotal'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ReadIOPSEphemeralStorage'),
                                 new \PHPStan\Type\Constant\ConstantStringType('WriteIOPSEphemeralStorage'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VolumeReadIOPs'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VolumeBytesUsed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VolumeWriteIOPs'),
                             ]),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Maximum'),
@@ -2164,6 +2182,7 @@ final class ComputeOptimizerClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('rank'),
                         new \PHPStan\Type\Constant\ConstantStringType('savingsOpportunity'),
                         new \PHPStan\Type\Constant\ConstantStringType('savingsOpportunityAfterDiscounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('estimatedMonthlyVolumeIOPsCostVariation'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('storageType'),
@@ -2211,6 +2230,12 @@ final class ComputeOptimizerClientReturnTypeExtension implements \PHPStan\Type\D
                                 new \PHPStan\Type\FloatType(),
                             ]),
                         ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Low'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Medium'),
+                            new \PHPStan\Type\Constant\ConstantStringType('High'),
+                        ]),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('name'),
@@ -2236,6 +2261,9 @@ final class ComputeOptimizerClientReturnTypeExtension implements \PHPStan\Type\D
                             new \PHPStan\Type\Constant\ConstantStringType('AuroraMemoryNumKillQueryTotal'),
                             new \PHPStan\Type\Constant\ConstantStringType('ReadIOPSEphemeralStorage'),
                             new \PHPStan\Type\Constant\ConstantStringType('WriteIOPSEphemeralStorage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VolumeReadIOPs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VolumeBytesUsed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VolumeWriteIOPs'),
                         ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('Maximum'),
@@ -2334,6 +2362,7 @@ final class ComputeOptimizerClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('EcsService'),
                         new \PHPStan\Type\Constant\ConstantStringType('License'),
                         new \PHPStan\Type\Constant\ConstantStringType('RdsDBInstance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuroraDBClusterStorage'),
                         new \PHPStan\Type\Constant\ConstantStringType('Idle'),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -2464,6 +2493,7 @@ final class ComputeOptimizerClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('License'),
                         new \PHPStan\Type\Constant\ConstantStringType('RdsDBInstance'),
                         new \PHPStan\Type\Constant\ConstantStringType('RdsDBInstanceStorage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuroraDBClusterStorage'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([

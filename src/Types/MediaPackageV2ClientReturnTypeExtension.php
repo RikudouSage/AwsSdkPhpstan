@@ -467,6 +467,12 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('ScteDash'),
                     new \PHPStan\Type\Constant\ConstantStringType('DrmSignaling'),
                     new \PHPStan\Type\Constant\ConstantStringType('UtcTiming'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Profiles'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BaseUrls'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProgramInformation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DvbSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Compactness'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubtitleConfiguration'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -518,6 +524,68 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('UTC_DIRECT'),
                         ]),
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('DVB_DASH')),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DvbPriority'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DvbWeight'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Copyright'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LanguageCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MoreInformationUrl'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FontDownload'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMetrics'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MimeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FontFamily'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReportingUrl'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Probability'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TtmlConfiguration'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TtmlProfile'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('IMSC_1'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EBU_TT_D_101'),
+                            ]),
+                        ]),
                     ]),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -962,6 +1030,12 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('ScteDash'),
                     new \PHPStan\Type\Constant\ConstantStringType('DrmSignaling'),
                     new \PHPStan\Type\Constant\ConstantStringType('UtcTiming'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Profiles'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BaseUrls'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProgramInformation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DvbSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Compactness'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubtitleConfiguration'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1013,6 +1087,68 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('UTC_DIRECT'),
                         ]),
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('DVB_DASH')),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DvbPriority'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DvbWeight'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Copyright'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LanguageCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MoreInformationUrl'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FontDownload'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMetrics'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MimeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FontFamily'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReportingUrl'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Probability'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TtmlConfiguration'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TtmlProfile'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('IMSC_1'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EBU_TT_D_101'),
+                            ]),
+                        ]),
                     ]),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1636,6 +1772,12 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('ScteDash'),
                     new \PHPStan\Type\Constant\ConstantStringType('DrmSignaling'),
                     new \PHPStan\Type\Constant\ConstantStringType('UtcTiming'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Profiles'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BaseUrls'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProgramInformation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DvbSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Compactness'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubtitleConfiguration'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1687,6 +1829,68 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('UTC_DIRECT'),
                         ]),
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('DVB_DASH')),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DvbPriority'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DvbWeight'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Copyright'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LanguageCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MoreInformationUrl'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FontDownload'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMetrics'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MimeType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FontFamily'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReportingUrl'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Probability'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TtmlConfiguration'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TtmlProfile'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('IMSC_1'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EBU_TT_D_101'),
+                            ]),
+                        ]),
                     ]),
                 ])),
             ]),

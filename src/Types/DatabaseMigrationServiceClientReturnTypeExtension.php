@@ -468,6 +468,7 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\Constant\ConstantStringType('DataProviderCreationTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('Description'),
                     new \PHPStan\Type\Constant\ConstantStringType('Engine'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Virtual'),
                     new \PHPStan\Type\Constant\ConstantStringType('Settings'),
                 ], [
                     new \PHPStan\Type\StringType(),
@@ -475,6 +476,7 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('RedshiftSettings'),
                         new \PHPStan\Type\Constant\ConstantStringType('PostgreSqlSettings'),
@@ -491,9 +493,13 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('ServerName'),
                             new \PHPStan\Type\Constant\ConstantStringType('Port'),
                             new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -502,6 +508,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -512,6 +520,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -519,6 +529,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('Port'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -528,6 +540,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -541,6 +555,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerOracleAsmAccessRoleArn'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerSecurityDbEncryptionSecretId'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerSecurityDbEncryptionAccessRoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -554,6 +570,30 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ServerName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('none'),
+                                new \PHPStan\Type\Constant\ConstantStringType('require'),
+                                new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
+                                new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
+                            ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -579,26 +619,10 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('ServerName'),
                             new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('none'),
-                                new \PHPStan\Type\Constant\ConstantStringType('require'),
-                                new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
-                                new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ServerName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -608,6 +632,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -616,6 +642,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -626,6 +654,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -634,6 +664,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -644,6 +676,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1140,6 +1174,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\Constant\ConstantStringType('DatabaseMode'),
                         new \PHPStan\Type\Constant\ConstantStringType('BabelfishDatabaseName'),
                         new \PHPStan\Type\Constant\ConstantStringType('DisableUnicodeSourceFilter'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceAccessRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMethod'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
@@ -1177,6 +1213,11 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('password'),
+                            new \PHPStan\Type\Constant\ConstantStringType('iam'),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AfterConnectScript'),
@@ -1194,6 +1235,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerAccessRoleArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerSecretId'),
                         new \PHPStan\Type\Constant\ConstantStringType('ExecuteTimeout'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceAccessRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMethod'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
@@ -1213,6 +1256,11 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('password'),
+                            new \PHPStan\Type\Constant\ConstantStringType('iam'),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AddSupplementalLogging'),
@@ -2112,6 +2160,7 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\Constant\ConstantStringType('DataProviderCreationTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('Description'),
                     new \PHPStan\Type\Constant\ConstantStringType('Engine'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Virtual'),
                     new \PHPStan\Type\Constant\ConstantStringType('Settings'),
                 ], [
                     new \PHPStan\Type\StringType(),
@@ -2119,6 +2168,7 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('RedshiftSettings'),
                         new \PHPStan\Type\Constant\ConstantStringType('PostgreSqlSettings'),
@@ -2135,9 +2185,13 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('ServerName'),
                             new \PHPStan\Type\Constant\ConstantStringType('Port'),
                             new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2146,6 +2200,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -2156,6 +2212,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2163,6 +2221,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('Port'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -2172,6 +2232,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2185,6 +2247,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerOracleAsmAccessRoleArn'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerSecurityDbEncryptionSecretId'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerSecurityDbEncryptionAccessRoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -2198,6 +2262,30 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ServerName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('none'),
+                                new \PHPStan\Type\Constant\ConstantStringType('require'),
+                                new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
+                                new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
+                            ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -2223,26 +2311,10 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('ServerName'),
                             new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('none'),
-                                new \PHPStan\Type\Constant\ConstantStringType('require'),
-                                new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
-                                new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ServerName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -2252,6 +2324,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2260,6 +2334,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -2270,6 +2346,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2278,6 +2356,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -2288,6 +2368,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2784,6 +2866,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\Constant\ConstantStringType('DatabaseMode'),
                         new \PHPStan\Type\Constant\ConstantStringType('BabelfishDatabaseName'),
                         new \PHPStan\Type\Constant\ConstantStringType('DisableUnicodeSourceFilter'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceAccessRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMethod'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
@@ -2821,6 +2905,11 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('password'),
+                            new \PHPStan\Type\Constant\ConstantStringType('iam'),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AfterConnectScript'),
@@ -2838,6 +2927,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerAccessRoleArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerSecretId'),
                         new \PHPStan\Type\Constant\ConstantStringType('ExecuteTimeout'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceAccessRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMethod'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
@@ -2857,6 +2948,11 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('password'),
+                            new \PHPStan\Type\Constant\ConstantStringType('iam'),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AddSupplementalLogging'),
@@ -3836,6 +3932,7 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\Constant\ConstantStringType('DataProviderCreationTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('Description'),
                     new \PHPStan\Type\Constant\ConstantStringType('Engine'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Virtual'),
                     new \PHPStan\Type\Constant\ConstantStringType('Settings'),
                 ], [
                     new \PHPStan\Type\StringType(),
@@ -3843,6 +3940,7 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('RedshiftSettings'),
                         new \PHPStan\Type\Constant\ConstantStringType('PostgreSqlSettings'),
@@ -3859,9 +3957,13 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('ServerName'),
                             new \PHPStan\Type\Constant\ConstantStringType('Port'),
                             new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3870,6 +3972,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -3880,6 +3984,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3887,6 +3993,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('Port'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -3896,6 +4004,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3909,6 +4019,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerOracleAsmAccessRoleArn'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerSecurityDbEncryptionSecretId'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerSecurityDbEncryptionAccessRoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -3922,6 +4034,30 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ServerName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('none'),
+                                new \PHPStan\Type\Constant\ConstantStringType('require'),
+                                new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
+                                new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
+                            ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -3947,26 +4083,10 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('ServerName'),
                             new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('none'),
-                                new \PHPStan\Type\Constant\ConstantStringType('require'),
-                                new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
-                                new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ServerName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -3976,6 +4096,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3984,6 +4106,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -3994,6 +4118,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4002,6 +4128,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -4012,6 +4140,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4574,6 +4704,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\Constant\ConstantStringType('DatabaseMode'),
                         new \PHPStan\Type\Constant\ConstantStringType('BabelfishDatabaseName'),
                         new \PHPStan\Type\Constant\ConstantStringType('DisableUnicodeSourceFilter'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceAccessRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMethod'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
@@ -4611,6 +4743,11 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('password'),
+                            new \PHPStan\Type\Constant\ConstantStringType('iam'),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AfterConnectScript'),
@@ -4628,6 +4765,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerAccessRoleArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerSecretId'),
                         new \PHPStan\Type\Constant\ConstantStringType('ExecuteTimeout'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceAccessRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMethod'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
@@ -4647,6 +4786,11 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('password'),
+                            new \PHPStan\Type\Constant\ConstantStringType('iam'),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AddSupplementalLogging'),
@@ -6075,6 +6219,11 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\Constant\ConstantStringType('ValidationSuspendedRecords'),
                     new \PHPStan\Type\Constant\ConstantStringType('ValidationState'),
                     new \PHPStan\Type\Constant\ConstantStringType('ValidationStateDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResyncState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResyncRowsAttempted'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResyncRowsSucceeded'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResyncRowsFailed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResyncProgress'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -6099,6 +6248,11 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\FloatType(),
                 ])),
             ]),
         ]);
@@ -6484,6 +6638,11 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\Constant\ConstantStringType('ValidationSuspendedRecords'),
                     new \PHPStan\Type\Constant\ConstantStringType('ValidationState'),
                     new \PHPStan\Type\Constant\ConstantStringType('ValidationStateDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResyncState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResyncRowsAttempted'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResyncRowsSucceeded'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResyncRowsFailed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResyncProgress'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -6508,6 +6667,11 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\FloatType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -6709,6 +6873,7 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\Constant\ConstantStringType('DataProviderCreationTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('Description'),
                     new \PHPStan\Type\Constant\ConstantStringType('Engine'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Virtual'),
                     new \PHPStan\Type\Constant\ConstantStringType('Settings'),
                 ], [
                     new \PHPStan\Type\StringType(),
@@ -6716,6 +6881,7 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('RedshiftSettings'),
                         new \PHPStan\Type\Constant\ConstantStringType('PostgreSqlSettings'),
@@ -6732,9 +6898,13 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('ServerName'),
                             new \PHPStan\Type\Constant\ConstantStringType('Port'),
                             new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -6743,6 +6913,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -6753,6 +6925,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -6760,6 +6934,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('Port'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -6769,6 +6945,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -6782,6 +6960,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerOracleAsmAccessRoleArn'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerSecurityDbEncryptionSecretId'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerSecurityDbEncryptionAccessRoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -6795,6 +6975,30 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ServerName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('none'),
+                                new \PHPStan\Type\Constant\ConstantStringType('require'),
+                                new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
+                                new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
+                            ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -6820,26 +7024,10 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('ServerName'),
                             new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('none'),
-                                new \PHPStan\Type\Constant\ConstantStringType('require'),
-                                new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
-                                new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ServerName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -6849,6 +7037,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -6857,6 +7047,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -6867,6 +7059,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -6875,6 +7069,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                             new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
                             new \PHPStan\Type\Constant\ConstantStringType('SslMode'),
                             new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AccessRoleArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
@@ -6885,6 +7081,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-ca'),
                                 new \PHPStan\Type\Constant\ConstantStringType('verify-full'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -7381,6 +7579,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\Constant\ConstantStringType('DatabaseMode'),
                         new \PHPStan\Type\Constant\ConstantStringType('BabelfishDatabaseName'),
                         new \PHPStan\Type\Constant\ConstantStringType('DisableUnicodeSourceFilter'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceAccessRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMethod'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
@@ -7418,6 +7618,11 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('password'),
+                            new \PHPStan\Type\Constant\ConstantStringType('iam'),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AfterConnectScript'),
@@ -7435,6 +7640,8 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerAccessRoleArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('SecretsManagerSecretId'),
                         new \PHPStan\Type\Constant\ConstantStringType('ExecuteTimeout'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceAccessRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMethod'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
@@ -7454,6 +7661,11 @@ final class DatabaseMigrationServiceClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('password'),
+                            new \PHPStan\Type\Constant\ConstantStringType('iam'),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AddSupplementalLogging'),

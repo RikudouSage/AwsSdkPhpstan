@@ -380,6 +380,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                             new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                             new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -462,6 +464,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 ]),
                             ]),
                             new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('AdministrativeActionType'),
@@ -1368,6 +1382,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                     new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                                     new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1450,6 +1466,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                         ]),
                                     ]),
                                     new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
                                 ]),
                                 new \PHPStan\Type\MixedType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1928,6 +1956,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                             new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                             new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2010,6 +2040,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 ]),
                             ]),
                             new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
                         ]),
                         new \PHPStan\Type\MixedType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2683,6 +2725,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                             new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                             new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2765,6 +2809,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 ]),
                             ]),
                             new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('AdministrativeActionType'),
@@ -3671,6 +3727,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                     new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                                     new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3753,6 +3811,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                         ]),
                                     ]),
                                     new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
                                 ]),
                                 new \PHPStan\Type\MixedType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4470,6 +4540,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4552,6 +4624,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             ]),
                         ]),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AdministrativeActionType'),
@@ -5214,6 +5298,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -5296,6 +5382,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             ]),
                         ]),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AdministrativeActionType'),
@@ -6031,6 +6129,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -6113,6 +6213,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                     ]),
                                 ]),
                                 new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
                             ]),
                             new \PHPStan\Type\MixedType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -7055,6 +7167,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -7137,6 +7251,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                     ]),
                                 ]),
                                 new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
                             ]),
                             new \PHPStan\Type\MixedType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -7799,6 +7925,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -7881,6 +8009,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                     ]),
                                 ]),
                                 new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
                             ]),
                             new \PHPStan\Type\MixedType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -8548,6 +8688,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                             new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                             new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -8630,6 +8772,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 ]),
                             ]),
                             new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('AdministrativeActionType'),
@@ -9536,6 +9690,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                     new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                                     new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -9618,6 +9774,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                         ]),
                                     ]),
                                     new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
                                 ]),
                                 new \PHPStan\Type\MixedType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10357,6 +10525,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10439,6 +10609,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             ]),
                         ]),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AdministrativeActionType'),
@@ -11186,6 +11368,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11268,6 +11452,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                     ]),
                                 ]),
                                 new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
                             ]),
                             new \PHPStan\Type\MixedType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -12214,6 +12410,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -12296,6 +12494,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                     ]),
                                 ]),
                                 new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
                             ]),
                             new \PHPStan\Type\MixedType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -12762,6 +12972,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -12844,6 +13056,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             ]),
                         ]),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AdministrativeActionType'),
@@ -13557,6 +13781,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                             new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                             new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -13639,6 +13865,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 ]),
                             ]),
                             new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
                         ]),
                         new \PHPStan\Type\MixedType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -14262,6 +14500,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -14344,6 +14584,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             ]),
                         ]),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AdministrativeActionType'),
@@ -15200,6 +15452,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -15282,6 +15536,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             ]),
                         ]),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('AdministrativeActionType'),
@@ -16027,6 +16293,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -16109,6 +16377,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                     ]),
                                 ]),
                                 new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
                             ]),
                             new \PHPStan\Type\MixedType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -17051,6 +17331,8 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('RootSquashConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MetadataConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('EfaEnabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputCapacity'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DataReadCacheConfiguration'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -17133,6 +17415,18 @@ final class FSxClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                     ]),
                                 ]),
                                 new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SizingMode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SizeGiB'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('USER_PROVISIONED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PROPORTIONAL_TO_THROUGHPUT_CAPACITY'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
                             ]),
                             new \PHPStan\Type\MixedType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([

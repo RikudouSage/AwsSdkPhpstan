@@ -19,6 +19,10 @@ services:
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
     -
+        class: Rikudou\AwsSdkPhpstan\Types\AIOpsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
         class: Rikudou\AwsSdkPhpstan\Types\PrometheusServiceClientReturnTypeExtension
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
@@ -587,6 +591,10 @@ services:
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
     -
+        class: Rikudou\AwsSdkPhpstan\Types\EvsClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
         class: Rikudou\AwsSdkPhpstan\Types\finspaceClientReturnTypeExtension
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
@@ -1023,6 +1031,10 @@ services:
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
     -
+        class: Rikudou\AwsSdkPhpstan\Types\MPAClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
         class: Rikudou\AwsSdkPhpstan\Types\MQClientReturnTypeExtension
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
@@ -1176,10 +1188,6 @@ services:
             - phpstan.broker.dynamicMethodReturnTypeExtension
     -
         class: Rikudou\AwsSdkPhpstan\Types\PricingClientReturnTypeExtension
-        tags:
-            - phpstan.broker.dynamicMethodReturnTypeExtension
-    -
-        class: Rikudou\AwsSdkPhpstan\Types\PrivateNetworksClientReturnTypeExtension
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
     -
@@ -1604,6 +1612,10 @@ services:
             - phpstan.broker.dynamicMethodReturnTypeExtension
     -
         class: Rikudou\AwsSdkPhpstan\Types\WorkSpacesClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Rikudou\AwsSdkPhpstan\Types\WorkspacesInstancesClientReturnTypeExtension
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
     -

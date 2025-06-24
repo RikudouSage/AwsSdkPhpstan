@@ -72,6 +72,7 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
             'listAnomalies',
             'listIntegrations',
             'listLogAnomalyDetectors',
+            'listLogGroups',
             'listLogGroupsForQuery',
             'listTagsForResource',
             'listTagsLogGroup',
@@ -167,6 +168,7 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
             'listAnomalies' => $this->listAnomalies(),
             'listIntegrations' => $this->listIntegrations(),
             'listLogAnomalyDetectors' => $this->listLogAnomalyDetectors(),
+            'listLogGroups' => $this->listLogGroups(),
             'listLogGroupsForQuery' => $this->listLogGroupsForQuery(),
             'listTagsForResource' => $this->listTagsForResource(),
             'listTagsLogGroup' => $this->listTagsLogGroup(),
@@ -1501,6 +1503,7 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('parseJSON'),
                     new \PHPStan\Type\Constant\ConstantStringType('parseKeyValue'),
                     new \PHPStan\Type\Constant\ConstantStringType('parseRoute53'),
+                    new \PHPStan\Type\Constant\ConstantStringType('parseToOCSF'),
                     new \PHPStan\Type\Constant\ConstantStringType('parsePostgres'),
                     new \PHPStan\Type\Constant\ConstantStringType('parseVPC'),
                     new \PHPStan\Type\Constant\ConstantStringType('parseWAF'),
@@ -1646,6 +1649,21 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('source'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('source'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ocsfVersion'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CloudTrail'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Route53Resolver'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VPCFlow'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EKSAudit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AWSWAF'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('V1.1'),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('source'),
@@ -1868,6 +1886,30 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listLogGroups(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('logGroups'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('logGroupName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('logGroupArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('logGroupClass'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INFREQUENT_ACCESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELIVERY'),
+                    ]),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

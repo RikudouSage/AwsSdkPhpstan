@@ -19,6 +19,7 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
             'batchGetProfile',
             'createCalculatedAttributeDefinition',
             'createDomain',
+            'createDomainLayout',
             'createEventStream',
             'createEventTrigger',
             'createIntegrationWorkflow',
@@ -28,6 +29,7 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
             'createSegmentSnapshot',
             'deleteCalculatedAttributeDefinition',
             'deleteDomain',
+            'deleteDomainLayout',
             'deleteEventStream',
             'deleteEventTrigger',
             'deleteIntegration',
@@ -42,6 +44,7 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
             'getCalculatedAttributeDefinition',
             'getCalculatedAttributeForProfile',
             'getDomain',
+            'getDomainLayout',
             'getEventStream',
             'getEventTrigger',
             'getIdentityResolutionJob',
@@ -59,6 +62,7 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
             'listAccountIntegrations',
             'listCalculatedAttributeDefinitions',
             'listCalculatedAttributesForProfile',
+            'listDomainLayouts',
             'listDomains',
             'listEventStreams',
             'listEventTriggers',
@@ -82,6 +86,7 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
             'untagResource',
             'updateCalculatedAttributeDefinition',
             'updateDomain',
+            'updateDomainLayout',
             'updateEventTrigger',
             'updateProfile',
         ], true);
@@ -95,6 +100,7 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
             'batchGetProfile' => $this->batchGetProfile(),
             'createCalculatedAttributeDefinition' => $this->createCalculatedAttributeDefinition(),
             'createDomain' => $this->createDomain(),
+            'createDomainLayout' => $this->createDomainLayout(),
             'createEventStream' => $this->createEventStream(),
             'createEventTrigger' => $this->createEventTrigger(),
             'createIntegrationWorkflow' => $this->createIntegrationWorkflow(),
@@ -104,6 +110,7 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
             'createSegmentSnapshot' => $this->createSegmentSnapshot(),
             'deleteCalculatedAttributeDefinition' => $this->deleteCalculatedAttributeDefinition(),
             'deleteDomain' => $this->deleteDomain(),
+            'deleteDomainLayout' => $this->deleteDomainLayout(),
             'deleteEventStream' => $this->deleteEventStream(),
             'deleteEventTrigger' => $this->deleteEventTrigger(),
             'deleteIntegration' => $this->deleteIntegration(),
@@ -118,6 +125,7 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
             'getCalculatedAttributeDefinition' => $this->getCalculatedAttributeDefinition(),
             'getCalculatedAttributeForProfile' => $this->getCalculatedAttributeForProfile(),
             'getDomain' => $this->getDomain(),
+            'getDomainLayout' => $this->getDomainLayout(),
             'getEventStream' => $this->getEventStream(),
             'getEventTrigger' => $this->getEventTrigger(),
             'getIdentityResolutionJob' => $this->getIdentityResolutionJob(),
@@ -135,6 +143,7 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
             'listAccountIntegrations' => $this->listAccountIntegrations(),
             'listCalculatedAttributeDefinitions' => $this->listCalculatedAttributeDefinitions(),
             'listCalculatedAttributesForProfile' => $this->listCalculatedAttributesForProfile(),
+            'listDomainLayouts' => $this->listDomainLayouts(),
             'listDomains' => $this->listDomains(),
             'listEventStreams' => $this->listEventStreams(),
             'listEventTriggers' => $this->listEventTriggers(),
@@ -158,6 +167,7 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
             'untagResource' => $this->untagResource(),
             'updateCalculatedAttributeDefinition' => $this->updateCalculatedAttributeDefinition(),
             'updateDomain' => $this->updateDomain(),
+            'updateDomainLayout' => $this->updateDomainLayout(),
             'updateEventTrigger' => $this->updateEventTrigger(),
             'updateProfile' => $this->updateProfile(),
         };
@@ -197,12 +207,14 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\Constant\ConstantStringType('IsDataPartial'),
                     new \PHPStan\Type\Constant\ConstantStringType('ProfileId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastObjectTimestamp'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Range'),
@@ -407,6 +419,9 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('Statistic'),
                 new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
                 new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('UseHistoricalData'),
+                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                new \PHPStan\Type\Constant\ConstantStringType('Readiness'),
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
                 new \PHPStan\Type\StringType(),
@@ -431,9 +446,21 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Value'),
                         new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ValueRange'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TimestampSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TimestampFormat'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Start'),
+                            new \PHPStan\Type\Constant\ConstantStringType('End'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -508,6 +535,20 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PREPARING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ProgressPercentage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
@@ -650,6 +691,34 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
+    private function createDomainLayout(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('LayoutDefinitionName'),
+                new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                new \PHPStan\Type\Constant\ConstantStringType('IsDefault'),
+                new \PHPStan\Type\Constant\ConstantStringType('LayoutType'),
+                new \PHPStan\Type\Constant\ConstantStringType('Layout'),
+                new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\Constant\ConstantStringType('PROFILE_EXPLORER'),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
         ]);
     }
@@ -834,6 +903,16 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
             ]),
         ]);
     }
+    private function deleteDomainLayout(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Message'),
+            ], [
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function deleteEventStream(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -953,6 +1032,15 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                             new \PHPStan\Type\Constant\ConstantStringType('CASE'),
                             new \PHPStan\Type\Constant\ConstantStringType('ORDER'),
                             new \PHPStan\Type\Constant\ConstantStringType('COMMUNICATION_RECORD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AIR_PREFERENCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HOTEL_PREFERENCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AIR_BOOKING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AIR_SEGMENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HOTEL_RESERVATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HOTEL_STAY_REVENUE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LOYALTY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LOYALTY_TRANSACTION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LOYALTY_PROMOTION'),
                             new \PHPStan\Type\Constant\ConstantStringType('UNIQUE'),
                             new \PHPStan\Type\Constant\ConstantStringType('SECONDARY'),
                             new \PHPStan\Type\Constant\ConstantStringType('LOOKUP_ONLY'),
@@ -993,6 +1081,9 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('Filter'),
                 new \PHPStan\Type\Constant\ConstantStringType('Conditions'),
                 new \PHPStan\Type\Constant\ConstantStringType('AttributeDetails'),
+                new \PHPStan\Type\Constant\ConstantStringType('UseHistoricalData'),
+                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                new \PHPStan\Type\Constant\ConstantStringType('Readiness'),
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
                 new \PHPStan\Type\StringType(),
@@ -1065,9 +1156,21 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Value'),
                         new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ValueRange'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TimestampSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TimestampFormat'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Start'),
+                            new \PHPStan\Type\Constant\ConstantStringType('End'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1094,6 +1197,20 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     ])),
                     new \PHPStan\Type\StringType(),
                 ]),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PREPARING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ProgressPercentage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
@@ -1106,11 +1223,13 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
                 new \PHPStan\Type\Constant\ConstantStringType('IsDataPartial'),
                 new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                new \PHPStan\Type\Constant\ConstantStringType('LastObjectTimestamp'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
         ]);
     }
@@ -1261,6 +1380,34 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                         ]),
                     ]),
                 ]),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
+    private function getDomainLayout(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('LayoutDefinitionName'),
+                new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                new \PHPStan\Type\Constant\ConstantStringType('IsDefault'),
+                new \PHPStan\Type\Constant\ConstantStringType('LayoutType'),
+                new \PHPStan\Type\Constant\ConstantStringType('Layout'),
+                new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\Constant\ConstantStringType('PROFILE_EXPLORER'),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -1578,6 +1725,15 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('CASE'),
                         new \PHPStan\Type\Constant\ConstantStringType('ORDER'),
                         new \PHPStan\Type\Constant\ConstantStringType('COMMUNICATION_RECORD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AIR_PREFERENCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HOTEL_PREFERENCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AIR_BOOKING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AIR_SEGMENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HOTEL_RESERVATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HOTEL_STAY_REVENUE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LOYALTY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LOYALTY_TRANSACTION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LOYALTY_PROMOTION'),
                         new \PHPStan\Type\Constant\ConstantStringType('UNIQUE'),
                         new \PHPStan\Type\Constant\ConstantStringType('SECONDARY'),
                         new \PHPStan\Type\Constant\ConstantStringType('LOOKUP_ONLY'),
@@ -1633,6 +1789,15 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('CASE'),
                         new \PHPStan\Type\Constant\ConstantStringType('ORDER'),
                         new \PHPStan\Type\Constant\ConstantStringType('COMMUNICATION_RECORD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AIR_PREFERENCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HOTEL_PREFERENCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AIR_BOOKING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AIR_SEGMENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HOTEL_RESERVATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HOTEL_STAY_REVENUE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LOYALTY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LOYALTY_TRANSACTION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LOYALTY_PROMOTION'),
                         new \PHPStan\Type\Constant\ConstantStringType('UNIQUE'),
                         new \PHPStan\Type\Constant\ConstantStringType('SECONDARY'),
                         new \PHPStan\Type\Constant\ConstantStringType('LOOKUP_ONLY'),
@@ -2762,6 +2927,8 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\Constant\ConstantStringType('Description'),
                     new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UseHistoricalData'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
                     new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                 ], [
                     new \PHPStan\Type\StringType(),
@@ -2769,6 +2936,13 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PREPARING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2787,11 +2961,43 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
                     new \PHPStan\Type\Constant\ConstantStringType('IsDataPartial'),
                     new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastObjectTimestamp'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listDomainLayouts(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('LayoutDefinitionName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsDefault'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LayoutType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('PROFILE_EXPLORER'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3270,6 +3476,15 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('CASE'),
                         new \PHPStan\Type\Constant\ConstantStringType('ORDER'),
                         new \PHPStan\Type\Constant\ConstantStringType('COMMUNICATION_RECORD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AIR_PREFERENCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HOTEL_PREFERENCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AIR_BOOKING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AIR_SEGMENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HOTEL_RESERVATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HOTEL_STAY_REVENUE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LOYALTY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LOYALTY_TRANSACTION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LOYALTY_PROMOTION'),
                         new \PHPStan\Type\Constant\ConstantStringType('UNIQUE'),
                         new \PHPStan\Type\Constant\ConstantStringType('SECONDARY'),
                         new \PHPStan\Type\Constant\ConstantStringType('LOOKUP_ONLY'),
@@ -3473,6 +3688,9 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('Statistic'),
                 new \PHPStan\Type\Constant\ConstantStringType('Conditions'),
                 new \PHPStan\Type\Constant\ConstantStringType('AttributeDetails'),
+                new \PHPStan\Type\Constant\ConstantStringType('UseHistoricalData'),
+                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                new \PHPStan\Type\Constant\ConstantStringType('Readiness'),
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
                 new \PHPStan\Type\StringType(),
@@ -3498,9 +3716,21 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Value'),
                         new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ValueRange'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TimestampSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TimestampFormat'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Start'),
+                            new \PHPStan\Type\Constant\ConstantStringType('End'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3525,6 +3755,20 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                     ], [
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\StringType(),
+                ]),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PREPARING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ProgressPercentage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -3666,6 +3910,34 @@ final class CustomerProfilesClientReturnTypeExtension implements \PHPStan\Type\D
                         ]),
                     ]),
                 ]),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
+    private function updateDomainLayout(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('LayoutDefinitionName'),
+                new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                new \PHPStan\Type\Constant\ConstantStringType('IsDefault'),
+                new \PHPStan\Type\Constant\ConstantStringType('LayoutType'),
+                new \PHPStan\Type\Constant\ConstantStringType('Layout'),
+                new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\Constant\ConstantStringType('PROFILE_EXPLORER'),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),

@@ -891,6 +891,7 @@ final class IoTFleetWiseClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
                         new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READY_FOR_CHECKIN'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),

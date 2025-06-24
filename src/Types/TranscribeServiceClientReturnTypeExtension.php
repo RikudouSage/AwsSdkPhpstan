@@ -1546,6 +1546,11 @@ final class TranscribeServiceClientReturnTypeExtension implements \PHPStan\Type\
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('HISTORY_AND_PHYSICAL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('GIRPP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BIRP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SIRP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DAP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BEHAVIORAL_SOAP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PHYSICAL_SOAP'),
                             ]),
                         ]),
                     ]),
@@ -4617,6 +4622,11 @@ final class TranscribeServiceClientReturnTypeExtension implements \PHPStan\Type\
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('HISTORY_AND_PHYSICAL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('GIRPP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BIRP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SIRP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DAP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BEHAVIORAL_SOAP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PHYSICAL_SOAP'),
                             ]),
                         ]),
                     ]),

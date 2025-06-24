@@ -337,8 +337,15 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('targetFileSizeMB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('strategy'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('auto'),
+                                new \PHPStan\Type\Constant\ConstantStringType('binpack'),
+                                new \PHPStan\Type\Constant\ConstantStringType('sort'),
+                                new \PHPStan\Type\Constant\ConstantStringType('z-order'),
+                            ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('minSnapshotsToKeep'),

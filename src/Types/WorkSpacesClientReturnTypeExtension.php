@@ -869,6 +869,7 @@ final class WorkSpacesClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('Errors'),
                     new \PHPStan\Type\Constant\ConstantStringType('ApplicationSettings'),
                     new \PHPStan\Type\Constant\ConstantStringType('TimeoutSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RunningMode'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -965,6 +966,10 @@ final class WorkSpacesClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTO_STOP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ALWAYS_ON'),
                     ]),
                 ]),
             ]),
@@ -1796,7 +1801,6 @@ final class WorkSpacesClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EnableWorkDocs'),
                         new \PHPStan\Type\Constant\ConstantStringType('EnableInternetAccess'),
                         new \PHPStan\Type\Constant\ConstantStringType('DefaultOu'),
                         new \PHPStan\Type\Constant\ConstantStringType('CustomSecurityGroupId'),
@@ -1804,7 +1808,6 @@ final class WorkSpacesClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('EnableMaintenanceMode'),
                         new \PHPStan\Type\Constant\ConstantStringType('InstanceIamRoleArn'),
                     ], [
-                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
@@ -2129,6 +2132,9 @@ final class WorkSpacesClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('StagedAppxPackage'),
                             new \PHPStan\Type\Constant\ConstantStringType('UnsupportedOsUpgrade'),
                             new \PHPStan\Type\Constant\ConstantStringType('InsufficientRearmCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ProtocolOSIncompatibility'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MemoryIntegrityIncompatibility'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RestrictedDriveLetterInUse'),
                         ]),
                         new \PHPStan\Type\StringType(),
                     ])),
@@ -2443,6 +2449,7 @@ final class WorkSpacesClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('Errors'),
                     new \PHPStan\Type\Constant\ConstantStringType('ApplicationSettings'),
                     new \PHPStan\Type\Constant\ConstantStringType('TimeoutSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RunningMode'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2539,6 +2546,10 @@ final class WorkSpacesClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTO_STOP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ALWAYS_ON'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -3074,6 +3085,7 @@ final class WorkSpacesClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('Errors'),
                     new \PHPStan\Type\Constant\ConstantStringType('ApplicationSettings'),
                     new \PHPStan\Type\Constant\ConstantStringType('TimeoutSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RunningMode'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -3170,6 +3182,10 @@ final class WorkSpacesClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTO_STOP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ALWAYS_ON'),
                     ]),
                 ]),
             ]),

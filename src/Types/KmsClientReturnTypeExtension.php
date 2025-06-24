@@ -204,6 +204,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('PendingDeletionWindowInDays'),
                     new \PHPStan\Type\Constant\ConstantStringType('MacAlgorithms'),
                     new \PHPStan\Type\Constant\ConstantStringType('XksKeyConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CurrentKeyMaterialId'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -274,6 +275,9 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('HMAC_384'),
                         new \PHPStan\Type\Constant\ConstantStringType('HMAC_512'),
                         new \PHPStan\Type\Constant\ConstantStringType('SM2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_44'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_65'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_87'),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('SYMMETRIC_DEFAULT'),
@@ -292,6 +296,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('ECDSA_SHA_384'),
                         new \PHPStan\Type\Constant\ConstantStringType('ECDSA_SHA_512'),
                         new \PHPStan\Type\Constant\ConstantStringType('SM2DSA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_SHAKE_256'),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('ECDH')),
                     new \PHPStan\Type\BooleanType(),
@@ -331,6 +336,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ], [
                         new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ]),
             ]),
         ]);
@@ -343,6 +349,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Plaintext'),
                 new \PHPStan\Type\Constant\ConstantStringType('EncryptionAlgorithm'),
                 new \PHPStan\Type\Constant\ConstantStringType('CiphertextForRecipient'),
+                new \PHPStan\Type\Constant\ConstantStringType('KeyMaterialId'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
@@ -361,6 +368,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\ResourceType(),
                     new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                 ]),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -379,7 +387,13 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
     private function deleteImportedKeyMaterial(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
+                new \PHPStan\Type\Constant\ConstantStringType('KeyMaterialId'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
         ]);
     }
     private function deriveSharedSecret(): ?\PHPStan\Type\Type
@@ -522,6 +536,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('PendingDeletionWindowInDays'),
                     new \PHPStan\Type\Constant\ConstantStringType('MacAlgorithms'),
                     new \PHPStan\Type\Constant\ConstantStringType('XksKeyConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CurrentKeyMaterialId'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -592,6 +607,9 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('HMAC_384'),
                         new \PHPStan\Type\Constant\ConstantStringType('HMAC_512'),
                         new \PHPStan\Type\Constant\ConstantStringType('SM2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_44'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_65'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_87'),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('SYMMETRIC_DEFAULT'),
@@ -610,6 +628,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('ECDSA_SHA_384'),
                         new \PHPStan\Type\Constant\ConstantStringType('ECDSA_SHA_512'),
                         new \PHPStan\Type\Constant\ConstantStringType('SM2DSA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_SHAKE_256'),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('ECDH')),
                     new \PHPStan\Type\BooleanType(),
@@ -649,6 +668,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ], [
                         new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ]),
             ]),
         ]);
@@ -714,6 +734,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Plaintext'),
                 new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
                 new \PHPStan\Type\Constant\ConstantStringType('CiphertextForRecipient'),
+                new \PHPStan\Type\Constant\ConstantStringType('KeyMaterialId'),
             ], [
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\StringType(),
@@ -731,6 +752,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\ResourceType(),
                     new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                 ]),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -744,6 +766,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
                 new \PHPStan\Type\Constant\ConstantStringType('KeyPairSpec'),
                 new \PHPStan\Type\Constant\ConstantStringType('CiphertextForRecipient'),
+                new \PHPStan\Type\Constant\ConstantStringType('KeyMaterialId'),
             ], [
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\StringType(),
@@ -776,6 +799,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\ResourceType(),
                     new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                 ]),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -787,6 +811,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('PublicKey'),
                 new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
                 new \PHPStan\Type\Constant\ConstantStringType('KeyPairSpec'),
+                new \PHPStan\Type\Constant\ConstantStringType('KeyMaterialId'),
             ], [
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\StringType(),
@@ -809,6 +834,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('ECC_SECG_P256K1'),
                     new \PHPStan\Type\Constant\ConstantStringType('SM2'),
                 ]),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -818,12 +844,14 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('CiphertextBlob'),
                 new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
+                new \PHPStan\Type\Constant\ConstantStringType('KeyMaterialId'),
             ], [
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ResourceType(),
                     new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                 ]),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -973,6 +1001,9 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('HMAC_384'),
                     new \PHPStan\Type\Constant\ConstantStringType('HMAC_512'),
                     new \PHPStan\Type\Constant\ConstantStringType('SM2'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_44'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_65'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_87'),
                 ]),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('SIGN_VERIFY'),
@@ -997,6 +1028,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('ECDSA_SHA_384'),
                     new \PHPStan\Type\Constant\ConstantStringType('ECDSA_SHA_512'),
                     new \PHPStan\Type\Constant\ConstantStringType('SM2DSA'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_SHAKE_256'),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('ECDH')),
             ]),
@@ -1005,7 +1037,13 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
     private function importKeyMaterial(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
+                new \PHPStan\Type\Constant\ConstantStringType('KeyMaterialId'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
         ]);
     }
     private function listAliases(): ?\PHPStan\Type\Type
@@ -1116,10 +1154,32 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             ], [
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KeyMaterialId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KeyMaterialDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ImportState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KeyMaterialState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExpirationModel'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ValidTo'),
                     new \PHPStan\Type\Constant\ConstantStringType('RotationDate'),
                     new \PHPStan\Type\Constant\ConstantStringType('RotationType'),
                 ], [
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IMPORTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_IMPORT'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NON_CURRENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CURRENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_ROTATION'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('KEY_MATERIAL_EXPIRES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KEY_MATERIAL_DOES_NOT_EXPIRE'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('AUTOMATIC'),
@@ -1244,6 +1304,8 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
                 new \PHPStan\Type\Constant\ConstantStringType('SourceEncryptionAlgorithm'),
                 new \PHPStan\Type\Constant\ConstantStringType('DestinationEncryptionAlgorithm'),
+                new \PHPStan\Type\Constant\ConstantStringType('SourceKeyMaterialId'),
+                new \PHPStan\Type\Constant\ConstantStringType('DestinationKeyMaterialId'),
             ], [
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\StringType(),
@@ -1264,6 +1326,8 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('RSAES_OAEP_SHA_256'),
                     new \PHPStan\Type\Constant\ConstantStringType('SM2PKE'),
                 ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -1301,6 +1365,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('PendingDeletionWindowInDays'),
                     new \PHPStan\Type\Constant\ConstantStringType('MacAlgorithms'),
                     new \PHPStan\Type\Constant\ConstantStringType('XksKeyConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CurrentKeyMaterialId'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1371,6 +1436,9 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('HMAC_384'),
                         new \PHPStan\Type\Constant\ConstantStringType('HMAC_512'),
                         new \PHPStan\Type\Constant\ConstantStringType('SM2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_44'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_65'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_87'),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('SYMMETRIC_DEFAULT'),
@@ -1389,6 +1457,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('ECDSA_SHA_384'),
                         new \PHPStan\Type\Constant\ConstantStringType('ECDSA_SHA_512'),
                         new \PHPStan\Type\Constant\ConstantStringType('SM2DSA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_SHAKE_256'),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('ECDH')),
                     new \PHPStan\Type\BooleanType(),
@@ -1428,6 +1497,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ], [
                         new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1512,6 +1582,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('ECDSA_SHA_384'),
                     new \PHPStan\Type\Constant\ConstantStringType('ECDSA_SHA_512'),
                     new \PHPStan\Type\Constant\ConstantStringType('SM2DSA'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_SHAKE_256'),
                 ]),
             ]),
         ]);
@@ -1573,6 +1644,7 @@ final class KmsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('ECDSA_SHA_384'),
                     new \PHPStan\Type\Constant\ConstantStringType('ECDSA_SHA_512'),
                     new \PHPStan\Type\Constant\ConstantStringType('SM2DSA'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ML_DSA_SHAKE_256'),
                 ]),
             ]),
         ]);

@@ -753,6 +753,7 @@ final class CloudFormationClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('MUTUALLY_EXCLUSIVE_PROPERTIES'),
                             new \PHPStan\Type\Constant\ConstantStringType('UNSUPPORTED_PROPERTIES'),
                             new \PHPStan\Type\Constant\ConstantStringType('MUTUALLY_EXCLUSIVE_TYPES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXCLUDED_PROPERTIES'),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('PropertyPath'),

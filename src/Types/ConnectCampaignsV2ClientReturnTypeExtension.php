@@ -26,12 +26,14 @@ final class ConnectCampaignsV2ClientReturnTypeExtension implements \PHPStan\Type
             'getCampaignState',
             'getCampaignStateBatch',
             'getConnectInstanceConfig',
+            'getInstanceCommunicationLimits',
             'getInstanceOnboardingJobStatus',
             'listCampaigns',
             'listConnectInstanceIntegrations',
             'listTagsForResource',
             'pauseCampaign',
             'putConnectInstanceIntegration',
+            'putInstanceCommunicationLimits',
             'putOutboundRequestBatch',
             'putProfileOutboundRequestBatch',
             'resumeCampaign',
@@ -65,12 +67,14 @@ final class ConnectCampaignsV2ClientReturnTypeExtension implements \PHPStan\Type
             'getCampaignState' => $this->getCampaignState(),
             'getCampaignStateBatch' => $this->getCampaignStateBatch(),
             'getConnectInstanceConfig' => $this->getConnectInstanceConfig(),
+            'getInstanceCommunicationLimits' => $this->getInstanceCommunicationLimits(),
             'getInstanceOnboardingJobStatus' => $this->getInstanceOnboardingJobStatus(),
             'listCampaigns' => $this->listCampaigns(),
             'listConnectInstanceIntegrations' => $this->listConnectInstanceIntegrations(),
             'listTagsForResource' => $this->listTagsForResource(),
             'pauseCampaign' => $this->pauseCampaign(),
             'putConnectInstanceIntegration' => $this->putConnectInstanceIntegration(),
+            'putInstanceCommunicationLimits' => $this->putInstanceCommunicationLimits(),
             'putOutboundRequestBatch' => $this->putOutboundRequestBatch(),
             'putProfileOutboundRequestBatch' => $this->putProfileOutboundRequestBatch(),
             'resumeCampaign' => $this->resumeCampaign(),
@@ -405,6 +409,7 @@ final class ConnectCampaignsV2ClientReturnTypeExtension implements \PHPStan\Type
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('allChannelSubtypes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('instanceLimitsHandling'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('communicationLimitsList'),
@@ -418,6 +423,10 @@ final class ConnectCampaignsV2ClientReturnTypeExtension implements \PHPStan\Type
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantStringType('DAY'),
                             ])),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('OPT_IN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OPT_OUT'),
                         ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -497,6 +506,32 @@ final class ConnectCampaignsV2ClientReturnTypeExtension implements \PHPStan\Type
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantStringType('KMS'),
                         new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
+    private function getInstanceCommunicationLimits(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('communicationLimitsConfig'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('allChannelSubtypes'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('communicationLimitsList'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('maxCountPerRecipient'),
+                            new \PHPStan\Type\Constant\ConstantStringType('frequency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantStringType('DAY'),
+                        ])),
                     ]),
                 ]),
             ]),
@@ -621,6 +656,12 @@ final class ConnectCampaignsV2ClientReturnTypeExtension implements \PHPStan\Type
         ]);
     }
     private function putConnectInstanceIntegration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
+    private function putInstanceCommunicationLimits(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),

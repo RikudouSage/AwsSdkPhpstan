@@ -28,6 +28,7 @@ final class AcmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'renewCertificate',
             'requestCertificate',
             'resendValidationEmail',
+            'revokeCertificate',
             'updateCertificateOptions',
         ], true);
     }
@@ -49,6 +50,7 @@ final class AcmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'renewCertificate' => $this->renewCertificate(),
             'requestCertificate' => $this->requestCertificate(),
             'resendValidationEmail' => $this->resendValidationEmail(),
+            'revokeCertificate' => $this->revokeCertificate(),
             'updateCertificateOptions' => $this->updateCertificateOptions(),
         };
     }
@@ -324,7 +326,12 @@ final class AcmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('CertificateTransparencyLoggingPreference'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Export'),
                     ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
@@ -402,6 +409,7 @@ final class AcmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('KeyAlgorithm'),
                     new \PHPStan\Type\Constant\ConstantStringType('KeyUsages'),
                     new \PHPStan\Type\Constant\ConstantStringType('ExtendedKeyUsages'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExportOption'),
                     new \PHPStan\Type\Constant\ConstantStringType('InUse'),
                     new \PHPStan\Type\Constant\ConstantStringType('Exported'),
                     new \PHPStan\Type\Constant\ConstantStringType('RenewalEligibility'),
@@ -467,6 +475,10 @@ final class AcmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                         new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                    ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\UnionType([
@@ -532,6 +544,16 @@ final class AcmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
+    private function revokeCertificate(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+            ], [
+                new \PHPStan\Type\StringType(),
+            ]),
         ]);
     }
     private function updateCertificateOptions(): ?\PHPStan\Type\Type

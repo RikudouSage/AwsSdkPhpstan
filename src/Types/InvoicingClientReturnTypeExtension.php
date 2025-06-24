@@ -18,6 +18,7 @@ final class InvoicingClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'createInvoiceUnit',
             'deleteInvoiceUnit',
             'getInvoiceUnit',
+            'listInvoiceSummaries',
             'listInvoiceUnits',
             'listTagsForResource',
             'tagResource',
@@ -33,6 +34,7 @@ final class InvoicingClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'createInvoiceUnit' => $this->createInvoiceUnit(),
             'deleteInvoiceUnit' => $this->deleteInvoiceUnit(),
             'getInvoiceUnit' => $this->getInvoiceUnit(),
+            'listInvoiceSummaries' => $this->listInvoiceSummaries(),
             'listInvoiceUnits' => $this->listInvoiceUnits(),
             'listTagsForResource' => $this->listTagsForResource(),
             'tagResource' => $this->tagResource(),
@@ -127,6 +129,273 @@ final class InvoicingClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
+            ]),
+        ]);
+    }
+    private function listInvoiceSummaries(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('InvoiceSummaries'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InvoiceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IssuedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DueDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Entity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BillingPeriod'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InvoiceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OriginalInvoiceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PurchaseOrderNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BaseCurrencyAmount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TaxCurrencyAmount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PaymentCurrencyAmount'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InvoicingEntity'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Month'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Year'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INVOICE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREDIT_MEMO'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TotalAmount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TotalAmountBeforeTax'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CurrencyCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AmountBreakdown'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CurrencyExchangeDetails'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubTotalAmount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Discounts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Taxes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Fees'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Breakdown'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TotalAmount'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Amount'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Rate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Breakdown'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TotalAmount'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Amount'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Rate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Breakdown'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TotalAmount'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Amount'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Rate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceCurrencyCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetCurrencyCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Rate'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TotalAmount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TotalAmountBeforeTax'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CurrencyCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AmountBreakdown'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CurrencyExchangeDetails'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubTotalAmount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Discounts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Taxes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Fees'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Breakdown'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TotalAmount'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Amount'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Rate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Breakdown'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TotalAmount'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Amount'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Rate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Breakdown'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TotalAmount'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Amount'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Rate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceCurrencyCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetCurrencyCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Rate'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TotalAmount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TotalAmountBeforeTax'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CurrencyCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AmountBreakdown'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CurrencyExchangeDetails'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubTotalAmount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Discounts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Taxes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Fees'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Breakdown'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TotalAmount'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Amount'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Rate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Breakdown'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TotalAmount'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Amount'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Rate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Breakdown'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TotalAmount'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Amount'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Rate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceCurrencyCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetCurrencyCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Rate'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }

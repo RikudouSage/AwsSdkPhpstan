@@ -260,6 +260,7 @@ final class MWAAClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                         new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
                         new \PHPStan\Type\Constant\ConstantStringType('Error'),
                         new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WorkerReplacementStrategy'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
@@ -275,6 +276,10 @@ final class MWAAClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FORCED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GRACEFUL'),
+                        ]),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
